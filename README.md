@@ -1,4 +1,4 @@
-# Efficient Graph Condensation via Gaussian Process (GCGP) [Paper](./docs/Efficient_Graph_Condensation_via_Gaussian_Processes.pdf.pdf), [arxiv](https://arxiv.org/abs/2501.02565)
+# Efficient Graph Condensation via Gaussian Process (GCGP) [Paper](./docs/Efficient_Graph_Condensation_via_Gaussian_Processes.pdf.pdf)
 
 
 
@@ -43,122 +43,136 @@ If you don't want to run the code, We have uploaded the original results of our 
 
 
 
+
 ## Implementation
 
 ### Requirements
 
-python=3.8.20 \
-ogb=1.3.6 \
-pytorch=1.12.1\
-pyg=2.5.2\
-numpy=1.24.3
+- `python=3.8.20`  
+- `ogb=1.3.6`  
+- `pytorch=1.12.1`  
+- `pyg=2.5.2`  
+- `numpy=1.24.3`  
 
-> **Note**: It is recommended to install the `ogb` package first to avoid potential misrecognition of CUDA devices.
+> **Note**: It is recommended to install the `ogb` package first to avoid potential issues with CUDA device recognition.
 
-
-You can also use the following command to install the environment:
+You can also use the following command to set up the environment:
 
 ```bash
 conda env create -f environment.yml
 ```
 
-
-
+---
 
 ### Small Datasets (`Cora`, `Citeseer`, `Pubmed`, `Photo`, `Computers`)
 
-If you want to run the code, you can follow the steps below:
+First, navigate to the `gcgp` folder, which contains the code for these datasets:
 
 ```bash
 cd gcgp
 ```
- Then you can try the following command to run the code:
- ```bash
- python main.py --dataset Cora --cond_ratio 0.5 --ridge 0.5 --k 4 --epochs 200 --learn_A 0
+
+You can then run the following command to execute the code:
+
+```bash
+python main.py --dataset Cora --cond_ratio 0.5 --ridge 0.5 --k 4 --epochs 200 --learn_A 0
 ```
 
-
-If you want to reproduce all the results, you can run the following commands:
+To reproduce all results, you can simply execute the following script:
 
 ```bash
 sh run.sh
 ```
 
-The `run.sh` script will execute the GCGP model on the five datasets using all the tuned parameters, and the results will be saved in the `./gcgp/outputs/` folder. The `results.py` script will then collect the final results, which will be stored in the `./gcgp/results.csv` file.
+- The `run.sh` script will run the GCGP model on all five datasets using the tuned parameters.  
+- The results will be saved in the `./gcgp/outputs/` folder.  
+- The `results.py` script will collect final results and store them in the `./gcgp/results.csv` file.
 
-
-For the generalization experiment, you can run the following commands:
+For the generalization experiments, use the following command:
 
 ```bash
 sh run_generalization.sh
 ```
 
-The output results will be saved in the `./gcgp/outputs_generalization/` folder. The `results_generalization.py` script will collect the final results, which will be saved in the `./gcgp/results_generalization.csv` file.
+- The outputs will be saved in the `./gcgp/outputs_generalization/` folder.  
+- The `results_generalization.py` script will collect the final results into the `./gcgp/results_generalization.csv` file.
 
-
-For the time evaluation experiments, you can run the following command:
+For the time evaluation experiments, use this command:
 
 ```bash
 sh run_time.sh
 ```
 
-The output results will be saved in the `./gcgp/outputs_time/` folder. 
+- The outputs will be saved in the `./gcgp/outputs_time/` folder.
 
+---
 
 ### Large Datasets (`Ogbn-arxiv` and `Reddit`)
 
+The code for the `Ogbn-arxiv` and `Reddit` datasets is located in the `gcgp_ogb` and `gcgp_reddit` folders, respectively.
 
-The codes for the `Ogbn-arxiv` and `Reddit` datasets are in the `gcgp_ogb` and `gcgp_reddit` folders, respectively.
+#### Ogbn-arxiv Dataset
 
+Navigate to the `gcgp_ogb` folder:
 
-#### Ogbn-arxiv dataset
-First, open the `gcgp_ogb` folder:
 ```bash
 cd gcgp_ogb
 ```
 
-Then, you can try the following command to run the code:
+Run the following command to execute the code:
+
 ```bash
 python main.py --dataset ogbn-arxiv --cond_size 90 --ridge 5 --k 2 --epochs 200 --learn_A 0
 ```
 
-To evaluate results across all parameters for the `ogbn-arxiv` dataset, simply execute the `run.sh` script. The results will be saved in the `./gcgp_ogb/outputs/` directory.
+To evaluate results across all tuned parameters for the `ogbn-arxiv` dataset, execute the `run.sh` script:
 
 ```bash
 sh run.sh
 ```
 
-The `results.py` script will then collect the final results using the outputs in `./gcgp_ogb/outputs/`, which will be stored in the `./gcgp_ogb/results.csv` file.
+- The results will be saved in the `./gcgp_ogb/outputs/` folder.  
+- Use the `results.py` script to collect the final results, which will be stored in the `./gcgp_ogb/results.csv` file.
 
+For efficiency experiments, run the following command:
 
-For the efficiency experimets, you can run the following command, the outputs will be saved in the `./gcgp_ogb/outputs_time/` folder.
 ```bash
 sh run_time.sh
 ```
 
-#### Reddit dataset
-Open the `gcgp_reddit` folder:
+- The outputs will be saved in the `./gcgp_ogb/outputs_time/` folder.
+
+#### Reddit Dataset
+
+Navigate to the `gcgp_reddit` folder:
+
 ```bash
 cd gcgp_reddit
 ```
-Then, you can try the following command to run the code:
+
+Run the following command to execute the code:
+
 ```bash
 python main.py --dataset Reddit --cond_size 77 --ridge 0.1 --k 2 --epochs 270 --learn_A 0
 ```
 
-You can also run the following commands to reproduce the all results, `run.sh` will execute the GCGP model using all the tuned parameters, and the results will be saved in the `./gcgp_reddit/outputs/` folder.
+To reproduce all results, execute the `run.sh` script:
+
 ```bash
 sh run.sh
 ```
 
-The `results.py` script will then collect the output results, which will be stored in the `./gcgp_reddit/results.csv` file.
+- The `run.sh` script will run the GCGP model using all tuned parameters.  
+- The results will be saved in the `./gcgp_reddit/outputs/` folder.  
+- The `results.py` script will collect the final results into the `./gcgp_reddit/results.csv` file.
 
+For efficiency experiments, use the following command:
 
-For the efficiency experimets, you can run the following command, the training time outputs will be saved in the `./gcgp_reddit/outputs_time/` folder,
 ```bash
 sh run_time.sh
 ```
 
+- The training time outputs will be saved in the `./gcgp_reddit/outputs_time/` folder.
 
 
 
