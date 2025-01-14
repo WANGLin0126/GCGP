@@ -12,9 +12,9 @@ GCGP incorporates a **covariance function** that aggregates local neighborhoods 
 ## Methodology
 
 <div style="text-align: center;">
-    <figure>
+    <figure style="display: inline-block; text-align: center;">
         <img src="./docs/GC.png" alt="Graph Condensation" style="width:50%; height:auto;">
-        <figcaption>
+        <figcaption style="display: block; margin-top: 10px; font-style: italic;">
             Figure 1: Graph condensation aims to condense a large graph $G$ to a smaller but informative one $G^{\mathcal{S}}$, so that it will not impact the downstream task, such as the training of the GNN models.
         </figcaption>
     </figure>
