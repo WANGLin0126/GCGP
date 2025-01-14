@@ -80,7 +80,7 @@ cd gcgp
 ```
 
 
-if you want to reproduce all the results, you can run the following commands:
+If you want to reproduce all the results, you can run the following commands:
 
 ```bash
 sh run.sh
