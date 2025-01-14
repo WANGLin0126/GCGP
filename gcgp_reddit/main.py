@@ -1,23 +1,4 @@
-"""
-Flickr
-python main.py --dataset Flickr --cond_size  44 --ridge 1e-3 --K 3 --k 3 --L 1 --kernel SGNTK
-python main.py --dataset Flickr --cond_size 223 --ridge 1e-3 --K 3 --k 3 --L 1 --kernel SGNTK
-python main.py --dataset Flickr --cond_size 446 --ridge 1e-3 --K 3 --k 3 --L 1 --kernel SGNTK
 
-python main.py --dataset Flickr --cond_size  44 --ridge 1e0 --K 0 --k 2 --L 1 --kernel SNTK
-python main.py --dataset Flickr --cond_size 223 --ridge 1e0 --K 0 --k 2 --L 1 --kernel SNTK
-python main.py --dataset Flickr --cond_size 446 --ridge 1e0 --K 0 --k 2 --L 1 --kernel SNTK
-
-Reddit
-python main.py --dataset Reddit --cond_size  77 --ridge 1e-3 --K 2 --k 2 --L 1 --kernel SGNTK
-python main.py --dataset Reddit --cond_size 153 --ridge 1e-3 --K 2 --k 2 --L 1 --kernel SGNTK
-python main.py --dataset Reddit --cond_size 307 --ridge 1e-3 --K 2 --k 2 --L 1 --kernel SGNTK
-
-python main.py --dataset Reddit --cond_size  77 --ridge 1e-3 --K 2 --k 2 --L 1 --kernel SNTK
-python main.py --dataset Reddit --cond_size 153 --ridge 1e-3 --K 2 --k 2 --L 1 --kernel SNTK
-python main.py --dataset Reddit --cond_size 307 --ridge 1e-3 --K 2 --k 2 --L 1 --kernel SNTK
-
-"""
 
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
@@ -26,7 +7,6 @@ from torch import nn
 from torch.nn import functional as F
 from krr import KernelRidgeRegression
 from sgtk import SimplifyingGraphTangentKernel
-# from sgntk import SimplifyingGraphNeuralTangentKernel
 from sgnk import SimplifyingGraphNeuralKernel
 from ntk import NeuralTangentKernel
 from sntk import StructureBasedNTK
@@ -41,9 +21,9 @@ device = "cuda:1" if torch.cuda.is_available() else "cpu"
 print(f"Using {device} device")
 
 
-parser = argparse.ArgumentParser(description='SNTK computation')
-parser.add_argument('--dataset', type=str, default="Reddit", help='name of dataset [Flickr, Reddit](default: Flickr)')
-parser.add_argument('--cond_size', type=int, default=77, help='condensation size)[44, 233,446]')
+parser = argparse.ArgumentParser(description='SGNK computation')
+parser.add_argument('--dataset', type=str, default="Reddit", help='name of dataset [Reddit]')
+parser.add_argument('--cond_size', type=int, default=77, help='condensation size)[77, 153, 307]')
 parser.add_argument('--ridge', type=float, default=1e-3, help='ridge parameter of KRR (default: 1e-3)')
 parser.add_argument('--epochs', type=int, default=200, help='number of epochs to train (default: 100)')
 parser.add_argument('--lr_X', type=float, default=5e-3, help='learning rate (default: 0.005)')
@@ -60,7 +40,7 @@ parser.add_argument('--batch_size', type=int, default=8000, help='batch size (de
 parser.add_argument('--accumulate_steps', type=int, default=8, help='accumulate steps (default: 10)')
 parser.add_argument('--save', type=bool, default=False, help='save the results (default: False)')
 parser.add_argument('--iterations', type=int, default=2, help='number of iterations of the whole experiments (default: 10)')
-parser.add_argument('--kernel', type=str, default='dot_product', help='kernel type [SGTK, SGNK] (default: SGTK)')
+parser.add_argument('--kernel', type=str, default='SGNK', help='kernel type [SGTK, SGNK] (default: SGTK)')
 parser.add_argument('--num_hops', type=int, default=0, help='number of the hops when sampling the training batches (default: 0)')
 args = parser.parse_args()
 

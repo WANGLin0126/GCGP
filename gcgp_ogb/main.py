@@ -1,16 +1,3 @@
-
-"""
-Ogbn-arxiv
-python main.py --dataset ogbn-arxiv --cond_size  90 --ridge 1e-5 --K 3 --k 3 --L 1 --kernel SGNK --lr_X 1e-2 --lr_A 1e-3
-python main.py --dataset ogbn-arxiv --cond_size 454 --ridge 1e-5 --K 3 --k 3 --L 1 --kernel SGNK --lr_X 1e-2 --lr_A 1e-3
-python main.py --dataset ogbn-arxiv --cond_size 909 --ridge 1e-5 --K 3 --k 3 --L 1 --kernel SGNK --lr_X 1e-2 --lr_A 1e-3
-
-python main.py --dataset ogbn-arxiv --cond_size  90 --ridge 1e-5 --K 3 --k 3 --L 1 --kernel SGTK --lr_X 1e-2 --lr_A 1e-3
-python main.py --dataset ogbn-arxiv --cond_size 454 --ridge 1e-5 --K 3 --k 3 --L 1 --kernel SGTK --lr_X 1e-2 --lr_A 1e-3
-python main.py --dataset ogbn-arxiv --cond_size 909 --ridge 1e-5 --K 3 --k 3 --L 1 --kernel SGTK --lr_X 1e-2 --lr_A 1e-3
-
-"""
-
 import torch
 from ogb.nodeproppred import dataset
 from torch_geometric.loader import NeighborLoader
@@ -90,7 +77,7 @@ def test(G_t, G_s, y_t, y_s, A_t, A_s, Alpha, loss_fn, learnA):
 device = "cuda:1" if torch.cuda.is_available() else "cpu"
 print(f"Using {device} device")
 
-parser = argparse.ArgumentParser(description='SGTK computation')
+parser = argparse.ArgumentParser(description='SGNK computation')
 parser.add_argument('--dataset', type=str, default="ogbn-arxiv", help='name of dataset (default: ogbn-arxiv)')
 parser.add_argument('--cond_size', type=int, default=90, help='condensed ratio of the training set (default: 0.5, the condened set is 0.5*training set)')
 parser.add_argument('--ridge', type=float, default=1e-3, help='ridge parameter of KRR (default: 1e-3)')
@@ -105,7 +92,7 @@ parser.add_argument('--norm', type=int, default=0, help='whether to normalize th
 parser.add_argument('--set_seed', type=bool, default=True, help='whether to set seed')
 parser.add_argument('--seed', type=int, default=5, help='setup the random seed (default: 5)')
 parser.add_argument('--iter', type=int, default=2, help='iteration times (default: 3)')
-parser.add_argument('--kernel', type=str, default='dot_product', help='kernel method in KRR [SGTK, SGNK] (default: SGTK)')
+parser.add_argument('--kernel', type=str, default='SGNK', help='kernel method in KRR [SGTK, SGNK] (default: SGTK)')
 parser.add_argument('--split_method', type=str, default='random', help='split method of the test set [kmeans,none] (default: kmeans)')
 parser.add_argument('--train_batch_size', type=int, default=5000, help='split method of the test set [kmeans,none] (default: kmeans)')
 parser.add_argument('--save', type=int, default=0, help='whether to save the results')

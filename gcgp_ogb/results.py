@@ -6,7 +6,7 @@ import re
 line_numbers = [623]  
 header = ["Dataset", "Cond_Size", "Ridge", "k", "Learn_A", "Norm", "Epoch", "Acc", "Std."]
 
-# 创建并写入表头到 CSV 文件
+
 with open('results.csv', 'w', newline='', encoding='utf-8') as cvs_file:
     writer = csv.writer(cvs_file)
     writer.writerow(header)
@@ -32,7 +32,7 @@ with open('results.csv', 'w', newline='', encoding='utf-8') as cvs_file:
 df = pd.read_csv('results.csv')
 print(df.columns.tolist())
 rows = []
-for dataset in ['ogbn-arxiv']:  #'CS', 'Physics'
+for dataset in ['ogbn-arxiv']: 
     for cond_size in [90, 454, 909]:
         for leanr_A in [0, 1]:
             dataset_rows = df[(df.iloc[:, 0] == dataset) & (df['Cond_Size'] == cond_size) & (df['Learn_A'] == leanr_A)]
