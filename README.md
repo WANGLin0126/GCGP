@@ -16,10 +16,8 @@ GCGP incorporates a **covariance function** that aggregates local neighborhoods 
     <img src="./docs/GC.png" alt="Graph Condensation" style="width:50%; height:auto; display: inline-block;">
 </div>
 
-<div style="text-align: center;">
-    <span style="font-size:12px;">Figure 1: Graph condensation aims to condense a large graph $G$ to a smaller but informative one $G^{\mathcal{S}}$, so that it will not impact the downstream task, such as the training of the GNN models.
-    </span>
-</div>
+*Figure 1: Graph condensation aims to condense a large graph $G$ to a smaller but informative one $G^{\mathcal{S}}$, so that it will not impact the downstream task, such as the training of the GNN models.*
+
 
 ---
 Existing graph condensation methods use a bi-level optimization strategy, where the condensed graph trains the GNN in the inner loop and is updated in the outer loop via a matching loss. This approach is computationally expensive due to the need for repeated GNN training.
@@ -27,14 +25,12 @@ Existing graph condensation methods use a bi-level optimization strategy, where 
 To address this limitation, the proposed **Graph Condensation via Gaussian Process (GCGP)** method introduces a framework that integrates a **Gaussian Process (GP)** to enhance efficiency in graph condensation tasks. In this context, the condensed synthetic graph $G^{\mathcal{S}}$ represents the observations for the GP. By combining these observations with prior knowledge of the model, the GP derives the posterior distribution of the outputs, thereby circumventing the need for computationally intensive iterative training.
 
 <div style="text-align: center;">
-    <figure>
         <img src="./docs/GCGP.png" alt="GCGP" style="width:90%; height:auto; display: inline-block;">
-        <figcaption style="font-style: italic; margin-top: 10px;">
-            Figure 2: The workflow of the proposed GCGP framework involves three key steps. First, the condensed synthetic graph $G^{\mathcal{S}}$ is utilized as the observations for the GP. Next, predictions are generated for the test locations, corresponding to the original graph $G$. Finally, the condensed graph is iteratively optimized by minimizing the discrepancy between the GP's predictions and the ground-truth labels.
-        </figcaption>
-    </figure>
 </div>
 
+*Figure 2: The workflow of the proposed GCGP framework involves three key steps. First, the condensed synthetic graph $G^{\mathcal{S}}$ is utilized as the observations for the GP. Next, predictions are generated for the test locations, corresponding to the original graph $G$. Finally, the condensed graph is iteratively optimized by minimizing the discrepancy between the GP's predictions and the ground-truth labels.*
+
+---
 
 <!-- ## Experimental Results
 
@@ -78,7 +74,7 @@ cd gcgp
 ```
  Then you can try the folowing command to run the code:
  ```bash
- python main.py --dataset Cora --cond_ratio o.5 --ridge 0.5 --k 4 --epochs 200 --learn_A 0
+ python main.py --dataset Cora --cond_ratio 0.5 --ridge 0.5 --k 4 --epochs 200 --learn_A 0
 ```
 
 
@@ -86,38 +82,36 @@ If you want to reproduce all the results, you can run the following commands:
 
 ```bash
 sh run.sh
-python results.py
 ```
 
 The `run.sh` script will execute the GCGP model on the five datasets using all the tuned parameters, and the results will be saved in the `./gcgp/outputs/` folder. The `results.py` script will then collect the final results, which will be stored in the `./gcgp/results.csv` file.
 
+
 For the generalization experiment, you can run the following commands:
 
 ```bash
-cd gcgp
 sh run_generalization.sh
-python results_generalization.py
 ```
 
 The output results will be saved in the `./gcgp/outputs_generalization/` folder. The `results_generalization.py` script will collect the final results, which will be saved in the `./gcgp/results_generalization.csv` file.
 
-For the time experiments, you can run the following command:
+
+For the time evaluation experiments, you can run the following command:
 
 ```bash
-cd gcgp 
 sh run_time.sh
 ```
 
-The output results will be saved in the `./gcgp/outputs_time/` folder. You can plot the training time curve by running the following code:
+The output results will be saved in the `./gcgp/outputs_time/` folder. 
 
-```bash
-cd gcgp/figures
-python time_acc1.py
-python time_acc2.py
-```
 
-### Large Datasets (`Ogbn-arxiv`)
+### Large Datasets (`Ogbn-arxiv` and `Reddit`)
 
+
+The codes for the `Ogbn-arxiv` and `Reddit` datasets are in the `gcgp_ogb` and `gcgp_reddit` folders, respectively.
+
+
+#### Ogbn-arxiv dataset
 For the `Ogbn-arxiv` dataset, you can run the following commands to reproduce the results:
 
 ```bash
@@ -126,19 +120,17 @@ sh run.sh
 python results.py
 ```
 
-`run.sh` will execute the GCGP model on the `Ogbn-arxiv` dataset using all the tuned parameters, and the results will be saved in the `./gcgp_ogb/outputs/` folder. The `results.py` script will then collect the final results, which will be stored in the `./gcgp_ogb/results.csv` file.
+`run.sh` will execute the GCGP model using all the tuned parameters, and the results will be saved in the `./gcgp_ogb/outputs/` folder. The `results.py` script will then collect the final results, which will be stored in the `./gcgp_ogb/results.csv` file.
 
-for the efficiency experimets on the `Ogbn-arxiv` dataset, you can run the following command:
+for the efficiency experimets, you can run the following command:
 
 ```bash
-cd gcgp_ogb
 sh run_time.sh
 ```
-
 the training time outputs will be saved in the `./gcgp_ogb/outputs_time/` folder.
 
-### Large Datasets (`Reddit`)
 
+#### Reddit dataset
 For the `Reddit` dataset, you can run the following commands to reproduce the results:
 
 ```bash
@@ -147,12 +139,11 @@ sh run.sh
 python results.py
 ```
 
-`run.sh` will execute the GCGP model on the `Reddit` dataset using all the tuned parameters, and the results will be saved in the `./gcgp_reddit/outputs/` folder. The `results.py` script will then collect the final results, which will be stored in the `./gcgp_reddit/results.csv` file.
+`run.sh` will execute the GCGP model using all the tuned parameters, and the results will be saved in the `./gcgp_reddit/outputs/` folder. The `results.py` script will then collect the final results, which will be stored in the `./gcgp_reddit/results.csv` file.
 
-For the efficiency experimets on the `Reddit` dataset, you can run the following command:
+For the efficiency experimets, you can run the following command:
 
 ```bash
-cd gcgp_reddit
 sh run_time.sh
 ```
 
