@@ -12,14 +12,16 @@ GCGP incorporates a **covariance function** that aggregates local neighborhoods 
 
 ## Methodology
 
-<figure style="text-align: center;">
+<div style="text-align: center;">
     <img src="./docs/GC.png" alt="Graph Condensation" style="width:50%; height:auto; display: inline-block;">
-    <figcaption style="font-style: italic; margin-top: 10px;">
-        Figure 1: Graph condensation aims to condense a large graph $G$ to a smaller but informative one $G^{\mathcal{S}}$, so that it will not impact the downstream task, such as the training of the GNN models.
-    </figcaption>
-</figure>
+</div>
 
+<div style="text-align: center;">
+    <span style="font-size:12px;">Figure 1: Graph condensation aims to condense a large graph $G$ to a smaller but informative one $G^{\mathcal{S}}$, so that it will not impact the downstream task, such as the training of the GNN models.
+    </span>
+</div>
 
+---
 Existing graph condensation methods use a bi-level optimization strategy, where the condensed graph trains the GNN in the inner loop and is updated in the outer loop via a matching loss. This approach is computationally expensive due to the need for repeated GNN training.
 
 To address this limitation, the proposed **Graph Condensation via Gaussian Process (GCGP)** method introduces a framework that integrates a **Gaussian Process (GP)** to enhance efficiency in graph condensation tasks. In this context, the condensed synthetic graph $G^{\mathcal{S}}$ represents the observations for the GP. By combining these observations with prior knowledge of the model, the GP derives the posterior distribution of the outputs, thereby circumventing the need for computationally intensive iterative training.
