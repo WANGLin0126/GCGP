@@ -26,21 +26,22 @@ To address this limitation, the proposed **Graph Condensation via Gaussian Proce
 
 <div style="text-align: center;">
     <figure>
-        <img src="./docs/GCGP.png" alt="GCGP" style="width:90%; height:auto;display: inline-block;">
-        <figcaption>
+        <img src="./docs/GCGP.png" alt="GCGP" style="width:90%; height:auto; display: inline-block;">
+        <figcaption style="font-style: italic; margin-top: 10px;">
             Figure 2: The workflow of the proposed GCGP framework involves three key steps. First, the condensed synthetic graph $G^{\mathcal{S}}$ is utilized as the observations for the GP. Next, predictions are generated for the test locations, corresponding to the original graph $G$. Finally, the condensed graph is iteratively optimized by minimizing the discrepancy between the GP's predictions and the ground-truth labels.
         </figcaption>
     </figure>
 </div>
 
-## Experimental Results
+
+<!-- ## Experimental Results
 
 
 If you don't want to run the code, We have uploaded the original results of our experiments to the corresponding folders,
 
 - Under `./gcgp/` folder, you can find the original output data for the `Cora`, `Citeseer`, `Pubmed`, `Photo`, and `Computers` datasets. The original outputs are stored in `./gcgp/outputs/`,  `./gcgp/outputs_time/` and `./gcgp/outputs_generalization/`. The node classification accuracy and generalization results are collected in the `./gcgp/results.csv` and `./gcgp/results_generalization.csv`, respectively.  
 - Under `./gcgp_ogb/` folder, you can find the original output data for the `ogbn-arxiv` dataset. The original outputs are stored in `./gcgp_ogb/outputs/` and `./gcgp_ogb/outputs_time/`. The node classification accuracy results are collected in the `./gcgp_ogb/results.csv` file.
-- Under `./gcgp_reddit/` folder, you can find the original output data for the `Reddit` dataset. The original outputs are stored in `./gcgp_reddit/outputs/` and `./gcgp_reddit/outputs_time/`. The node classification accuracy results are collected in the `./gcgp_reddit/results.csv` file.
+- Under `./gcgp_reddit/` folder, you can find the original output data for the `Reddit` dataset. The original outputs are stored in `./gcgp_reddit/outputs/` and `./gcgp_reddit/outputs_time/`. The node classification accuracy results are collected in the `./gcgp_reddit/results.csv` file. -->
 
 
 
@@ -64,12 +65,24 @@ conda env create -f environment.yml
 ```
 
 
+
+
 ### Small Datasets (`Cora`, `Citeseer`, `Pubmed`, `Photo`, `Computers`)
 
-For the datasets `Cora`, `Citeseer`, `Pubmed`, `Photo`, and `Computers`, you can run the following commands to reproduce all the results:
+If you want to run the code, you can follow the steps below:
 
 ```bash
 cd gcgp
+```
+ Then you can try the folowing command to run the code:
+ ```bash
+ python main.py --dataset Cora --cond_ratio o.5 --ridge 0.5 --k 4 --epochs 200 --learn_A 0
+```
+
+
+if you want to reproduce all the results, you can run the following commands:
+
+```bash
 sh run.sh
 python results.py
 ```

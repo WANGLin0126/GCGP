@@ -32,7 +32,7 @@ parser.add_argument('--set_seed', type=bool, default=True, help='setup the rando
 parser.add_argument('--save', type=int, default=0, help='save the results (default: False)')
 parser.add_argument('--seed', type=int, default=5, help='setup the random seed (default: 5)')
 parser.add_argument('--iter', type=int, default=5, help='iteration times of the experiments (default: 5)')
-parser.add_argument('--kernel', type=str, default='dot_product', help='kernel method in KRR [SGTK, SGNK] (default: SNTK, the condened set is 0.5*training set)')
+parser.add_argument('--kernel', type=str, default='SGNK', help='kernel method in KRR [SGTK, SGNK] (default: SGNK, the condened set is 0.5*training set)')
 args = parser.parse_args()
 
 # K = args.k
