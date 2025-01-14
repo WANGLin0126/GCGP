@@ -9,3 +9,44 @@ This paper proposes **Graph Condensation via Gaussian Process (GCGP)**, a comput
 GCGP incorporates a **covariance function** that aggregates local neighborhoods to capture complex node dependencies. Additionally, **Concrete random variables** approximate binary adjacency matrices in a continuous, differentiable form, enabling gradient-based optimization of discrete graph structures.
 
 
+## Methodology
+
+<div style="text-align: center;">
+<img src="./docs/GC.png" alt="Graph Condensation" style="width:50%; height:auto;">
+<figcaption>Figure 1: Graoh condensation aims to condense a large graph $G$ to a smaller but informative one $G^{\mathcal{S}}$, so that which will not impact the downstream task, such as the training of the GNN models.</figcaption>
+</div>
+
+\
+Existing graph condensation methods use a bi-level optimization strategy, where the condensed graph trains the GNN in the inner loop and is updated in the outer loop via a matching loss. This approach is computationally expensive due to the need for repeated GNN training.
+
+To address this limitation, the proposed **Graph Condensation via Gaussian Process (GCGP)** method introduces a framework that integrates a **Gaussian Process (GP)** to enhance efficiency in graph condensation tasks. In this context, the condensed synthetic graph $G^{\mathcal{S}}$ represents the observations for the GP. By combining these observations with prior knowledge of the model, the GP derives the posterior distribution of the outputs, thereby circumventing the need for computationally intensive iterative training.
+
+<div style="text-align: center;">
+<img src="./docs/GCGP.png" alt="Graph Condensation" style="width:890%; height:auto;">
+<figcaption>Figure 2: The workflow of the proposed GCGP framework involves three key steps. First, the condensed synthetic graph $G^{\mathcal{S}}$ is utilized as the observations for the GP. Next, predictions are generated for the test locations, corresponding to the original graph $G$. Finally, the condensed graph is iteratively optimized by minimizing the discrepancy between the GP's predictions and the ground-truth labels.</figcaption>
+</div>
+
+
+
+## Implementation
+
+### Requeirements
+python=3.8.20 \
+ogb=1.3.6 \
+pytorch=1.12.1\
+pyg=2.5.2\
+numpy=1.24.3
+
+> **Note**: It is recommended to install the $\texttt{ogb}$ package first to avoid potential misrecognition of CUDA devices.
+
+
+
+You can also use the following command to install the environment:
+
+```bash
+conda env create -f environment.yml
+```
+For the datasets $\texttt{Cora}$, $\texttt{Citeseer}$, $\texttt{Pubmed}$, $\texttt{Photo}$ and $\texttt{Computers}$, you can run the following command to reproduce the results:
+
+```bash
+cd gcgp

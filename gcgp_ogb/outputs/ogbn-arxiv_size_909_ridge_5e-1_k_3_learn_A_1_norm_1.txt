@@ -1,0 +1,823 @@
+Using cuda:0 device
+Dataset       :ogbn-arxiv
+Conden size   :909
+Kernel        :SGNK
+Ridge         :0.5
+Epochs        :200
+Learn A       :1
+Norm          :1
+Aggr (K)      :3
+L             :1
+LR X          :0.005
+LR A          :0.005
+Batches       :91
+Batch Size    :1000
+The  1-th iteration
+--------------------------------------------------
+Size 909 Iter 1 - 1 Test Avg Acc: 20.6839%, Test Avg loss: 0.004874 Time: 7.6858s
+Size 909 Iter 1 - 2 Test Avg Acc: 20.8279%, Test Avg loss: 0.004872 Time: 3.7482s
+Size 909 Iter 1 - 3 Test Avg Acc: 20.8341%, Test Avg loss: 0.004867 Time: 4.1754s
+Size 909 Iter 1 - 4 Test Avg Acc: 20.8218%, Test Avg loss: 0.004864 Time: 4.1557s
+Size 909 Iter 1 - 5 Test Avg Acc: 20.7559%, Test Avg loss: 0.004862 Time: 3.7385s
+Size 909 Iter 1 - 6 Test Avg Acc: 21.7929%, Test Avg loss: 0.004861 Time: 4.2530s
+Size 909 Iter 1 - 7 Test Avg Acc: 22.2867%, Test Avg loss: 0.004861 Time: 4.6620s
+Size 909 Iter 1 - 8 Test Avg Acc: 22.2209%, Test Avg loss: 0.004859 Time: 4.4442s
+Size 909 Iter 1 - 9 Test Avg Acc: 22.1694%, Test Avg loss: 0.004859 Time: 4.4020s
+Size 909 Iter 1 - 10 Test Avg Acc: 22.2538%, Test Avg loss: 0.004858 Time: 3.8694s
+Size 909 Iter 1 - 11 Test Avg Acc: 22.3237%, Test Avg loss: 0.004857 Time: 4.3218s
+Size 909 Iter 1 - 12 Test Avg Acc: 22.6015%, Test Avg loss: 0.004856 Time: 4.2713s
+Size 909 Iter 1 - 13 Test Avg Acc: 22.4389%, Test Avg loss: 0.004856 Time: 3.7736s
+Size 909 Iter 1 - 14 Test Avg Acc: 22.8072%, Test Avg loss: 0.004854 Time: 4.1232s
+Size 909 Iter 1 - 15 Test Avg Acc: 22.5048%, Test Avg loss: 0.004853 Time: 4.0886s
+Size 909 Iter 1 - 16 Test Avg Acc: 22.5192%, Test Avg loss: 0.004853 Time: 4.2554s
+Size 909 Iter 1 - 17 Test Avg Acc: 22.5500%, Test Avg loss: 0.004852 Time: 3.8931s
+Size 909 Iter 1 - 18 Test Avg Acc: 22.7908%, Test Avg loss: 0.004851 Time: 4.1891s
+Size 909 Iter 1 - 19 Test Avg Acc: 22.6159%, Test Avg loss: 0.004850 Time: 3.7582s
+Size 909 Iter 1 - 20 Test Avg Acc: 22.8792%, Test Avg loss: 0.004850 Time: 3.8695s
+Size 909 Iter 1 - 21 Test Avg Acc: 22.6632%, Test Avg loss: 0.004848 Time: 4.3033s
+Size 909 Iter 1 - 22 Test Avg Acc: 22.7229%, Test Avg loss: 0.004847 Time: 4.2766s
+Size 909 Iter 1 - 23 Test Avg Acc: 22.7435%, Test Avg loss: 0.004846 Time: 3.7860s
+Size 909 Iter 1 - 24 Test Avg Acc: 22.8031%, Test Avg loss: 0.004846 Time: 4.7013s
+Size 909 Iter 1 - 25 Test Avg Acc: 23.2414%, Test Avg loss: 0.004844 Time: 4.4490s
+Size 909 Iter 1 - 26 Test Avg Acc: 23.3175%, Test Avg loss: 0.004843 Time: 4.4451s
+Size 909 Iter 1 - 27 Test Avg Acc: 23.4101%, Test Avg loss: 0.004840 Time: 4.4318s
+Size 909 Iter 1 - 28 Test Avg Acc: 23.9615%, Test Avg loss: 0.004839 Time: 4.1664s
+Size 909 Iter 1 - 29 Test Avg Acc: 26.2967%, Test Avg loss: 0.004836 Time: 4.5416s
+Size 909 Iter 1 - 30 Test Avg Acc: 28.7390%, Test Avg loss: 0.004833 Time: 4.2372s
+Size 909 Iter 1 - 31 Test Avg Acc: 31.9157%, Test Avg loss: 0.004825 Time: 4.5433s
+Size 909 Iter 1 - 32 Test Avg Acc: 33.7160%, Test Avg loss: 0.004803 Time: 4.2169s
+Size 909 Iter 1 - 33 Test Avg Acc: 34.3497%, Test Avg loss: 0.004722 Time: 4.0889s
+Size 909 Iter 1 - 34 Test Avg Acc: 35.4834%, Test Avg loss: 0.004612 Time: 4.3532s
+Size 909 Iter 1 - 35 Test Avg Acc: 28.4715%, Test Avg loss: 0.004508 Time: 4.6948s
+Size 909 Iter 1 - 36 Test Avg Acc: 20.0461%, Test Avg loss: 0.004453 Time: 5.0428s
+Size 909 Iter 1 - 37 Test Avg Acc: 19.6675%, Test Avg loss: 0.004466 Time: 4.7418s
+Size 909 Iter 1 - 38 Test Avg Acc: 19.2210%, Test Avg loss: 0.004473 Time: 4.5219s
+Size 909 Iter 1 - 39 Test Avg Acc: 18.9968%, Test Avg loss: 0.004482 Time: 4.9840s
+Size 909 Iter 1 - 40 Test Avg Acc: 18.5462%, Test Avg loss: 0.004502 Time: 5.0388s
+Size 909 Iter 1 - 41 Test Avg Acc: 15.0567%, Test Avg loss: 0.004516 Time: 4.3420s
+Size 909 Iter 1 - 42 Test Avg Acc: 14.8160%, Test Avg loss: 0.004505 Time: 4.1400s
+Size 909 Iter 1 - 43 Test Avg Acc: 14.4847%, Test Avg loss: 0.004507 Time: 4.7441s
+Size 909 Iter 1 - 44 Test Avg Acc: 14.1000%, Test Avg loss: 0.004480 Time: 3.9541s
+Size 909 Iter 1 - 45 Test Avg Acc: 14.2172%, Test Avg loss: 0.004475 Time: 3.8695s
+Size 909 Iter 1 - 46 Test Avg Acc: 13.8798%, Test Avg loss: 0.004470 Time: 4.2852s
+Size 909 Iter 1 - 47 Test Avg Acc: 13.8942%, Test Avg loss: 0.004454 Time: 3.9308s
+Size 909 Iter 1 - 48 Test Avg Acc: 13.3922%, Test Avg loss: 0.004466 Time: 3.9486s
+Size 909 Iter 1 - 49 Test Avg Acc: 13.4765%, Test Avg loss: 0.004436 Time: 3.8260s
+Size 909 Iter 1 - 50 Test Avg Acc: 13.4477%, Test Avg loss: 0.004448 Time: 3.6767s
+Size 909 Iter 1 - 51 Test Avg Acc: 13.3572%, Test Avg loss: 0.004445 Time: 3.4100s
+Size 909 Iter 1 - 52 Test Avg Acc: 13.3449%, Test Avg loss: 0.004444 Time: 3.6076s
+Size 909 Iter 1 - 53 Test Avg Acc: 13.3819%, Test Avg loss: 0.004437 Time: 3.9261s
+Size 909 Iter 1 - 54 Test Avg Acc: 13.3407%, Test Avg loss: 0.004402 Time: 4.6365s
+Size 909 Iter 1 - 55 Test Avg Acc: 13.3119%, Test Avg loss: 0.004409 Time: 3.8830s
+Size 909 Iter 1 - 56 Test Avg Acc: 13.4148%, Test Avg loss: 0.004413 Time: 4.1292s
+Size 909 Iter 1 - 57 Test Avg Acc: 13.4457%, Test Avg loss: 0.004408 Time: 3.9534s
+Size 909 Iter 1 - 58 Test Avg Acc: 13.2564%, Test Avg loss: 0.004405 Time: 4.4139s
+Size 909 Iter 1 - 59 Test Avg Acc: 13.3222%, Test Avg loss: 0.004398 Time: 3.6678s
+Size 909 Iter 1 - 60 Test Avg Acc: 13.4806%, Test Avg loss: 0.004397 Time: 3.7672s
+Size 909 Iter 1 - 61 Test Avg Acc: 13.3099%, Test Avg loss: 0.004404 Time: 4.0856s
+Size 909 Iter 1 - 62 Test Avg Acc: 13.4251%, Test Avg loss: 0.004380 Time: 4.2168s
+Size 909 Iter 1 - 63 Test Avg Acc: 13.2934%, Test Avg loss: 0.004383 Time: 4.1307s
+Size 909 Iter 1 - 64 Test Avg Acc: 13.3716%, Test Avg loss: 0.004393 Time: 3.7376s
+Size 909 Iter 1 - 65 Test Avg Acc: 13.5321%, Test Avg loss: 0.004365 Time: 4.5283s
+Size 909 Iter 1 - 66 Test Avg Acc: 13.3222%, Test Avg loss: 0.004386 Time: 4.6126s
+Size 909 Iter 1 - 67 Test Avg Acc: 13.5815%, Test Avg loss: 0.004371 Time: 4.4389s
+Size 909 Iter 1 - 68 Test Avg Acc: 13.7337%, Test Avg loss: 0.004355 Time: 4.7309s
+Size 909 Iter 1 - 69 Test Avg Acc: 13.6164%, Test Avg loss: 0.004367 Time: 4.5467s
+Size 909 Iter 1 - 70 Test Avg Acc: 13.4395%, Test Avg loss: 0.004364 Time: 4.2155s
+Size 909 Iter 1 - 71 Test Avg Acc: 14.1514%, Test Avg loss: 0.004358 Time: 3.8078s
+Size 909 Iter 1 - 72 Test Avg Acc: 13.4992%, Test Avg loss: 0.004355 Time: 4.2432s
+Size 909 Iter 1 - 73 Test Avg Acc: 13.9189%, Test Avg loss: 0.004353 Time: 4.2416s
+Size 909 Iter 1 - 74 Test Avg Acc: 14.0835%, Test Avg loss: 0.004349 Time: 4.6121s
+Size 909 Iter 1 - 75 Test Avg Acc: 14.0629%, Test Avg loss: 0.004332 Time: 4.0399s
+Size 909 Iter 1 - 76 Test Avg Acc: 13.7152%, Test Avg loss: 0.004345 Time: 4.1624s
+Size 909 Iter 1 - 77 Test Avg Acc: 14.6349%, Test Avg loss: 0.004331 Time: 3.8941s
+Size 909 Iter 1 - 78 Test Avg Acc: 14.0711%, Test Avg loss: 0.004351 Time: 3.7414s
+Size 909 Iter 1 - 79 Test Avg Acc: 14.0156%, Test Avg loss: 0.004350 Time: 3.8127s
+Size 909 Iter 1 - 80 Test Avg Acc: 14.2954%, Test Avg loss: 0.004346 Time: 4.1640s
+Size 909 Iter 1 - 81 Test Avg Acc: 14.8756%, Test Avg loss: 0.004349 Time: 4.4630s
+Size 909 Iter 1 - 82 Test Avg Acc: 14.4168%, Test Avg loss: 0.004330 Time: 4.5228s
+Size 909 Iter 1 - 83 Test Avg Acc: 14.8941%, Test Avg loss: 0.004321 Time: 4.3599s
+Size 909 Iter 1 - 84 Test Avg Acc: 14.5073%, Test Avg loss: 0.004333 Time: 4.0489s
+Size 909 Iter 1 - 85 Test Avg Acc: 14.6802%, Test Avg loss: 0.004322 Time: 3.5566s
+Size 909 Iter 1 - 86 Test Avg Acc: 15.4826%, Test Avg loss: 0.004330 Time: 3.9025s
+Size 909 Iter 1 - 87 Test Avg Acc: 15.7562%, Test Avg loss: 0.004314 Time: 4.2320s
+Size 909 Iter 1 - 88 Test Avg Acc: 14.4641%, Test Avg loss: 0.004335 Time: 3.8178s
+Size 909 Iter 1 - 89 Test Avg Acc: 17.1903%, Test Avg loss: 0.004326 Time: 4.5121s
+Size 909 Iter 1 - 90 Test Avg Acc: 16.4619%, Test Avg loss: 0.004322 Time: 4.2032s
+Size 909 Iter 1 - 91 Test Avg Acc: 15.4990%, Test Avg loss: 0.004323 Time: 4.4646s
+Size 909 Iter 1 - 92 Test Avg Acc: 16.2233%, Test Avg loss: 0.004326 Time: 4.1264s
+Size 909 Iter 1 - 93 Test Avg Acc: 16.2397%, Test Avg loss: 0.004328 Time: 4.8651s
+Size 909 Iter 1 - 94 Test Avg Acc: 16.2953%, Test Avg loss: 0.004319 Time: 4.1908s
+Size 909 Iter 1 - 95 Test Avg Acc: 16.9146%, Test Avg loss: 0.004291 Time: 3.9559s
+Size 909 Iter 1 - 96 Test Avg Acc: 17.3158%, Test Avg loss: 0.004290 Time: 4.2943s
+Size 909 Iter 1 - 97 Test Avg Acc: 16.7994%, Test Avg loss: 0.004296 Time: 4.4649s
+Size 909 Iter 1 - 98 Test Avg Acc: 17.8302%, Test Avg loss: 0.004285 Time: 4.4422s
+Size 909 Iter 1 - 99 Test Avg Acc: 17.5750%, Test Avg loss: 0.004277 Time: 4.6117s
+Size 909 Iter 1 - 100 Test Avg Acc: 18.9186%, Test Avg loss: 0.004277 Time: 4.9242s
+Size 909 Iter 1 - 101 Test Avg Acc: 19.7971%, Test Avg loss: 0.004264 Time: 4.4939s
+Size 909 Iter 1 - 102 Test Avg Acc: 19.8918%, Test Avg loss: 0.004258 Time: 4.5275s
+Size 909 Iter 1 - 103 Test Avg Acc: 20.2210%, Test Avg loss: 0.004247 Time: 4.0385s
+Size 909 Iter 1 - 104 Test Avg Acc: 22.8566%, Test Avg loss: 0.004213 Time: 4.3907s
+Size 909 Iter 1 - 105 Test Avg Acc: 23.1755%, Test Avg loss: 0.004201 Time: 3.9701s
+Size 909 Iter 1 - 106 Test Avg Acc: 26.6918%, Test Avg loss: 0.004154 Time: 4.1043s
+Size 909 Iter 1 - 107 Test Avg Acc: 32.7860%, Test Avg loss: 0.004071 Time: 4.1706s
+Size 909 Iter 1 - 108 Test Avg Acc: 34.5946%, Test Avg loss: 0.004019 Time: 4.6579s
+Size 909 Iter 1 - 109 Test Avg Acc: 36.8187%, Test Avg loss: 0.004007 Time: 4.7222s
+Size 909 Iter 1 - 110 Test Avg Acc: 38.6396%, Test Avg loss: 0.003973 Time: 4.3669s
+Size 909 Iter 1 - 111 Test Avg Acc: 38.0100%, Test Avg loss: 0.003941 Time: 4.4216s
+Size 909 Iter 1 - 112 Test Avg Acc: 38.4256%, Test Avg loss: 0.003930 Time: 4.0391s
+Size 909 Iter 1 - 113 Test Avg Acc: 38.7528%, Test Avg loss: 0.003905 Time: 4.3199s
+Size 909 Iter 1 - 114 Test Avg Acc: 38.3803%, Test Avg loss: 0.003886 Time: 4.0493s
+Size 909 Iter 1 - 115 Test Avg Acc: 40.9337%, Test Avg loss: 0.003859 Time: 4.4624s
+Size 909 Iter 1 - 116 Test Avg Acc: 40.4049%, Test Avg loss: 0.003852 Time: 3.8598s
+Size 909 Iter 1 - 117 Test Avg Acc: 39.8494%, Test Avg loss: 0.003841 Time: 4.0868s
+Size 909 Iter 1 - 118 Test Avg Acc: 40.8205%, Test Avg loss: 0.003858 Time: 3.9306s
+Size 909 Iter 1 - 119 Test Avg Acc: 40.1992%, Test Avg loss: 0.003847 Time: 3.8520s
+Size 909 Iter 1 - 120 Test Avg Acc: 42.0530%, Test Avg loss: 0.003821 Time: 4.1287s
+Size 909 Iter 1 - 121 Test Avg Acc: 41.4851%, Test Avg loss: 0.003812 Time: 4.2330s
+Size 909 Iter 1 - 122 Test Avg Acc: 40.0942%, Test Avg loss: 0.003802 Time: 4.1731s
+Size 909 Iter 1 - 123 Test Avg Acc: 40.0016%, Test Avg loss: 0.003817 Time: 4.7499s
+Size 909 Iter 1 - 124 Test Avg Acc: 40.4584%, Test Avg loss: 0.003804 Time: 4.4283s
+Size 909 Iter 1 - 125 Test Avg Acc: 40.8617%, Test Avg loss: 0.003813 Time: 4.2513s
+Size 909 Iter 1 - 126 Test Avg Acc: 42.1949%, Test Avg loss: 0.003791 Time: 4.4406s
+Size 909 Iter 1 - 127 Test Avg Acc: 42.0406%, Test Avg loss: 0.003799 Time: 3.9417s
+Size 909 Iter 1 - 128 Test Avg Acc: 40.7897%, Test Avg loss: 0.003805 Time: 3.8900s
+Size 909 Iter 1 - 129 Test Avg Acc: 40.6559%, Test Avg loss: 0.003797 Time: 4.1811s
+Size 909 Iter 1 - 130 Test Avg Acc: 42.4171%, Test Avg loss: 0.003795 Time: 4.1132s
+Size 909 Iter 1 - 131 Test Avg Acc: 41.8863%, Test Avg loss: 0.003781 Time: 4.2265s
+Size 909 Iter 1 - 132 Test Avg Acc: 41.5304%, Test Avg loss: 0.003794 Time: 4.0969s
+Size 909 Iter 1 - 133 Test Avg Acc: 41.7443%, Test Avg loss: 0.003787 Time: 4.3086s
+Size 909 Iter 1 - 134 Test Avg Acc: 42.8739%, Test Avg loss: 0.003803 Time: 3.7221s
+Size 909 Iter 1 - 135 Test Avg Acc: 42.2567%, Test Avg loss: 0.003788 Time: 3.6768s
+Size 909 Iter 1 - 136 Test Avg Acc: 43.2175%, Test Avg loss: 0.003749 Time: 4.1279s
+Size 909 Iter 1 - 137 Test Avg Acc: 43.6413%, Test Avg loss: 0.003773 Time: 3.7836s
+Size 909 Iter 1 - 138 Test Avg Acc: 43.8533%, Test Avg loss: 0.003766 Time: 4.4200s
+Size 909 Iter 1 - 139 Test Avg Acc: 44.7297%, Test Avg loss: 0.003736 Time: 4.3796s
+Size 909 Iter 1 - 140 Test Avg Acc: 45.1639%, Test Avg loss: 0.003727 Time: 3.9469s
+Size 909 Iter 1 - 141 Test Avg Acc: 46.0671%, Test Avg loss: 0.003731 Time: 3.8221s
+Size 909 Iter 1 - 142 Test Avg Acc: 46.0733%, Test Avg loss: 0.003707 Time: 3.4040s
+Size 909 Iter 1 - 143 Test Avg Acc: 44.8553%, Test Avg loss: 0.003723 Time: 3.4207s
+Size 909 Iter 1 - 144 Test Avg Acc: 46.1041%, Test Avg loss: 0.003731 Time: 3.4193s
+Size 909 Iter 1 - 145 Test Avg Acc: 46.6309%, Test Avg loss: 0.003689 Time: 3.5537s
+Size 909 Iter 1 - 146 Test Avg Acc: 47.2605%, Test Avg loss: 0.003672 Time: 3.6428s
+Size 909 Iter 1 - 147 Test Avg Acc: 47.3325%, Test Avg loss: 0.003657 Time: 3.7768s
+Size 909 Iter 1 - 148 Test Avg Acc: 48.9929%, Test Avg loss: 0.003634 Time: 3.9323s
+Size 909 Iter 1 - 149 Test Avg Acc: 49.1101%, Test Avg loss: 0.003640 Time: 3.9391s
+Size 909 Iter 1 - 150 Test Avg Acc: 49.8138%, Test Avg loss: 0.003621 Time: 3.8503s
+Size 909 Iter 1 - 151 Test Avg Acc: 50.2952%, Test Avg loss: 0.003612 Time: 3.7041s
+Size 909 Iter 1 - 152 Test Avg Acc: 50.9619%, Test Avg loss: 0.003585 Time: 3.8644s
+Size 909 Iter 1 - 153 Test Avg Acc: 50.4804%, Test Avg loss: 0.003610 Time: 3.6855s
+Size 909 Iter 1 - 154 Test Avg Acc: 50.4269%, Test Avg loss: 0.003627 Time: 3.5891s
+Size 909 Iter 1 - 155 Test Avg Acc: 50.7067%, Test Avg loss: 0.003618 Time: 3.5512s
+Size 909 Iter 1 - 156 Test Avg Acc: 50.7932%, Test Avg loss: 0.003591 Time: 3.7580s
+Size 909 Iter 1 - 157 Test Avg Acc: 51.0215%, Test Avg loss: 0.003597 Time: 3.9576s
+Size 909 Iter 1 - 158 Test Avg Acc: 51.0565%, Test Avg loss: 0.003560 Time: 3.8966s
+Size 909 Iter 1 - 159 Test Avg Acc: 51.4783%, Test Avg loss: 0.003566 Time: 4.2965s
+Size 909 Iter 1 - 160 Test Avg Acc: 51.9700%, Test Avg loss: 0.003578 Time: 3.9508s
+Size 909 Iter 1 - 161 Test Avg Acc: 52.0318%, Test Avg loss: 0.003573 Time: 4.7930s
+Size 909 Iter 1 - 162 Test Avg Acc: 52.3918%, Test Avg loss: 0.003558 Time: 4.5878s
+Size 909 Iter 1 - 163 Test Avg Acc: 52.0811%, Test Avg loss: 0.003561 Time: 4.0405s
+Size 909 Iter 1 - 164 Test Avg Acc: 52.5317%, Test Avg loss: 0.003536 Time: 4.3433s
+Size 909 Iter 1 - 165 Test Avg Acc: 52.4762%, Test Avg loss: 0.003531 Time: 3.9373s
+Size 909 Iter 1 - 166 Test Avg Acc: 52.7087%, Test Avg loss: 0.003540 Time: 4.2249s
+Size 909 Iter 1 - 167 Test Avg Acc: 52.8548%, Test Avg loss: 0.003557 Time: 4.3646s
+Size 909 Iter 1 - 168 Test Avg Acc: 52.7066%, Test Avg loss: 0.003529 Time: 5.1712s
+Size 909 Iter 1 - 169 Test Avg Acc: 53.0338%, Test Avg loss: 0.003546 Time: 4.2123s
+Size 909 Iter 1 - 170 Test Avg Acc: 53.4597%, Test Avg loss: 0.003511 Time: 4.2646s
+Size 909 Iter 1 - 171 Test Avg Acc: 53.0317%, Test Avg loss: 0.003512 Time: 4.2707s
+Size 909 Iter 1 - 172 Test Avg Acc: 53.6160%, Test Avg loss: 0.003508 Time: 3.5593s
+Size 909 Iter 1 - 173 Test Avg Acc: 53.6983%, Test Avg loss: 0.003498 Time: 4.3039s
+Size 909 Iter 1 - 174 Test Avg Acc: 53.9411%, Test Avg loss: 0.003510 Time: 3.9710s
+Size 909 Iter 1 - 175 Test Avg Acc: 53.7457%, Test Avg loss: 0.003479 Time: 3.7494s
+Size 909 Iter 1 - 176 Test Avg Acc: 53.8177%, Test Avg loss: 0.003450 Time: 3.7988s
+Size 909 Iter 1 - 177 Test Avg Acc: 54.2909%, Test Avg loss: 0.003453 Time: 3.8878s
+Size 909 Iter 1 - 178 Test Avg Acc: 54.0070%, Test Avg loss: 0.003476 Time: 3.6600s
+Size 909 Iter 1 - 179 Test Avg Acc: 54.1016%, Test Avg loss: 0.003484 Time: 3.9332s
+Size 909 Iter 1 - 180 Test Avg Acc: 54.3588%, Test Avg loss: 0.003456 Time: 3.9781s
+Size 909 Iter 1 - 181 Test Avg Acc: 54.2806%, Test Avg loss: 0.003474 Time: 3.9419s
+Size 909 Iter 1 - 182 Test Avg Acc: 54.5625%, Test Avg loss: 0.003459 Time: 4.0040s
+Size 909 Iter 1 - 183 Test Avg Acc: 54.2374%, Test Avg loss: 0.003462 Time: 3.8639s
+Size 909 Iter 1 - 184 Test Avg Acc: 54.6509%, Test Avg loss: 0.003436 Time: 3.7602s
+Size 909 Iter 1 - 185 Test Avg Acc: 54.4493%, Test Avg loss: 0.003439 Time: 3.6704s
+Size 909 Iter 1 - 186 Test Avg Acc: 54.6489%, Test Avg loss: 0.003422 Time: 3.9519s
+Size 909 Iter 1 - 187 Test Avg Acc: 54.7929%, Test Avg loss: 0.003439 Time: 3.7675s
+Size 909 Iter 1 - 188 Test Avg Acc: 55.0542%, Test Avg loss: 0.003425 Time: 3.9401s
+Size 909 Iter 1 - 189 Test Avg Acc: 55.3793%, Test Avg loss: 0.003416 Time: 4.2847s
+Size 909 Iter 1 - 190 Test Avg Acc: 54.9637%, Test Avg loss: 0.003401 Time: 3.8255s
+Size 909 Iter 1 - 191 Test Avg Acc: 54.8978%, Test Avg loss: 0.003449 Time: 3.8973s
+Size 909 Iter 1 - 192 Test Avg Acc: 54.9081%, Test Avg loss: 0.003420 Time: 3.8835s
+Size 909 Iter 1 - 193 Test Avg Acc: 55.4678%, Test Avg loss: 0.003439 Time: 3.8313s
+Size 909 Iter 1 - 194 Test Avg Acc: 55.2188%, Test Avg loss: 0.003416 Time: 4.0072s
+Size 909 Iter 1 - 195 Test Avg Acc: 55.4863%, Test Avg loss: 0.003422 Time: 4.5867s
+Size 909 Iter 1 - 196 Test Avg Acc: 55.9780%, Test Avg loss: 0.003399 Time: 4.6950s
+Size 909 Iter 1 - 197 Test Avg Acc: 55.9719%, Test Avg loss: 0.003442 Time: 4.0569s
+Size 909 Iter 1 - 198 Test Avg Acc: 55.6776%, Test Avg loss: 0.003432 Time: 4.1360s
+Size 909 Iter 1 - 199 Test Avg Acc: 55.7414%, Test Avg loss: 0.003418 Time: 3.9200s
+Size 909 Iter 1 - 200 Test Avg Acc: 55.7373%, Test Avg loss: 0.003374 Time: 4.5572s
+The  2-th iteration
+--------------------------------------------------
+Size 909 Iter 2 - 1 Test Avg Acc: 5.6581%, Test Avg loss: 0.004874 Time: 4.6318s
+Size 909 Iter 2 - 2 Test Avg Acc: 13.6658%, Test Avg loss: 0.004872 Time: 4.5254s
+Size 909 Iter 2 - 3 Test Avg Acc: 12.5116%, Test Avg loss: 0.004869 Time: 4.4428s
+Size 909 Iter 2 - 4 Test Avg Acc: 6.0223%, Test Avg loss: 0.004866 Time: 4.4855s
+Size 909 Iter 2 - 5 Test Avg Acc: 6.1148%, Test Avg loss: 0.004863 Time: 4.2237s
+Size 909 Iter 2 - 6 Test Avg Acc: 6.4975%, Test Avg loss: 0.004863 Time: 4.1030s
+Size 909 Iter 2 - 7 Test Avg Acc: 6.7876%, Test Avg loss: 0.004864 Time: 4.0358s
+Size 909 Iter 2 - 8 Test Avg Acc: 7.2156%, Test Avg loss: 0.004865 Time: 3.9962s
+Size 909 Iter 2 - 9 Test Avg Acc: 12.5321%, Test Avg loss: 0.004865 Time: 4.3567s
+Size 909 Iter 2 - 10 Test Avg Acc: 13.1494%, Test Avg loss: 0.004866 Time: 4.2938s
+Size 909 Iter 2 - 11 Test Avg Acc: 9.2093%, Test Avg loss: 0.004866 Time: 4.0634s
+Size 909 Iter 2 - 12 Test Avg Acc: 8.1785%, Test Avg loss: 0.004865 Time: 4.2803s
+Size 909 Iter 2 - 13 Test Avg Acc: 9.1702%, Test Avg loss: 0.004864 Time: 4.0018s
+Size 909 Iter 2 - 14 Test Avg Acc: 8.7361%, Test Avg loss: 0.004864 Time: 3.6240s
+Size 909 Iter 2 - 15 Test Avg Acc: 8.8822%, Test Avg loss: 0.004864 Time: 3.9946s
+Size 909 Iter 2 - 16 Test Avg Acc: 8.6476%, Test Avg loss: 0.004863 Time: 4.3206s
+Size 909 Iter 2 - 17 Test Avg Acc: 8.6168%, Test Avg loss: 0.004863 Time: 4.1029s
+Size 909 Iter 2 - 18 Test Avg Acc: 8.6291%, Test Avg loss: 0.004863 Time: 3.7449s
+Size 909 Iter 2 - 19 Test Avg Acc: 8.5201%, Test Avg loss: 0.004862 Time: 4.1855s
+Size 909 Iter 2 - 20 Test Avg Acc: 8.5900%, Test Avg loss: 0.004863 Time: 4.2584s
+Size 909 Iter 2 - 21 Test Avg Acc: 8.6250%, Test Avg loss: 0.004863 Time: 3.8792s
+Size 909 Iter 2 - 22 Test Avg Acc: 8.6270%, Test Avg loss: 0.004861 Time: 4.6073s
+Size 909 Iter 2 - 23 Test Avg Acc: 8.7155%, Test Avg loss: 0.004861 Time: 4.3031s
+Size 909 Iter 2 - 24 Test Avg Acc: 8.8534%, Test Avg loss: 0.004861 Time: 4.2917s
+Size 909 Iter 2 - 25 Test Avg Acc: 8.9974%, Test Avg loss: 0.004861 Time: 4.0892s
+Size 909 Iter 2 - 26 Test Avg Acc: 9.2463%, Test Avg loss: 0.004860 Time: 4.6200s
+Size 909 Iter 2 - 27 Test Avg Acc: 9.3883%, Test Avg loss: 0.004860 Time: 4.5365s
+Size 909 Iter 2 - 28 Test Avg Acc: 9.5364%, Test Avg loss: 0.004858 Time: 4.5086s
+Size 909 Iter 2 - 29 Test Avg Acc: 10.4788%, Test Avg loss: 0.004859 Time: 4.3443s
+Size 909 Iter 2 - 30 Test Avg Acc: 11.3367%, Test Avg loss: 0.004857 Time: 4.2261s
+Size 909 Iter 2 - 31 Test Avg Acc: 12.7934%, Test Avg loss: 0.004857 Time: 4.3358s
+Size 909 Iter 2 - 32 Test Avg Acc: 16.4990%, Test Avg loss: 0.004857 Time: 4.3083s
+Size 909 Iter 2 - 33 Test Avg Acc: 18.2808%, Test Avg loss: 0.004855 Time: 4.6392s
+Size 909 Iter 2 - 34 Test Avg Acc: 25.1363%, Test Avg loss: 0.004855 Time: 4.2442s
+Size 909 Iter 2 - 35 Test Avg Acc: 27.4222%, Test Avg loss: 0.004853 Time: 3.8730s
+Size 909 Iter 2 - 36 Test Avg Acc: 28.6526%, Test Avg loss: 0.004849 Time: 3.9002s
+Size 909 Iter 2 - 37 Test Avg Acc: 30.6874%, Test Avg loss: 0.004843 Time: 4.1061s
+Size 909 Iter 2 - 38 Test Avg Acc: 31.7347%, Test Avg loss: 0.004827 Time: 4.2223s
+Size 909 Iter 2 - 39 Test Avg Acc: 30.3376%, Test Avg loss: 0.004755 Time: 4.3563s
+Size 909 Iter 2 - 40 Test Avg Acc: 29.6504%, Test Avg loss: 0.004630 Time: 4.8386s
+Size 909 Iter 2 - 41 Test Avg Acc: 33.7428%, Test Avg loss: 0.004496 Time: 4.6648s
+Size 909 Iter 2 - 42 Test Avg Acc: 33.0000%, Test Avg loss: 0.004404 Time: 4.4629s
+Size 909 Iter 2 - 43 Test Avg Acc: 35.3558%, Test Avg loss: 0.004364 Time: 4.2169s
+Size 909 Iter 2 - 44 Test Avg Acc: 32.8560%, Test Avg loss: 0.004363 Time: 4.3749s
+Size 909 Iter 2 - 45 Test Avg Acc: 31.9486%, Test Avg loss: 0.004389 Time: 4.6247s
+Size 909 Iter 2 - 46 Test Avg Acc: 30.3129%, Test Avg loss: 0.004373 Time: 4.2569s
+Size 909 Iter 2 - 47 Test Avg Acc: 29.1463%, Test Avg loss: 0.004370 Time: 4.2986s
+Size 909 Iter 2 - 48 Test Avg Acc: 29.0023%, Test Avg loss: 0.004365 Time: 4.0272s
+Size 909 Iter 2 - 49 Test Avg Acc: 27.9715%, Test Avg loss: 0.004366 Time: 4.0982s
+Size 909 Iter 2 - 50 Test Avg Acc: 27.7123%, Test Avg loss: 0.004354 Time: 4.2204s
+Size 909 Iter 2 - 51 Test Avg Acc: 28.3172%, Test Avg loss: 0.004336 Time: 4.9300s
+Size 909 Iter 2 - 52 Test Avg Acc: 22.5233%, Test Avg loss: 0.004344 Time: 4.6386s
+Size 909 Iter 2 - 53 Test Avg Acc: 24.5664%, Test Avg loss: 0.004329 Time: 4.8062s
+Size 909 Iter 2 - 54 Test Avg Acc: 27.3131%, Test Avg loss: 0.004326 Time: 4.0300s
+Size 909 Iter 2 - 55 Test Avg Acc: 23.7434%, Test Avg loss: 0.004324 Time: 4.6901s
+Size 909 Iter 2 - 56 Test Avg Acc: 25.9902%, Test Avg loss: 0.004320 Time: 3.8952s
+Size 909 Iter 2 - 57 Test Avg Acc: 25.6630%, Test Avg loss: 0.004312 Time: 3.8492s
+Size 909 Iter 2 - 58 Test Avg Acc: 27.4962%, Test Avg loss: 0.004321 Time: 3.9072s
+Size 909 Iter 2 - 59 Test Avg Acc: 27.0971%, Test Avg loss: 0.004321 Time: 4.1088s
+Size 909 Iter 2 - 60 Test Avg Acc: 26.6321%, Test Avg loss: 0.004313 Time: 3.9749s
+Size 909 Iter 2 - 61 Test Avg Acc: 30.5207%, Test Avg loss: 0.004309 Time: 4.8254s
+Size 909 Iter 2 - 62 Test Avg Acc: 27.8933%, Test Avg loss: 0.004316 Time: 4.4655s
+Size 909 Iter 2 - 63 Test Avg Acc: 33.5864%, Test Avg loss: 0.004291 Time: 4.2626s
+Size 909 Iter 2 - 64 Test Avg Acc: 28.0147%, Test Avg loss: 0.004302 Time: 4.3720s
+Size 909 Iter 2 - 65 Test Avg Acc: 34.0637%, Test Avg loss: 0.004293 Time: 4.3918s
+Size 909 Iter 2 - 66 Test Avg Acc: 31.2635%, Test Avg loss: 0.004295 Time: 3.8072s
+Size 909 Iter 2 - 67 Test Avg Acc: 30.7676%, Test Avg loss: 0.004286 Time: 3.6597s
+Size 909 Iter 2 - 68 Test Avg Acc: 30.6463%, Test Avg loss: 0.004299 Time: 3.7269s
+Size 909 Iter 2 - 69 Test Avg Acc: 30.7142%, Test Avg loss: 0.004294 Time: 4.0681s
+Size 909 Iter 2 - 70 Test Avg Acc: 32.5021%, Test Avg loss: 0.004289 Time: 4.2750s
+Size 909 Iter 2 - 71 Test Avg Acc: 35.3312%, Test Avg loss: 0.004277 Time: 4.1223s
+Size 909 Iter 2 - 72 Test Avg Acc: 33.4115%, Test Avg loss: 0.004289 Time: 3.9859s
+Size 909 Iter 2 - 73 Test Avg Acc: 34.2098%, Test Avg loss: 0.004292 Time: 4.4818s
+Size 909 Iter 2 - 74 Test Avg Acc: 31.9363%, Test Avg loss: 0.004275 Time: 4.6682s
+Size 909 Iter 2 - 75 Test Avg Acc: 34.2160%, Test Avg loss: 0.004271 Time: 4.8618s
+Size 909 Iter 2 - 76 Test Avg Acc: 35.4032%, Test Avg loss: 0.004285 Time: 4.4110s
+Size 909 Iter 2 - 77 Test Avg Acc: 35.4649%, Test Avg loss: 0.004291 Time: 4.8353s
+Size 909 Iter 2 - 78 Test Avg Acc: 35.1892%, Test Avg loss: 0.004275 Time: 4.6567s
+Size 909 Iter 2 - 79 Test Avg Acc: 32.7737%, Test Avg loss: 0.004280 Time: 4.8213s
+Size 909 Iter 2 - 80 Test Avg Acc: 35.8188%, Test Avg loss: 0.004278 Time: 5.4678s
+Size 909 Iter 2 - 81 Test Avg Acc: 34.7180%, Test Avg loss: 0.004251 Time: 5.7986s
+Size 909 Iter 2 - 82 Test Avg Acc: 33.9259%, Test Avg loss: 0.004261 Time: 5.8765s
+Size 909 Iter 2 - 83 Test Avg Acc: 35.0493%, Test Avg loss: 0.004275 Time: 6.3945s
+Size 909 Iter 2 - 84 Test Avg Acc: 36.1994%, Test Avg loss: 0.004261 Time: 6.6911s
+Size 909 Iter 2 - 85 Test Avg Acc: 31.4343%, Test Avg loss: 0.004256 Time: 7.3458s
+Size 909 Iter 2 - 86 Test Avg Acc: 34.9834%, Test Avg loss: 0.004261 Time: 6.2371s
+Size 909 Iter 2 - 87 Test Avg Acc: 32.8807%, Test Avg loss: 0.004267 Time: 6.6577s
+Size 909 Iter 2 - 88 Test Avg Acc: 33.6090%, Test Avg loss: 0.004246 Time: 5.6253s
+Size 909 Iter 2 - 89 Test Avg Acc: 33.0206%, Test Avg loss: 0.004259 Time: 4.6707s
+Size 909 Iter 2 - 90 Test Avg Acc: 32.3499%, Test Avg loss: 0.004260 Time: 6.2052s
+Size 909 Iter 2 - 91 Test Avg Acc: 34.4032%, Test Avg loss: 0.004259 Time: 6.4970s
+Size 909 Iter 2 - 92 Test Avg Acc: 32.3231%, Test Avg loss: 0.004254 Time: 7.2227s
+Size 909 Iter 2 - 93 Test Avg Acc: 35.9361%, Test Avg loss: 0.004262 Time: 6.8104s
+Size 909 Iter 2 - 94 Test Avg Acc: 34.3806%, Test Avg loss: 0.004267 Time: 7.0733s
+Size 909 Iter 2 - 95 Test Avg Acc: 33.9238%, Test Avg loss: 0.004258 Time: 6.8161s
+Size 909 Iter 2 - 96 Test Avg Acc: 34.1008%, Test Avg loss: 0.004252 Time: 4.5999s
+Size 909 Iter 2 - 97 Test Avg Acc: 34.4691%, Test Avg loss: 0.004251 Time: 3.6589s
+Size 909 Iter 2 - 98 Test Avg Acc: 35.2591%, Test Avg loss: 0.004256 Time: 3.6910s
+Size 909 Iter 2 - 99 Test Avg Acc: 36.3085%, Test Avg loss: 0.004245 Time: 3.8824s
+Size 909 Iter 2 - 100 Test Avg Acc: 34.9978%, Test Avg loss: 0.004247 Time: 3.7506s
+Size 909 Iter 2 - 101 Test Avg Acc: 34.4341%, Test Avg loss: 0.004254 Time: 3.8657s
+Size 909 Iter 2 - 102 Test Avg Acc: 33.7695%, Test Avg loss: 0.004244 Time: 3.7731s
+Size 909 Iter 2 - 103 Test Avg Acc: 35.2324%, Test Avg loss: 0.004248 Time: 4.2421s
+Size 909 Iter 2 - 104 Test Avg Acc: 34.7509%, Test Avg loss: 0.004233 Time: 5.0463s
+Size 909 Iter 2 - 105 Test Avg Acc: 37.0348%, Test Avg loss: 0.004248 Time: 4.9624s
+Size 909 Iter 2 - 106 Test Avg Acc: 34.9443%, Test Avg loss: 0.004225 Time: 4.9796s
+Size 909 Iter 2 - 107 Test Avg Acc: 33.5370%, Test Avg loss: 0.004235 Time: 4.5844s
+Size 909 Iter 2 - 108 Test Avg Acc: 36.6603%, Test Avg loss: 0.004236 Time: 4.7993s
+Size 909 Iter 2 - 109 Test Avg Acc: 38.0553%, Test Avg loss: 0.004213 Time: 4.4622s
+Size 909 Iter 2 - 110 Test Avg Acc: 35.9916%, Test Avg loss: 0.004221 Time: 4.3257s
+Size 909 Iter 2 - 111 Test Avg Acc: 37.8907%, Test Avg loss: 0.004233 Time: 5.6122s
+Size 909 Iter 2 - 112 Test Avg Acc: 34.8332%, Test Avg loss: 0.004189 Time: 4.0696s
+Size 909 Iter 2 - 113 Test Avg Acc: 37.3537%, Test Avg loss: 0.004201 Time: 4.1717s
+Size 909 Iter 2 - 114 Test Avg Acc: 39.3556%, Test Avg loss: 0.004181 Time: 4.2485s
+Size 909 Iter 2 - 115 Test Avg Acc: 36.5101%, Test Avg loss: 0.004143 Time: 4.3828s
+Size 909 Iter 2 - 116 Test Avg Acc: 39.1478%, Test Avg loss: 0.004138 Time: 4.1844s
+Size 909 Iter 2 - 117 Test Avg Acc: 40.0449%, Test Avg loss: 0.004106 Time: 4.3403s
+Size 909 Iter 2 - 118 Test Avg Acc: 40.1251%, Test Avg loss: 0.004072 Time: 4.4627s
+Size 909 Iter 2 - 119 Test Avg Acc: 40.0119%, Test Avg loss: 0.004019 Time: 4.5798s
+Size 909 Iter 2 - 120 Test Avg Acc: 42.2608%, Test Avg loss: 0.003987 Time: 4.7592s
+Size 909 Iter 2 - 121 Test Avg Acc: 42.2813%, Test Avg loss: 0.003950 Time: 4.4632s
+Size 909 Iter 2 - 122 Test Avg Acc: 44.3409%, Test Avg loss: 0.003906 Time: 4.3852s
+Size 909 Iter 2 - 123 Test Avg Acc: 43.5673%, Test Avg loss: 0.003905 Time: 4.4133s
+Size 909 Iter 2 - 124 Test Avg Acc: 44.5055%, Test Avg loss: 0.003889 Time: 4.4784s
+Size 909 Iter 2 - 125 Test Avg Acc: 45.4848%, Test Avg loss: 0.003904 Time: 4.2663s
+Size 909 Iter 2 - 126 Test Avg Acc: 46.6247%, Test Avg loss: 0.003853 Time: 4.4310s
+Size 909 Iter 2 - 127 Test Avg Acc: 46.8778%, Test Avg loss: 0.003893 Time: 4.3010s
+Size 909 Iter 2 - 128 Test Avg Acc: 47.8839%, Test Avg loss: 0.003822 Time: 4.3396s
+Size 909 Iter 2 - 129 Test Avg Acc: 48.5299%, Test Avg loss: 0.003825 Time: 4.0082s
+Size 909 Iter 2 - 130 Test Avg Acc: 49.1760%, Test Avg loss: 0.003788 Time: 4.3658s
+Size 909 Iter 2 - 131 Test Avg Acc: 49.9784%, Test Avg loss: 0.003765 Time: 4.2951s
+Size 909 Iter 2 - 132 Test Avg Acc: 49.5360%, Test Avg loss: 0.003748 Time: 4.7374s
+Size 909 Iter 2 - 133 Test Avg Acc: 49.4825%, Test Avg loss: 0.003757 Time: 4.7226s
+Size 909 Iter 2 - 134 Test Avg Acc: 49.9064%, Test Avg loss: 0.003753 Time: 4.3774s
+Size 909 Iter 2 - 135 Test Avg Acc: 49.4681%, Test Avg loss: 0.003742 Time: 4.6445s
+Size 909 Iter 2 - 136 Test Avg Acc: 49.1677%, Test Avg loss: 0.003748 Time: 4.6205s
+Size 909 Iter 2 - 137 Test Avg Acc: 49.6924%, Test Avg loss: 0.003736 Time: 4.3613s
+Size 909 Iter 2 - 138 Test Avg Acc: 49.3344%, Test Avg loss: 0.003746 Time: 4.2394s
+Size 909 Iter 2 - 139 Test Avg Acc: 49.4085%, Test Avg loss: 0.003744 Time: 4.3670s
+Size 909 Iter 2 - 140 Test Avg Acc: 49.0505%, Test Avg loss: 0.003709 Time: 4.4107s
+Size 909 Iter 2 - 141 Test Avg Acc: 48.9764%, Test Avg loss: 0.003743 Time: 4.4618s
+Size 909 Iter 2 - 142 Test Avg Acc: 49.0628%, Test Avg loss: 0.003739 Time: 4.2409s
+Size 909 Iter 2 - 143 Test Avg Acc: 49.1842%, Test Avg loss: 0.003742 Time: 4.3858s
+Size 909 Iter 2 - 144 Test Avg Acc: 49.4640%, Test Avg loss: 0.003739 Time: 4.6300s
+Size 909 Iter 2 - 145 Test Avg Acc: 49.3797%, Test Avg loss: 0.003718 Time: 4.4032s
+Size 909 Iter 2 - 146 Test Avg Acc: 49.6513%, Test Avg loss: 0.003683 Time: 4.3311s
+Size 909 Iter 2 - 147 Test Avg Acc: 49.2089%, Test Avg loss: 0.003701 Time: 4.2375s
+Size 909 Iter 2 - 148 Test Avg Acc: 49.5484%, Test Avg loss: 0.003715 Time: 4.5414s
+Size 909 Iter 2 - 149 Test Avg Acc: 49.4146%, Test Avg loss: 0.003680 Time: 4.3196s
+Size 909 Iter 2 - 150 Test Avg Acc: 50.0751%, Test Avg loss: 0.003698 Time: 4.5349s
+Size 909 Iter 2 - 151 Test Avg Acc: 49.9249%, Test Avg loss: 0.003698 Time: 4.7041s
+Size 909 Iter 2 - 152 Test Avg Acc: 50.0607%, Test Avg loss: 0.003670 Time: 4.2578s
+Size 909 Iter 2 - 153 Test Avg Acc: 50.5895%, Test Avg loss: 0.003697 Time: 4.1231s
+Size 909 Iter 2 - 154 Test Avg Acc: 50.9084%, Test Avg loss: 0.003663 Time: 4.2080s
+Size 909 Iter 2 - 155 Test Avg Acc: 51.1265%, Test Avg loss: 0.003647 Time: 4.1574s
+Size 909 Iter 2 - 156 Test Avg Acc: 51.2293%, Test Avg loss: 0.003633 Time: 4.2085s
+Size 909 Iter 2 - 157 Test Avg Acc: 51.3240%, Test Avg loss: 0.003646 Time: 4.3209s
+Size 909 Iter 2 - 158 Test Avg Acc: 51.4680%, Test Avg loss: 0.003625 Time: 3.6972s
+Size 909 Iter 2 - 159 Test Avg Acc: 51.9371%, Test Avg loss: 0.003636 Time: 3.7489s
+Size 909 Iter 2 - 160 Test Avg Acc: 51.7705%, Test Avg loss: 0.003613 Time: 3.8491s
+Size 909 Iter 2 - 161 Test Avg Acc: 51.7437%, Test Avg loss: 0.003634 Time: 4.2474s
+Size 909 Iter 2 - 162 Test Avg Acc: 52.1367%, Test Avg loss: 0.003612 Time: 4.0126s
+Size 909 Iter 2 - 163 Test Avg Acc: 51.7931%, Test Avg loss: 0.003651 Time: 4.0187s
+Size 909 Iter 2 - 164 Test Avg Acc: 52.2581%, Test Avg loss: 0.003586 Time: 4.1882s
+Size 909 Iter 2 - 165 Test Avg Acc: 52.1614%, Test Avg loss: 0.003596 Time: 4.0931s
+Size 909 Iter 2 - 166 Test Avg Acc: 52.5050%, Test Avg loss: 0.003606 Time: 3.8341s
+Size 909 Iter 2 - 167 Test Avg Acc: 52.7313%, Test Avg loss: 0.003586 Time: 4.0627s
+Size 909 Iter 2 - 168 Test Avg Acc: 52.6655%, Test Avg loss: 0.003590 Time: 4.3078s
+Size 909 Iter 2 - 169 Test Avg Acc: 52.9185%, Test Avg loss: 0.003575 Time: 4.6744s
+Size 909 Iter 2 - 170 Test Avg Acc: 52.7231%, Test Avg loss: 0.003586 Time: 4.0823s
+Size 909 Iter 2 - 171 Test Avg Acc: 52.9391%, Test Avg loss: 0.003583 Time: 4.2076s
+Size 909 Iter 2 - 172 Test Avg Acc: 53.0050%, Test Avg loss: 0.003564 Time: 3.9530s
+Size 909 Iter 2 - 173 Test Avg Acc: 53.0729%, Test Avg loss: 0.003563 Time: 4.0892s
+Size 909 Iter 2 - 174 Test Avg Acc: 53.3774%, Test Avg loss: 0.003535 Time: 4.0565s
+Size 909 Iter 2 - 175 Test Avg Acc: 53.4885%, Test Avg loss: 0.003553 Time: 4.3036s
+Size 909 Iter 2 - 176 Test Avg Acc: 53.5584%, Test Avg loss: 0.003524 Time: 4.2114s
+Size 909 Iter 2 - 177 Test Avg Acc: 53.5461%, Test Avg loss: 0.003542 Time: 3.9575s
+Size 909 Iter 2 - 178 Test Avg Acc: 53.9946%, Test Avg loss: 0.003533 Time: 4.0528s
+Size 909 Iter 2 - 179 Test Avg Acc: 53.8465%, Test Avg loss: 0.003511 Time: 3.7548s
+Size 909 Iter 2 - 180 Test Avg Acc: 54.0234%, Test Avg loss: 0.003497 Time: 3.9098s
+Size 909 Iter 2 - 181 Test Avg Acc: 54.3012%, Test Avg loss: 0.003486 Time: 4.0608s
+Size 909 Iter 2 - 182 Test Avg Acc: 54.3176%, Test Avg loss: 0.003487 Time: 3.9804s
+Size 909 Iter 2 - 183 Test Avg Acc: 54.5440%, Test Avg loss: 0.003500 Time: 4.6798s
+Size 909 Iter 2 - 184 Test Avg Acc: 54.6221%, Test Avg loss: 0.003464 Time: 4.1859s
+Size 909 Iter 2 - 185 Test Avg Acc: 54.8155%, Test Avg loss: 0.003482 Time: 5.3100s
+Size 909 Iter 2 - 186 Test Avg Acc: 55.0213%, Test Avg loss: 0.003477 Time: 4.2117s
+Size 909 Iter 2 - 187 Test Avg Acc: 55.1118%, Test Avg loss: 0.003470 Time: 5.3009s
+Size 909 Iter 2 - 188 Test Avg Acc: 55.1530%, Test Avg loss: 0.003434 Time: 3.8926s
+Size 909 Iter 2 - 189 Test Avg Acc: 55.4348%, Test Avg loss: 0.003442 Time: 3.9685s
+Size 909 Iter 2 - 190 Test Avg Acc: 55.5336%, Test Avg loss: 0.003425 Time: 4.9423s
+Size 909 Iter 2 - 191 Test Avg Acc: 55.5089%, Test Avg loss: 0.003434 Time: 4.8637s
+Size 909 Iter 2 - 192 Test Avg Acc: 55.6139%, Test Avg loss: 0.003433 Time: 5.1404s
+Size 909 Iter 2 - 193 Test Avg Acc: 55.6200%, Test Avg loss: 0.003447 Time: 4.7448s
+Size 909 Iter 2 - 194 Test Avg Acc: 55.9101%, Test Avg loss: 0.003438 Time: 4.8979s
+Size 909 Iter 2 - 195 Test Avg Acc: 55.9430%, Test Avg loss: 0.003429 Time: 4.3972s
+Size 909 Iter 2 - 196 Test Avg Acc: 55.7887%, Test Avg loss: 0.003430 Time: 4.4224s
+Size 909 Iter 2 - 197 Test Avg Acc: 56.0727%, Test Avg loss: 0.003445 Time: 4.0156s
+Size 909 Iter 2 - 198 Test Avg Acc: 56.2229%, Test Avg loss: 0.003405 Time: 3.9900s
+Size 909 Iter 2 - 199 Test Avg Acc: 56.4512%, Test Avg loss: 0.003430 Time: 4.4672s
+Size 909 Iter 2 - 200 Test Avg Acc: 56.4574%, Test Avg loss: 0.003423 Time: 4.2286s
+The  3-th iteration
+--------------------------------------------------
+Size 909 Iter 3 - 1 Test Avg Acc: 21.9472%, Test Avg loss: 0.004874 Time: 4.4879s
+Size 909 Iter 3 - 2 Test Avg Acc: 22.1344%, Test Avg loss: 0.004872 Time: 3.7792s
+Size 909 Iter 3 - 3 Test Avg Acc: 22.0912%, Test Avg loss: 0.004867 Time: 4.1283s
+Size 909 Iter 3 - 4 Test Avg Acc: 22.0521%, Test Avg loss: 0.004864 Time: 4.8364s
+Size 909 Iter 3 - 5 Test Avg Acc: 22.0398%, Test Avg loss: 0.004861 Time: 4.5084s
+Size 909 Iter 3 - 6 Test Avg Acc: 22.0583%, Test Avg loss: 0.004861 Time: 4.1750s
+Size 909 Iter 3 - 7 Test Avg Acc: 22.2229%, Test Avg loss: 0.004861 Time: 4.3325s
+Size 909 Iter 3 - 8 Test Avg Acc: 22.1653%, Test Avg loss: 0.004860 Time: 4.0746s
+Size 909 Iter 3 - 9 Test Avg Acc: 22.2106%, Test Avg loss: 0.004858 Time: 4.1399s
+Size 909 Iter 3 - 10 Test Avg Acc: 22.2064%, Test Avg loss: 0.004858 Time: 4.0059s
+Size 909 Iter 3 - 11 Test Avg Acc: 22.5953%, Test Avg loss: 0.004857 Time: 4.5628s
+Size 909 Iter 3 - 12 Test Avg Acc: 22.3196%, Test Avg loss: 0.004856 Time: 4.6151s
+Size 909 Iter 3 - 13 Test Avg Acc: 22.3978%, Test Avg loss: 0.004855 Time: 4.3220s
+Size 909 Iter 3 - 14 Test Avg Acc: 22.7928%, Test Avg loss: 0.004854 Time: 4.8078s
+Size 909 Iter 3 - 15 Test Avg Acc: 22.4410%, Test Avg loss: 0.004854 Time: 5.0146s
+Size 909 Iter 3 - 16 Test Avg Acc: 22.8216%, Test Avg loss: 0.004853 Time: 4.5486s
+Size 909 Iter 3 - 17 Test Avg Acc: 22.5233%, Test Avg loss: 0.004852 Time: 4.5002s
+Size 909 Iter 3 - 18 Test Avg Acc: 22.5542%, Test Avg loss: 0.004851 Time: 4.4727s
+Size 909 Iter 3 - 19 Test Avg Acc: 22.6077%, Test Avg loss: 0.004850 Time: 4.7378s
+Size 909 Iter 3 - 20 Test Avg Acc: 22.5953%, Test Avg loss: 0.004848 Time: 4.1867s
+Size 909 Iter 3 - 21 Test Avg Acc: 22.6344%, Test Avg loss: 0.004848 Time: 3.8670s
+Size 909 Iter 3 - 22 Test Avg Acc: 22.6694%, Test Avg loss: 0.004847 Time: 4.4237s
+Size 909 Iter 3 - 23 Test Avg Acc: 22.7537%, Test Avg loss: 0.004846 Time: 4.7592s
+Size 909 Iter 3 - 24 Test Avg Acc: 22.7908%, Test Avg loss: 0.004844 Time: 4.9017s
+Size 909 Iter 3 - 25 Test Avg Acc: 22.8484%, Test Avg loss: 0.004844 Time: 4.0455s
+Size 909 Iter 3 - 26 Test Avg Acc: 23.1426%, Test Avg loss: 0.004842 Time: 4.2287s
+Size 909 Iter 3 - 27 Test Avg Acc: 23.1344%, Test Avg loss: 0.004839 Time: 4.1228s
+Size 909 Iter 3 - 28 Test Avg Acc: 23.6241%, Test Avg loss: 0.004836 Time: 4.2122s
+Size 909 Iter 3 - 29 Test Avg Acc: 24.8359%, Test Avg loss: 0.004837 Time: 4.2068s
+Size 909 Iter 3 - 30 Test Avg Acc: 27.1856%, Test Avg loss: 0.004833 Time: 3.8769s
+Size 909 Iter 3 - 31 Test Avg Acc: 29.1669%, Test Avg loss: 0.004829 Time: 3.9876s
+Size 909 Iter 3 - 32 Test Avg Acc: 33.2634%, Test Avg loss: 0.004815 Time: 3.8992s
+Size 909 Iter 3 - 33 Test Avg Acc: 34.6131%, Test Avg loss: 0.004772 Time: 4.0851s
+Size 909 Iter 3 - 34 Test Avg Acc: 35.1768%, Test Avg loss: 0.004677 Time: 3.8493s
+Size 909 Iter 3 - 35 Test Avg Acc: 34.2880%, Test Avg loss: 0.004567 Time: 3.9654s
+Size 909 Iter 3 - 36 Test Avg Acc: 23.8154%, Test Avg loss: 0.004471 Time: 3.7973s
+Size 909 Iter 3 - 37 Test Avg Acc: 20.0379%, Test Avg loss: 0.004448 Time: 4.0230s
+Size 909 Iter 3 - 38 Test Avg Acc: 19.6017%, Test Avg loss: 0.004456 Time: 3.7882s
+Size 909 Iter 3 - 39 Test Avg Acc: 19.0791%, Test Avg loss: 0.004458 Time: 3.5474s
+Size 909 Iter 3 - 40 Test Avg Acc: 18.8898%, Test Avg loss: 0.004478 Time: 3.5559s
+Size 909 Iter 3 - 41 Test Avg Acc: 15.8488%, Test Avg loss: 0.004491 Time: 3.6503s
+Size 909 Iter 3 - 42 Test Avg Acc: 15.4661%, Test Avg loss: 0.004497 Time: 3.8931s
+Size 909 Iter 3 - 43 Test Avg Acc: 14.2069%, Test Avg loss: 0.004498 Time: 4.0590s
+Size 909 Iter 3 - 44 Test Avg Acc: 14.1370%, Test Avg loss: 0.004484 Time: 3.9974s
+Size 909 Iter 3 - 45 Test Avg Acc: 13.9312%, Test Avg loss: 0.004481 Time: 3.9380s
+Size 909 Iter 3 - 46 Test Avg Acc: 13.5835%, Test Avg loss: 0.004485 Time: 3.9190s
+Size 909 Iter 3 - 47 Test Avg Acc: 13.5444%, Test Avg loss: 0.004457 Time: 3.8356s
+Size 909 Iter 3 - 48 Test Avg Acc: 13.5979%, Test Avg loss: 0.004450 Time: 3.8332s
+Size 909 Iter 3 - 49 Test Avg Acc: 13.3078%, Test Avg loss: 0.004448 Time: 3.8509s
+Size 909 Iter 3 - 50 Test Avg Acc: 13.5424%, Test Avg loss: 0.004446 Time: 3.5555s
+Size 909 Iter 3 - 51 Test Avg Acc: 13.2728%, Test Avg loss: 0.004437 Time: 3.8055s
+Size 909 Iter 3 - 52 Test Avg Acc: 13.5156%, Test Avg loss: 0.004439 Time: 4.7165s
+Size 909 Iter 3 - 53 Test Avg Acc: 13.3593%, Test Avg loss: 0.004428 Time: 4.4645s
+Size 909 Iter 3 - 54 Test Avg Acc: 13.4025%, Test Avg loss: 0.004431 Time: 4.2658s
+Size 909 Iter 3 - 55 Test Avg Acc: 13.4354%, Test Avg loss: 0.004413 Time: 4.1930s
+Size 909 Iter 3 - 56 Test Avg Acc: 13.4148%, Test Avg loss: 0.004411 Time: 4.4363s
+Size 909 Iter 3 - 57 Test Avg Acc: 13.4374%, Test Avg loss: 0.004406 Time: 3.9641s
+Size 909 Iter 3 - 58 Test Avg Acc: 13.4354%, Test Avg loss: 0.004401 Time: 3.7185s
+Size 909 Iter 3 - 59 Test Avg Acc: 13.6329%, Test Avg loss: 0.004390 Time: 4.1932s
+Size 909 Iter 3 - 60 Test Avg Acc: 13.5197%, Test Avg loss: 0.004399 Time: 3.8223s
+Size 909 Iter 3 - 61 Test Avg Acc: 13.6103%, Test Avg loss: 0.004377 Time: 3.8757s
+Size 909 Iter 3 - 62 Test Avg Acc: 13.5547%, Test Avg loss: 0.004380 Time: 4.2179s
+Size 909 Iter 3 - 63 Test Avg Acc: 13.6946%, Test Avg loss: 0.004384 Time: 3.9239s
+Size 909 Iter 3 - 64 Test Avg Acc: 13.9395%, Test Avg loss: 0.004380 Time: 4.7500s
+Size 909 Iter 3 - 65 Test Avg Acc: 13.8921%, Test Avg loss: 0.004385 Time: 3.7882s
+Size 909 Iter 3 - 66 Test Avg Acc: 14.1061%, Test Avg loss: 0.004370 Time: 4.0179s
+Size 909 Iter 3 - 67 Test Avg Acc: 13.7708%, Test Avg loss: 0.004358 Time: 4.3079s
+Size 909 Iter 3 - 68 Test Avg Acc: 15.1061%, Test Avg loss: 0.004346 Time: 3.9970s
+Size 909 Iter 3 - 69 Test Avg Acc: 14.3119%, Test Avg loss: 0.004355 Time: 4.1959s
+Size 909 Iter 3 - 70 Test Avg Acc: 14.9085%, Test Avg loss: 0.004353 Time: 4.0499s
+Size 909 Iter 3 - 71 Test Avg Acc: 15.5484%, Test Avg loss: 0.004335 Time: 4.3564s
+Size 909 Iter 3 - 72 Test Avg Acc: 15.6060%, Test Avg loss: 0.004336 Time: 4.2650s
+Size 909 Iter 3 - 73 Test Avg Acc: 16.3262%, Test Avg loss: 0.004308 Time: 3.9730s
+Size 909 Iter 3 - 74 Test Avg Acc: 16.1924%, Test Avg loss: 0.004319 Time: 4.1300s
+Size 909 Iter 3 - 75 Test Avg Acc: 17.9392%, Test Avg loss: 0.004296 Time: 4.5778s
+Size 909 Iter 3 - 76 Test Avg Acc: 18.0750%, Test Avg loss: 0.004279 Time: 4.3470s
+Size 909 Iter 3 - 77 Test Avg Acc: 19.5379%, Test Avg loss: 0.004249 Time: 4.6915s
+Size 909 Iter 3 - 78 Test Avg Acc: 22.0130%, Test Avg loss: 0.004239 Time: 4.0955s
+Size 909 Iter 3 - 79 Test Avg Acc: 22.9842%, Test Avg loss: 0.004201 Time: 4.4314s
+Size 909 Iter 3 - 80 Test Avg Acc: 27.7658%, Test Avg loss: 0.004155 Time: 4.5029s
+Size 909 Iter 3 - 81 Test Avg Acc: 28.1464%, Test Avg loss: 0.004154 Time: 4.9713s
+Size 909 Iter 3 - 82 Test Avg Acc: 30.2594%, Test Avg loss: 0.004125 Time: 4.6953s
+Size 909 Iter 3 - 83 Test Avg Acc: 30.7162%, Test Avg loss: 0.004123 Time: 4.1437s
+Size 909 Iter 3 - 84 Test Avg Acc: 30.4323%, Test Avg loss: 0.004100 Time: 4.4783s
+Size 909 Iter 3 - 85 Test Avg Acc: 33.6708%, Test Avg loss: 0.004101 Time: 4.6132s
+Size 909 Iter 3 - 86 Test Avg Acc: 32.8004%, Test Avg loss: 0.004120 Time: 4.7572s
+Size 909 Iter 3 - 87 Test Avg Acc: 32.5515%, Test Avg loss: 0.004097 Time: 4.1574s
+Size 909 Iter 3 - 88 Test Avg Acc: 33.9588%, Test Avg loss: 0.004101 Time: 4.5030s
+Size 909 Iter 3 - 89 Test Avg Acc: 35.0040%, Test Avg loss: 0.004081 Time: 3.9638s
+Size 909 Iter 3 - 90 Test Avg Acc: 34.1934%, Test Avg loss: 0.004096 Time: 4.3984s
+Size 909 Iter 3 - 91 Test Avg Acc: 34.4053%, Test Avg loss: 0.004096 Time: 5.1809s
+Size 909 Iter 3 - 92 Test Avg Acc: 34.8559%, Test Avg loss: 0.004073 Time: 4.6303s
+Size 909 Iter 3 - 93 Test Avg Acc: 35.2591%, Test Avg loss: 0.004072 Time: 4.2468s
+Size 909 Iter 3 - 94 Test Avg Acc: 35.2797%, Test Avg loss: 0.004060 Time: 4.0241s
+Size 909 Iter 3 - 95 Test Avg Acc: 35.1131%, Test Avg loss: 0.004037 Time: 4.2256s
+Size 909 Iter 3 - 96 Test Avg Acc: 35.3949%, Test Avg loss: 0.004082 Time: 4.3503s
+Size 909 Iter 3 - 97 Test Avg Acc: 35.6521%, Test Avg loss: 0.004046 Time: 5.1056s
+Size 909 Iter 3 - 98 Test Avg Acc: 36.9339%, Test Avg loss: 0.004056 Time: 4.4430s
+Size 909 Iter 3 - 99 Test Avg Acc: 37.2426%, Test Avg loss: 0.004038 Time: 4.6401s
+Size 909 Iter 3 - 100 Test Avg Acc: 37.2282%, Test Avg loss: 0.004036 Time: 4.8998s
+Size 909 Iter 3 - 101 Test Avg Acc: 37.3084%, Test Avg loss: 0.004033 Time: 4.7778s
+Size 909 Iter 3 - 102 Test Avg Acc: 37.3495%, Test Avg loss: 0.003989 Time: 3.9730s
+Size 909 Iter 3 - 103 Test Avg Acc: 39.1828%, Test Avg loss: 0.003985 Time: 4.0379s
+Size 909 Iter 3 - 104 Test Avg Acc: 39.7465%, Test Avg loss: 0.003985 Time: 4.8207s
+Size 909 Iter 3 - 105 Test Avg Acc: 37.4565%, Test Avg loss: 0.003956 Time: 4.9249s
+Size 909 Iter 3 - 106 Test Avg Acc: 39.0634%, Test Avg loss: 0.003961 Time: 4.5913s
+Size 909 Iter 3 - 107 Test Avg Acc: 39.5531%, Test Avg loss: 0.003939 Time: 3.9400s
+Size 909 Iter 3 - 108 Test Avg Acc: 40.5633%, Test Avg loss: 0.003921 Time: 4.3567s
+Size 909 Iter 3 - 109 Test Avg Acc: 39.5799%, Test Avg loss: 0.003923 Time: 4.5022s
+Size 909 Iter 3 - 110 Test Avg Acc: 40.4934%, Test Avg loss: 0.003918 Time: 4.2247s
+Size 909 Iter 3 - 111 Test Avg Acc: 40.6950%, Test Avg loss: 0.003889 Time: 5.0031s
+Size 909 Iter 3 - 112 Test Avg Acc: 39.7527%, Test Avg loss: 0.003880 Time: 4.4087s
+Size 909 Iter 3 - 113 Test Avg Acc: 38.5491%, Test Avg loss: 0.003884 Time: 3.9607s
+Size 909 Iter 3 - 114 Test Avg Acc: 36.9401%, Test Avg loss: 0.003881 Time: 3.7509s
+Size 909 Iter 3 - 115 Test Avg Acc: 38.2384%, Test Avg loss: 0.003880 Time: 4.6812s
+Size 909 Iter 3 - 116 Test Avg Acc: 39.0387%, Test Avg loss: 0.003849 Time: 4.5181s
+Size 909 Iter 3 - 117 Test Avg Acc: 38.1190%, Test Avg loss: 0.003868 Time: 4.1706s
+Size 909 Iter 3 - 118 Test Avg Acc: 37.8104%, Test Avg loss: 0.003863 Time: 4.3558s
+Size 909 Iter 3 - 119 Test Avg Acc: 37.6726%, Test Avg loss: 0.003860 Time: 4.8570s
+Size 909 Iter 3 - 120 Test Avg Acc: 37.6623%, Test Avg loss: 0.003871 Time: 4.8351s
+Size 909 Iter 3 - 121 Test Avg Acc: 37.2837%, Test Avg loss: 0.003876 Time: 4.7179s
+Size 909 Iter 3 - 122 Test Avg Acc: 38.4318%, Test Avg loss: 0.003868 Time: 4.3918s
+Size 909 Iter 3 - 123 Test Avg Acc: 38.2631%, Test Avg loss: 0.003853 Time: 4.9803s
+Size 909 Iter 3 - 124 Test Avg Acc: 38.4626%, Test Avg loss: 0.003855 Time: 5.0589s
+Size 909 Iter 3 - 125 Test Avg Acc: 37.7919%, Test Avg loss: 0.003829 Time: 4.1744s
+Size 909 Iter 3 - 126 Test Avg Acc: 38.6375%, Test Avg loss: 0.003868 Time: 4.1505s
+Size 909 Iter 3 - 127 Test Avg Acc: 37.9709%, Test Avg loss: 0.003873 Time: 4.5929s
+Size 909 Iter 3 - 128 Test Avg Acc: 38.3269%, Test Avg loss: 0.003838 Time: 4.7298s
+Size 909 Iter 3 - 129 Test Avg Acc: 40.1374%, Test Avg loss: 0.003834 Time: 3.9091s
+Size 909 Iter 3 - 130 Test Avg Acc: 39.4070%, Test Avg loss: 0.003837 Time: 3.9720s
+Size 909 Iter 3 - 131 Test Avg Acc: 40.2177%, Test Avg loss: 0.003847 Time: 3.7756s
+Size 909 Iter 3 - 132 Test Avg Acc: 40.1745%, Test Avg loss: 0.003834 Time: 3.7914s
+Size 909 Iter 3 - 133 Test Avg Acc: 40.0572%, Test Avg loss: 0.003829 Time: 3.9967s
+Size 909 Iter 3 - 134 Test Avg Acc: 39.9296%, Test Avg loss: 0.003844 Time: 4.3972s
+Size 909 Iter 3 - 135 Test Avg Acc: 39.9049%, Test Avg loss: 0.003825 Time: 4.5315s
+Size 909 Iter 3 - 136 Test Avg Acc: 39.3865%, Test Avg loss: 0.003839 Time: 4.3184s
+Size 909 Iter 3 - 137 Test Avg Acc: 40.9378%, Test Avg loss: 0.003839 Time: 4.9114s
+Size 909 Iter 3 - 138 Test Avg Acc: 41.0510%, Test Avg loss: 0.003828 Time: 3.9653s
+Size 909 Iter 3 - 139 Test Avg Acc: 39.5161%, Test Avg loss: 0.003827 Time: 3.8154s
+Size 909 Iter 3 - 140 Test Avg Acc: 40.2568%, Test Avg loss: 0.003824 Time: 4.1042s
+Size 909 Iter 3 - 141 Test Avg Acc: 42.0344%, Test Avg loss: 0.003790 Time: 4.0653s
+Size 909 Iter 3 - 142 Test Avg Acc: 41.4049%, Test Avg loss: 0.003804 Time: 4.4332s
+Size 909 Iter 3 - 143 Test Avg Acc: 41.1600%, Test Avg loss: 0.003789 Time: 5.0237s
+Size 909 Iter 3 - 144 Test Avg Acc: 41.6703%, Test Avg loss: 0.003810 Time: 4.6678s
+Size 909 Iter 3 - 145 Test Avg Acc: 41.4049%, Test Avg loss: 0.003818 Time: 4.9420s
+Size 909 Iter 3 - 146 Test Avg Acc: 42.3924%, Test Avg loss: 0.003793 Time: 4.3410s
+Size 909 Iter 3 - 147 Test Avg Acc: 42.5694%, Test Avg loss: 0.003788 Time: 4.3487s
+Size 909 Iter 3 - 148 Test Avg Acc: 41.7999%, Test Avg loss: 0.003786 Time: 3.7850s
+Size 909 Iter 3 - 149 Test Avg Acc: 42.6435%, Test Avg loss: 0.003810 Time: 4.2110s
+Size 909 Iter 3 - 150 Test Avg Acc: 41.3822%, Test Avg loss: 0.003803 Time: 4.5003s
+Size 909 Iter 3 - 151 Test Avg Acc: 43.0241%, Test Avg loss: 0.003825 Time: 4.5558s
+Size 909 Iter 3 - 152 Test Avg Acc: 44.0570%, Test Avg loss: 0.003763 Time: 4.2581s
+Size 909 Iter 3 - 153 Test Avg Acc: 43.3286%, Test Avg loss: 0.003790 Time: 4.4512s
+Size 909 Iter 3 - 154 Test Avg Acc: 43.2360%, Test Avg loss: 0.003783 Time: 3.5745s
+Size 909 Iter 3 - 155 Test Avg Acc: 44.1454%, Test Avg loss: 0.003775 Time: 4.3056s
+Size 909 Iter 3 - 156 Test Avg Acc: 44.5034%, Test Avg loss: 0.003783 Time: 4.2190s
+Size 909 Iter 3 - 157 Test Avg Acc: 44.4602%, Test Avg loss: 0.003772 Time: 4.2208s
+Size 909 Iter 3 - 158 Test Avg Acc: 43.9829%, Test Avg loss: 0.003771 Time: 3.8810s
+Size 909 Iter 3 - 159 Test Avg Acc: 45.9005%, Test Avg loss: 0.003746 Time: 4.2579s
+Size 909 Iter 3 - 160 Test Avg Acc: 46.3572%, Test Avg loss: 0.003747 Time: 4.2426s
+Size 909 Iter 3 - 161 Test Avg Acc: 45.7235%, Test Avg loss: 0.003741 Time: 3.9899s
+Size 909 Iter 3 - 162 Test Avg Acc: 46.1947%, Test Avg loss: 0.003729 Time: 4.0394s
+Size 909 Iter 3 - 163 Test Avg Acc: 45.6104%, Test Avg loss: 0.003715 Time: 4.2923s
+Size 909 Iter 3 - 164 Test Avg Acc: 46.2009%, Test Avg loss: 0.003739 Time: 4.3269s
+Size 909 Iter 3 - 165 Test Avg Acc: 47.2728%, Test Avg loss: 0.003722 Time: 4.5380s
+Size 909 Iter 3 - 166 Test Avg Acc: 47.7131%, Test Avg loss: 0.003704 Time: 4.2266s
+Size 909 Iter 3 - 167 Test Avg Acc: 48.1287%, Test Avg loss: 0.003690 Time: 3.7901s
+Size 909 Iter 3 - 168 Test Avg Acc: 47.6699%, Test Avg loss: 0.003693 Time: 3.7871s
+Size 909 Iter 3 - 169 Test Avg Acc: 48.2069%, Test Avg loss: 0.003704 Time: 4.3158s
+Size 909 Iter 3 - 170 Test Avg Acc: 48.7583%, Test Avg loss: 0.003695 Time: 4.1252s
+Size 909 Iter 3 - 171 Test Avg Acc: 49.4044%, Test Avg loss: 0.003674 Time: 4.1736s
+Size 909 Iter 3 - 172 Test Avg Acc: 49.3817%, Test Avg loss: 0.003656 Time: 4.1914s
+Size 909 Iter 3 - 173 Test Avg Acc: 50.3385%, Test Avg loss: 0.003645 Time: 4.1303s
+Size 909 Iter 3 - 174 Test Avg Acc: 50.5401%, Test Avg loss: 0.003632 Time: 4.1348s
+Size 909 Iter 3 - 175 Test Avg Acc: 51.4207%, Test Avg loss: 0.003650 Time: 4.5801s
+Size 909 Iter 3 - 176 Test Avg Acc: 51.9968%, Test Avg loss: 0.003593 Time: 4.2457s
+Size 909 Iter 3 - 177 Test Avg Acc: 52.2519%, Test Avg loss: 0.003595 Time: 4.0334s
+Size 909 Iter 3 - 178 Test Avg Acc: 52.6881%, Test Avg loss: 0.003555 Time: 4.1433s
+Size 909 Iter 3 - 179 Test Avg Acc: 52.7190%, Test Avg loss: 0.003539 Time: 4.1727s
+Size 909 Iter 3 - 180 Test Avg Acc: 53.3444%, Test Avg loss: 0.003539 Time: 4.2528s
+Size 909 Iter 3 - 181 Test Avg Acc: 53.5337%, Test Avg loss: 0.003540 Time: 3.9265s
+Size 909 Iter 3 - 182 Test Avg Acc: 53.3465%, Test Avg loss: 0.003534 Time: 4.2421s
+Size 909 Iter 3 - 183 Test Avg Acc: 53.5625%, Test Avg loss: 0.003497 Time: 4.1458s
+Size 909 Iter 3 - 184 Test Avg Acc: 53.9699%, Test Avg loss: 0.003512 Time: 3.9309s
+Size 909 Iter 3 - 185 Test Avg Acc: 54.2621%, Test Avg loss: 0.003513 Time: 4.6389s
+Size 909 Iter 3 - 186 Test Avg Acc: 54.3156%, Test Avg loss: 0.003515 Time: 4.6201s
+Size 909 Iter 3 - 187 Test Avg Acc: 54.4905%, Test Avg loss: 0.003487 Time: 5.2014s
+Size 909 Iter 3 - 188 Test Avg Acc: 54.6900%, Test Avg loss: 0.003495 Time: 4.3749s
+Size 909 Iter 3 - 189 Test Avg Acc: 55.1674%, Test Avg loss: 0.003455 Time: 4.0596s
+Size 909 Iter 3 - 190 Test Avg Acc: 55.0439%, Test Avg loss: 0.003450 Time: 4.2679s
+Size 909 Iter 3 - 191 Test Avg Acc: 55.2579%, Test Avg loss: 0.003482 Time: 4.4257s
+Size 909 Iter 3 - 192 Test Avg Acc: 55.0995%, Test Avg loss: 0.003457 Time: 5.0577s
+Size 909 Iter 3 - 193 Test Avg Acc: 55.0604%, Test Avg loss: 0.003474 Time: 4.5035s
+Size 909 Iter 3 - 194 Test Avg Acc: 55.5686%, Test Avg loss: 0.003460 Time: 4.4989s
+Size 909 Iter 3 - 195 Test Avg Acc: 55.3937%, Test Avg loss: 0.003431 Time: 4.3070s
+Size 909 Iter 3 - 196 Test Avg Acc: 55.5768%, Test Avg loss: 0.003447 Time: 4.6132s
+Size 909 Iter 3 - 197 Test Avg Acc: 55.5933%, Test Avg loss: 0.003454 Time: 4.0755s
+Size 909 Iter 3 - 198 Test Avg Acc: 55.8937%, Test Avg loss: 0.003448 Time: 4.5725s
+Size 909 Iter 3 - 199 Test Avg Acc: 56.0809%, Test Avg loss: 0.003466 Time: 4.6453s
+Size 909 Iter 3 - 200 Test Avg Acc: 55.4534%, Test Avg loss: 0.003455 Time: 4.6891s
+[[  1.          16.0964       9.061885     5.44642   ]
+ [  2.          18.876062     4.5592427    9.376239  ]
+ [  3.          18.47897      5.206001    13.52617   ]
+ [  4.          16.29872      8.920911    17.894653  ]
+ [  5.          16.30352      8.846968    21.929102  ]
+ [  6.          16.782915     8.908383    26.01877   ]
+ [  7.          17.099081     8.930021    30.262665  ]
+ [  8.          17.200584     8.647291    34.349934  ]
+ [  9.          18.970709     5.5759945   38.56128   ]
+ [ 10.          19.203203     5.242807    42.53073   ]
+ [ 11.          18.04278      7.651218    46.760345  ]
+ [ 12.          17.69987      8.246944    51.101513  ]
+ [ 13.          18.002317     7.648853    55.078186  ]
+ [ 14.          18.112051     8.119826    59.214138  ]
+ [ 15.          17.942652     7.8466735   63.530487  ]
+ [ 16.          17.996145     8.097478    67.855934  ]
+ [ 17.          17.8967       8.036682    71.9722    ]
+ [ 18.          17.991344     8.108808    76.05755   ]
+ [ 19.          17.914534     8.135861    80.23514   ]
+ [ 20.          18.02152      8.169167    84.27741   ]
+ [ 21.          17.9742       8.096672    88.24457   ]
+ [ 22.          18.006433     8.122837    92.60425   ]
+ [ 23.          18.070902     8.102007    96.81321   ]
+ [ 24.          18.149086     8.050334   101.34997   ]
+ [ 25.          18.36238      8.1126995  105.45831   ]
+ [ 26.          18.568813     8.07397    109.84066   ]
+ [ 27.          18.644255     8.017068   114.11902   ]
+ [ 28.          19.040663     8.232619   118.31597   ]
+ [ 29.          20.53714      8.741367   122.618385  ]
+ [ 30.          22.420425     9.630119   126.648926  ]
+ [ 31.          24.625366    10.338504   130.88843   ]
+ [ 32.          27.826128     9.812207   134.97632   ]
+ [ 33.          29.081194     9.354375   139.1929    ]
+ [ 34.          31.932184     5.887398   143.29272   ]
+ [ 35.          30.060556     3.6984794  147.41985   ]
+ [ 36.          24.171347     4.314259   151.58492   ]
+ [ 37.          23.464258     6.25817    155.78725   ]
+ [ 38.          23.519125     7.1174135  159.8441    ]
+ [ 39.          22.804491     6.5240226  164.01308   ]
+ [ 40.          22.362131     6.314192   168.36395   ]
+ [ 41.          21.549423    10.567176   172.49773   ]
+ [ 42.          21.094034    10.3160095  176.57849   ]
+ [ 43.          21.349161    12.130936   180.86317   ]
+ [ 44.          20.364311    10.8181305  184.9157    ]
+ [ 45.          20.032372    10.320786   189.00966   ]
+ [ 46.          19.258757     9.574353   193.10942   ]
+ [ 47.          18.861662     8.908517   197.0448    ]
+ [ 48.          18.664143     8.953719   200.8966    ]
+ [ 49.          18.251959     8.417813   204.75044   ]
+ [ 50.          18.234129     8.208457   208.48344   ]
+ [ 51.          18.315742     8.661604   212.4836    ]
+ [ 52.          16.46126      5.2505746  216.71875   ]
+ [ 53.          17.10251      6.4639144  221.06718   ]
+ [ 54.          18.018778     8.049204   225.32622   ]
+ [ 55.          16.830238     5.987285   229.52483   ]
+ [ 56.          17.606596     7.260385   233.59474   ]
+ [ 57.          17.515379     7.056069   237.4502    ]
+ [ 58.          18.06267      8.170205   241.34828   ]
+ [ 59.          18.017406     7.8647738  245.28984   ]
+ [ 60.          17.877497     7.581734   249.09583   ]
+ [ 61.          19.146967     9.8511305  253.29224   ]
+ [ 62.          18.291052     8.316077   257.54114   ]
+ [ 63.          20.191483    11.602076   261.5981    ]
+ [ 64.          18.441935     8.295147   265.80692   ]
+ [ 65.          20.49599     11.751394   269.99268   ]
+ [ 66.          19.56395     10.139688   274.0129    ]
+ [ 67.          19.37329      9.868258   278.04858   ]
+ [ 68.          19.82868      9.393391   282.11237   ]
+ [ 69.          19.547491     9.676863   286.2942    ]
+ [ 70.          20.283384    10.607188   290.42383   ]
+ [ 71.          21.676989    11.845467   294.46646   ]
+ [ 72.          20.838905    10.939043   298.54617   ]
+ [ 73.          21.484955    11.085594   302.68784   ]
+ [ 74.          20.737404     9.755684   307.1086    ]
+ [ 75.          22.072714    10.6935     311.47696   ]
+ [ 76.          22.397795    11.471997   315.69278   ]
+ [ 77.          23.21256     10.890341   320.1157    ]
+ [ 78.          23.757792    10.666583   324.19168   ]
+ [ 79.          23.257822     9.382044   328.48593   ]
+ [ 80.          25.95999     10.874715   333.0383    ]
+ [ 81.          25.913353    10.107922   337.97348   ]
+ [ 82.          26.200714    10.368514   342.91483   ]
+ [ 83.          26.886543    10.609295   347.76218   ]
+ [ 84.          27.04634     11.235435   352.7169    ]
+ [ 85.          26.595068    10.3790245  357.7819    ]
+ [ 86.          27.755487    10.6845455  362.69583   ]
+ [ 87.          27.0628       9.793162   367.62534   ]
+ [ 88.          27.343988    11.15566    372.17245   ]
+ [ 89.          28.404968     9.7626915  376.4625    ]
+ [ 90.          27.668386     9.748737   381.26724   ]
+ [ 91.          28.102518    10.914929   386.4888    ]
+ [ 92.          27.800753    10.106047   391.75806   ]
+ [ 93.          29.14498     11.181389   396.96225   ]
+ [ 94.          28.651865    10.710548   401.99258   ]
+ [ 95.          28.650496    10.180967   406.87973   ]
+ [ 96.          28.937172    10.08518    411.2014    ]
+ [ 97.          28.97352     10.559701   415.4889    ]
+ [ 98.          30.007751    10.579283   419.6288    ]
+ [ 99.          30.375353    11.095225   423.91965   ]
+ [100.          30.381525     9.989636   428.3383    ]
+ [101.          30.513206     9.39101    432.6343    ]
+ [102.          30.336946     9.2211895  436.6605    ]
+ [103.          31.545378    10.004147   440.7142    ]
+ [104.          32.45136      8.676594   445.36264   ]
+ [105.          32.555603     8.126124   449.88705   ]
+ [106.          33.566513     6.299866   454.38208   ]
+ [107.          35.29206      3.7092366  458.56262   ]
+ [108.          37.272736     3.0311477  463.07056   ]
+ [109.          38.15128      1.3830751  467.57996   ]
+ [110.          38.37486      2.2625365  471.83337   ]
+ [111.          38.86523      1.5857681  476.7019    ]
+ [112.          37.670513     2.545167   480.7499    ]
+ [113.          38.21849      0.7558575  484.77524   ]
+ [114.          38.225353     1.2151812  488.7413    ]
+ [115.          38.560722     2.2293444  493.16284   ]
+ [116.          39.530483     0.75924134 497.2888    ]
+ [117.          39.337765     1.0599561  501.43274   ]
+ [118.          39.585346     1.5759671  505.5956    ]
+ [119.          39.294556     1.4077953  509.93774   ]
+ [120.          40.65867      2.597025   514.3867    ]
+ [121.          40.350048     2.6852067  518.7395    ]
+ [122.          40.955635     3.047273   522.96106   ]
+ [123.          40.61066      2.7040355  527.5663    ]
+ [124.          41.142178     3.0788994  532.13043   ]
+ [125.          41.379475     3.8725228  536.2675    ]
+ [126.          42.485718     4.001514   540.4903    ]
+ [127.          42.29643      4.458937   544.6561    ]
+ [128.          42.33346      4.9620237  548.888     ]
+ [129.          43.10776      4.702881   552.8359    ]
+ [130.          43.666714     5.0029144  556.90845   ]
+ [131.          44.027462     5.2207575  560.9031    ]
+ [132.          43.74696      5.0591197  565.01447   ]
+ [133.          43.761364     5.02599    569.3046    ]
+ [134.          44.236637     5.126078   573.3775    ]
+ [135.          43.876575     4.9831514  577.6111    ]
+ [136.          43.9239       4.928758   581.8745    ]
+ [137.          44.757183     4.4827003  586.1761    ]
+ [138.          44.746212     4.213296   590.335     ]
+ [139.          44.551434     4.9486074  594.4727    ]
+ [140.          44.82371      4.406705   598.5688    ]
+ [141.          45.692654     3.4860961  602.59906   ]
+ [142.          45.513653     3.8595347  606.5425    ]
+ [143.          45.066486     4.016267   610.76825   ]
+ [144.          45.74615      3.9091914  614.91754   ]
+ [145.          45.80513      4.051027   619.12823   ]
+ [146.          46.43472      3.699185   623.1641    ]
+ [147.          46.37025      3.422742   627.2346    ]
+ [148.          46.780376     4.322163   631.2579    ]
+ [149.          47.05608      3.8244743  635.347     ]
+ [150.          47.090374     4.9451327  639.5549    ]
+ [151.          47.74808      4.095282   643.788     ]
+ [152.          48.359837     3.753556   647.847     ]
+ [153.          48.13283      4.160942   651.8704    ]
+ [154.          48.19044      4.297406   655.5772    ]
+ [155.          48.659546     3.9149745  659.53253   ]
+ [156.          48.84198      3.7636204  663.5456    ]
+ [157.          48.935253     3.8784404  667.5915    ]
+ [158.          48.835804     4.207788   671.36835   ]
+ [159.          49.77196      3.3606584  675.4025    ]
+ [160.          50.032578     3.184516   679.2984    ]
+ [161.          49.833004     3.5618331  683.5539    ]
+ [162.          50.24107      3.506597   687.67334   ]
+ [163.          49.828197     3.655601   691.72064   ]
+ [164.          50.330227     3.5787606  695.9228    ]
+ [165.          50.63679      2.9175503  700.03644   ]
+ [166.          50.97559      2.8272314  704.0456    ]
+ [167.          51.238262     2.6936548  708.0181    ]
+ [168.          51.013996     2.8961506  712.3574    ]
+ [169.          51.386402     2.754132   716.6445    ]
+ [170.          51.64702      2.52866    720.72174   ]
+ [171.          51.79173      2.068041   724.8471    ]
+ [172.          52.000904     2.2887619  728.69977   ]
+ [173.          52.369884     1.7868468  732.81226   ]
+ [174.          52.619522     1.82277    736.7837    ]
+ [175.          52.884937     1.2745779  740.8868    ]
+ [176.          53.124294     0.9850106  744.8872    ]
+ [177.          53.36296      1.031744   748.79785   ]
+ [178.          53.56322      0.7578987  752.7007    ]
+ [179.          53.55568      0.7357553  756.6048    ]
+ [180.          53.908886     0.5167781  760.6026    ]
+ [181.          54.0385       0.43726435 764.5303    ]
+ [182.          54.075535     0.64312375 768.5566    ]
+ [183.          54.114628     0.5020944  772.6677    ]
+ [184.          54.414337     0.38514498 776.57745   ]
+ [185.          54.508984     0.2815164  780.9943    ]
+ [186.          54.661922     0.35303798 785.1324    ]
+ [187.          54.7984       0.31071672 789.7668    ]
+ [188.          54.96574      0.24381772 793.772     ]
+ [189.          55.327175     0.14114854 797.7702    ]
+ [190.          55.180405     0.30850154 802.03174   ]
+ [191.          55.221558     0.30715352 806.32806   ]
+ [192.          55.207153     0.3649711  810.89484   ]
+ [193.          55.382725     0.28934786 815.1677    ]
+ [194.          55.56584      0.3456655  819.497     ]
+ [195.          55.607677     0.29410657 823.8205    ]
+ [196.          55.781193     0.20071176 828.3359    ]
+ [197.          55.87927      0.25275242 832.3044    ]
+ [198.          55.931385     0.27456748 836.4512    ]
+ [199.          56.091187     0.3550274  840.74536   ]
+ [200.          55.882694     0.51757735 845.1879    ]]
+Best Result: Epoch   Acc  Std.
+                 199 56.09  0.36
+--------------- Train Done! ----------------
