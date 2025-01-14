@@ -12,9 +12,12 @@ GCGP incorporates a **covariance function** that aggregates local neighborhoods 
 ## Methodology
 
 <div style="text-align: center;">
-<img src="./docs/GC.png" alt="Graph Condensation" style="width:50%; height:auto;">
-
-<figcaption>Figure 1: Graoh condensation aims to condense a large graph $G$ to a smaller but informative one $G^{\mathcal{S}}$, so that which will not impact the downstream task, such as the training of the GNN models.</figcaption>
+    <figure>
+        <img src="./docs/GC.png" alt="Graph Condensation" style="width:50%; height:auto;">
+        <figcaption>
+            Figure 1: Graph condensation aims to condense a large graph $G$ to a smaller but informative one $G^{\mathcal{S}}$, so that it will not impact the downstream task, such as the training of the GNN models.
+        </figcaption>
+    </figure>
 </div>
 
 \
@@ -23,9 +26,12 @@ Existing graph condensation methods use a bi-level optimization strategy, where 
 To address this limitation, the proposed **Graph Condensation via Gaussian Process (GCGP)** method introduces a framework that integrates a **Gaussian Process (GP)** to enhance efficiency in graph condensation tasks. In this context, the condensed synthetic graph $G^{\mathcal{S}}$ represents the observations for the GP. By combining these observations with prior knowledge of the model, the GP derives the posterior distribution of the outputs, thereby circumventing the need for computationally intensive iterative training.
 
 <div style="text-align: center;">
-<img src="./docs/GCGP.png" alt="GCGP" style="width:90%; height:auto;">
-
-<figcaption>Figure 2: The workflow of the proposed GCGP framework involves three key steps. First, the condensed synthetic graph $G^{\mathcal{S}}$ is utilized as the observations for the GP. Next, predictions are generated for the test locations, corresponding to the original graph $G$. Finally, the condensed graph is iteratively optimized by minimizing the discrepancy between the GP's predictions and the ground-truth labels.</figcaption>
+    <figure>
+        <img src="./docs/GCGP.png" alt="GCGP" style="width:90%; height:auto;">
+        <figcaption>
+            Figure 2: The workflow of the proposed GCGP framework involves three key steps. First, the condensed synthetic graph $G^{\mathcal{S}}$ is utilized as the observations for the GP. Next, predictions are generated for the test locations, corresponding to the original graph $G$. Finally, the condensed graph is iteratively optimized by minimizing the discrepancy between the GP's predictions and the ground-truth labels.
+        </figcaption>
+    </figure>
 </div>
 
 
