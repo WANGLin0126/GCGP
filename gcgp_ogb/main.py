@@ -92,7 +92,7 @@ parser.add_argument('--norm', type=int, default=0, help='whether to normalize th
 parser.add_argument('--set_seed', type=bool, default=True, help='whether to set seed')
 parser.add_argument('--seed', type=int, default=5, help='setup the random seed (default: 5)')
 parser.add_argument('--iter', type=int, default=2, help='iteration times (default: 3)')
-parser.add_argument('--kernel', type=str, default='SGNK', help='kernel method in KRR [SGTK, SGNK] (default: SGTK)')
+parser.add_argument('--kernel', type=str, default='SGNK', help='kernel method in KRR [SGTK, SGNK] (default: SGNK)')
 parser.add_argument('--split_method', type=str, default='random', help='split method of the test set [kmeans,none] (default: kmeans)')
 parser.add_argument('--train_batch_size', type=int, default=5000, help='split method of the test set [kmeans,none] (default: kmeans)')
 parser.add_argument('--save', type=int, default=0, help='whether to save the results')

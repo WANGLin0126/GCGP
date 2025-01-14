@@ -31,7 +31,6 @@ parser.add_argument('--lr_A', type=float, default=5e-3, help='learning rate (def
 parser.add_argument('--K', type=int, default=0, help='number of aggr in SNTK (default: 2)')
 parser.add_argument('--k', type=int, default=0, help='number of aggr in SNTK (default: 2)')
 parser.add_argument('--L', type=int, default=2, help='the number of layers after each aggr (default: 2)')
-
 parser.add_argument('--learn_A', type=int, default=0, help='whether to learn the adjacency matrix')
 parser.add_argument('--norm', type=int, default=0, help='whether to normalize the features')
 parser.add_argument('--set_seed', type=bool, default=True, help='setup the random seed (default: False)')
