@@ -5,7 +5,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 import torch
 from torch import nn
 from torch.nn import functional as F
-from krr import KernelRidgeRegression
+from gpr import GaussianProcessRegression
 from sgtk import SimplifyingGraphTangentKernel
 from sgnk import SimplifyingGraphNeuralKernel
 from ntk import NeuralTangentKernel
@@ -21,15 +21,15 @@ device = "cuda:1" if torch.cuda.is_available() else "cpu"
 print(f"Using {device} device")
 
 
-parser = argparse.ArgumentParser(description='SGNK computation')
+parser = argparse.ArgumentParser(description='')
 parser.add_argument('--dataset', type=str, default="Reddit", help='name of dataset [Reddit]')
 parser.add_argument('--cond_size', type=int, default=77, help='condensation size)[77, 153, 307]')
-parser.add_argument('--ridge', type=float, default=1e-3, help='ridge parameter of KRR (default: 1e-3)')
+parser.add_argument('--ridge', type=float, default=1e-3, help='ridge parameter of GPR (default: 1e-3)')
 parser.add_argument('--epochs', type=int, default=200, help='number of epochs to train (default: 100)')
 parser.add_argument('--lr_X', type=float, default=5e-3, help='learning rate (default: 0.005)')
 parser.add_argument('--lr_A', type=float, default=5e-3, help='learning rate (default: 0.005)')
-parser.add_argument('--K', type=int, default=0, help='number of aggr in SNTK (default: 2)')
-parser.add_argument('--k', type=int, default=0, help='number of aggr in SNTK (default: 2)')
+parser.add_argument('--K', type=int, default=0, help='number of aggr in SGNK (default: 2)')
+parser.add_argument('--k', type=int, default=0, help='number of aggr in SGNK (default: 2)')
 parser.add_argument('--L', type=int, default=2, help='the number of layers after each aggr (default: 2)')
 parser.add_argument('--learn_A', type=int, default=0, help='whether to learn the adjacency matrix')
 parser.add_argument('--norm', type=int, default=0, help='whether to normalize the features')
@@ -39,7 +39,7 @@ parser.add_argument('--batch_size', type=int, default=8000, help='batch size (de
 parser.add_argument('--accumulate_steps', type=int, default=8, help='accumulate steps (default: 10)')
 parser.add_argument('--save', type=bool, default=False, help='save the results (default: False)')
 parser.add_argument('--iterations', type=int, default=2, help='number of iterations of the whole experiments (default: 10)')
-parser.add_argument('--kernel', type=str, default='SGNK', help='kernel type [SGTK, SGNK] (default: SGTK)')
+parser.add_argument('--kernel', type=str, default='SGNK', help='kernel method [SGNK] (default: SGNK)')
 parser.add_argument('--num_hops', type=int, default=0, help='number of the hops when sampling the training batches (default: 0)')
 args = parser.parse_args()
 
@@ -50,7 +50,7 @@ if args.learn_A:
     
 # torch.autograd.set_detect_anomaly(True) 
 def train(G_t, G_s, y_t, y_s, A_t, A_s,Alpha, loss_fn, accumulate_steps, i, epoch, learnA, norm):
-    pred, correct,loss_sparse = KRR.forward( G_t, G_s, y_t, y_s, A_t, A_s, Alpha,train=1, epoch=epoch, learnA = learnA, norm = norm)
+    pred, correct,loss_sparse = GPR.forward( G_t, G_s, y_t, y_s, A_t, A_s, Alpha,train=1, epoch=epoch, learnA = learnA, norm = norm)
 
     pred      = pred.to(torch.float32)
     y_t       = y_t.to(torch.float32)
@@ -89,7 +89,7 @@ def test(G_t, G_s, y_t, y_s, A_t, A_s, Alpha, loss_fn, learnA):
     size               = len(y_t)
     test_loss, correct = 0, 0
     with torch.no_grad():
-        pred,_,_      = KRR.forward( G_t, G_s, y_t, y_s, A_t, A_s ,Alpha, train=0, epoch=0, learnA = learnA)
+        pred,_,_      = GPR.forward( G_t, G_s, y_t, y_s, A_t, A_s ,Alpha, train=0, epoch=0, learnA = learnA)
         test_loss  += loss_fn(pred, y_t).item()
         correct    += (pred.argmax(1) == y_t.argmax(1)).type(torch.float).sum().item()
     return test_loss, correct
@@ -139,7 +139,7 @@ elif args.kernel == "dot_product":
 elif args.kernel == "NTK":
     kernel      =  NTK.nodes_gram
 
-KRR        = KernelRidgeRegression(kernel,ridge,args.K).to(device)
+GPR        = GaussianProcessRegression(kernel,ridge,args.K).to(device)
 
 
 
@@ -323,7 +323,7 @@ print("--------------- Train Done! ----------------")
 # Time_Acc = torch.load('Time_Acc.pt')
 # print(np.array(Time_Acc.cpu()))
 
-# pred,_,_ = KRR.forward( x_s, x_s, y_s, y_s, A_s, A_s,train=False)
+# pred,_,_ = GPR.forward( x_s, x_s, y_s, y_s, A_s, A_s,train=False)
 
 if args.save:
     adj = Alpha.detach()
@@ -334,6 +334,6 @@ if args.save:
     torch.save(x_s, 'save/'+args.dataset+'_x_s_'+str(args.cond_size)+'_learnA_'+str(args.learn_A)+'.pt')
     torch.save(y_s, 'save/'+args.dataset+'_y_s_'+str(args.cond_size)+'_learnA_'+str(args.learn_A)+'.pt')
     torch.save(adj, 'save/'+args.dataset+'_A_s_'+str(args.cond_size)+'_learnA_'+str(args.learn_A)+'.pt')
-    pred,_ = KRR.forward( x_s, x_s, y_s, y_s, adj, adj,train=False)
+    pred,_ = GPR.forward( x_s, x_s, y_s, y_s, adj, adj,train=False)
     torch.save(pred,'save/'+args.dataset+'_pred_'+str(args.cond_size)+'_learnA_'+str(args.learn_A)+'.pt')
     print("--------------- Save Done! ----------------")

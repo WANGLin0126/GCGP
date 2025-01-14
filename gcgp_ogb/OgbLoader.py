@@ -83,14 +83,11 @@ class OgbNodeDataLoader(nn.Module):
         tensor = torch.arange(self.n_train)
         shuffled_tensor = tensor[torch.randperm(tensor.size(0))]
 
-        # 根据 training batch size 分成 self.train_batch 组
         groups = torch.chunk(shuffled_tensor, self.train_batch)
 
         for i, group in enumerate(groups):
             # num_hops = 2  # k-hop
-            # 使用 k_hop_subgraph 函数查找 k-hop 邻居， 输出的是子图的节点索引 和 边索引
             subset, edge_index_k_hop,_,_ = k_hop_subgraph(node_idx=group, num_hops=self.num_hops, edge_index=data.edge_index, relabel_nodes=True)
-            # 生成 training batch 数据
             yield Data(x = self.train_feat[subset], edge_index = edge_index_k_hop, y = self.train_label[subset])
 
 
@@ -103,14 +100,11 @@ class OgbNodeDataLoader(nn.Module):
         tensor = torch.arange(self.n_test)
         shuffled_tensor = tensor[torch.randperm(tensor.size(0))]
 
-        # 根据 test batch size 分成 self.test_batch 组
         groups = torch.chunk(shuffled_tensor, self.test_batch)
 
         for i, group in enumerate(groups):
             # num_hops = 2  # k-hop
-            # 使用 k_hop_subgraph 函数查找 k-hop 邻居， 输出的是子图的节点索引 和 边索引
             subset, edge_index_k_hop,_,_ = k_hop_subgraph(node_idx=group, num_hops=0, edge_index=data.edge_index, relabel_nodes=True)
-            # 生成 training batch 数据
             yield Data(x = self.test_feat[subset], edge_index = edge_index_k_hop, y = self.test_label[subset])
     # def get_train_batch(self, idx):
 
@@ -247,13 +241,3 @@ class OgbNodeDataLoader(nn.Module):
         idx       = self.batch_labels_list[i]
         batch_i   = self.getitem(idx)
         return batch_i
-
-    # def kmeans_centers(self):
-    #     """
-    #     genrate kmeans centers
-    #     """
-    #     data = self.split_feat.cpu()
-    #     kmeans = KMeans(n_clusters = self.M)
-    #     kmeans.fit(data.numpy())
-    #     centers = kmeans.cluster_centers_
-    #     return centers

@@ -2,9 +2,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-class KernelRidgeRegression(nn.Module):
+class GaussianProcessRegression(nn.Module):
     def __init__(self, kernel, ridge, K=2):
-        super(KernelRidgeRegression, self).__init__()
+        super(GaussianProcessRegression, self).__init__()
         self.kernel   = kernel
         self.ridge    = ridge
         self.K        = K
@@ -41,7 +41,6 @@ class KernelRidgeRegression(nn.Module):
             """ Using the threshold 0.5 to discretize the adjacency matrix """
             # adj = torch.sigmoid(Alpha)
             adj = Alpha/(1+Alpha)
-            # TODO: 需要优化的参数和 adj 是分开的， 需要优化的参数是 Alpha ， adj 是通过 Alpha 计算出来的
             # A = adj.detach()
             # A = adj/(1+adj)
             threshold = 0.5
@@ -72,27 +71,78 @@ class KernelRidgeRegression(nn.Module):
         return x
 
 
-    def forward(self, G_t, G_s, y_t, y_s, A_t, A_s, Alpha, epoch=0, train=True, learnA=False):
+    def forward(self, G_t, G_s, y_t, y_s, A_t, A_s, Alpha, train, epoch=0,  learnA=0, norm = 0):
         if learnA:
             if train:
                 A_s = self.discretize( Alpha, train, epoch=epoch )
             else:
                 A_s = self.discretize( Alpha, train )
                 # print(sum(A_s))
+        if norm:
+            G_s = F.normalize(G_s, dim=1)
 
-        # G_s = F.normalize(G_s, dim=1)
-        # G_s = self.GCF(A_s, G_s, self.K)
+        G_s = self.GCF(A_s, G_s, self.K)
         # print(sum(A_s))
 
         K_ss      = self.kernel(G_s, G_s, A_s, A_s)
         K_ts      = self.kernel(G_t, G_s, A_t, A_s)
-        n         = torch.tensor(len(G_s), device = G_s.device)
+        n        = torch.tensor(len(G_s), device = G_s.device)
         regulizer = self.ridge * torch.trace(K_ss) * torch.eye(n, device = G_s.device) / n
         b         = torch.linalg.solve(K_ss + regulizer, y_s)
         pred      = torch.matmul(K_ts, b)
-        # pred      = torch.sigmoid(pred)
+
         pred      = nn.functional.softmax(pred, dim = 1)
         correct   = torch.eq(pred.argmax(1).to(torch.float32), y_t.argmax(1).to(torch.float32)).sum().item()
         acc       = correct / len(y_t)
+        # MSE loss for the sparse matrix A_s
+        loss_sparse = torch.square(torch.sigmoid(A_s).mean() - 5/70)
+        return pred, correct,loss_sparse
+    
 
-        return pred, acc
+    # def GCF(self, adj, x, k=3):
+    #     """
+    #     Graph convolution filter
+    #     parameters:
+    #         adj: torch.Tensor, adjacency matrix, must be self-looped
+    #         x: torch.Tensor, features
+    #         k: int, number of hops
+    #     return:
+    #         torch.Tensor, filtered features
+    #     """
+    #     D = torch.sum(adj,dim=1)
+    #     D = torch.pow(D,-0.5)
+    #     D = torch.diag(D)
+        
+    #     filter = torch.matmul(torch.matmul(D,adj),D)
+    #     for i in range(k):
+    #         x = torch.matmul(filter,x)
+    #     return x
+
+
+    # def forward(self, G_t, G_s, y_t, y_s, A_t, A_s, train, epoch=0, learnA = 0, norm = 0):
+        
+    #     if learnA:
+    #         if train:
+    #             A_s = self.discretize(A_s,train, epoch=epoch)
+    #         else:
+    #             A_s = self.discretize(A_s, train)
+
+    #     if norm:
+    #         G_s = F.normalize(G_s, dim=1)
+            
+    #     G_s = self.GCF(A_s, G_s, self.K)
+
+
+    #     K_ss      = self.kernel(G_s, G_s, A_s, A_s)
+    #     K_ts      = self.kernel(G_t, G_s, A_t, A_s)
+    #     n        = torch.tensor(len(G_s), device = G_s.device)
+    #     regulizer = self.ridge * torch.trace(K_ss) * torch.eye(n, device = G_s.device) / n
+    #     b         = torch.linalg.solve(K_ss + regulizer, y_s)
+    #     pred      = torch.matmul(K_ts, b)
+
+    #     pred      = nn.functional.softmax(pred, dim = 1)
+    #     correct   = torch.eq(pred.argmax(1).to(torch.float32), y_t.argmax(1).to(torch.float32)).sum().item()
+    #     acc       = correct / len(y_t)
+    #     # MSE loss for the sparse matrix A_s
+    #     loss_sparse = torch.square(torch.sigmoid(A_s).mean() - 5/70)
+    #     return pred, correct, loss_sparse

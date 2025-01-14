@@ -12,12 +12,12 @@ import re
 line_numbers = [223]  
 header = ["Dataset", "Cond_ratio", "Ridge", "k", "Learn_A", "Epoch", "Acc", "Std.", "Time"]
 
-# 创建并写入表头到 CSV 文件
+
 with open('results.csv', 'w', newline='', encoding='utf-8') as cvs_file:
     writer = csv.writer(cvs_file)
     writer.writerow(header)
 
-    for dataset in ['Cora', 'Citeseer','Pubmed', 'Photo', 'Computers']:  #,'CS', 'Physics'
+    for dataset in ['Cora', 'Citeseer','Pubmed', 'Photo', 'Computers']:  
         for cond_ratio in [0.25, 0.50, 1]:
             for ridge in ['1e-3', '1e-2', '1e-1', '5e-1', '1e0', '5', '1e1']:
                 for k in [1, 2, 3, 4, 5]:
@@ -44,7 +44,7 @@ with open('results.csv', 'w', newline='', encoding='utf-8') as cvs_file:
 df = pd.read_csv('results.csv')
 print(df.columns.tolist())
 rows = []
-for dataset in ['Cora','Citeseer', 'Pubmed', 'Photo', 'Computers']:  #'CS', 'Physics'
+for dataset in ['Cora','Citeseer', 'Pubmed', 'Photo', 'Computers']:  
     for cond_ratio in [0.25, 0.50, 1]:
         for leanr_A in [0, 1]:
 

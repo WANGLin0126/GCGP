@@ -11,13 +11,12 @@ import re
 # line_numbers = [222]  
 header = ["Dataset","Model", "Cond_ratio", "Learn_A", "k","Epoch", "Mean_Acc", "Std.", "Best_Acc"]
 
-# 创建并写入表头到 CSV 文件
 with open('results_generalization.csv', 'w', newline='', encoding='utf-8') as cvs_file:
     writer = csv.writer(cvs_file)
     writer.writerow(header)
 
-    for dataset in ['Cora', 'Citeseer','Pubmed', 'Photo', 'Computers','CS', 'Physics']:  #,'CS', 'Physics'
-        for model in ['GCN','SGC', 'GAT', 'SAGE', 'APPNP', 'Cheby', 'MLP']: #GCN SGC APPNP GAT SAGE Cheby MLP
+    for dataset in ['Cora', 'Citeseer','Pubmed', 'Photo', 'Computers','CS', 'Physics']:
+        for model in ['GCN','SGC', 'GAT', 'SAGE', 'APPNP', 'Cheby', 'MLP']:
             for cond_ratio in [0.25, 0.50, 1.0]:
                 for k in [1, 2, 3, 4, 5]:
                     for learn_A in [0,1]:
@@ -37,7 +36,7 @@ with open('results_generalization.csv', 'w', newline='', encoding='utf-8') as cv
 df = pd.read_csv('results_generalization.csv')
 print(df.columns.tolist())
 rows = []
-for dataset in ['Cora','Citeseer', 'Pubmed', 'Photo', 'Computers', 'CS']:  # 'Physics'
+for dataset in ['Cora','Citeseer', 'Pubmed', 'Photo', 'Computers', 'CS']:  
     for cond_ratio in [0.25, 0.50, 1]:
         for model in ['GCN', 'SGC', 'GAT', 'SAGE', 'APPNP', 'Cheby', 'MLP']:
 

@@ -3,7 +3,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 import torch
 from torch import nn
 from torch.nn import functional as F
-from krr import KernelRidgeRegression
+from gpr import GaussianProcessRegression
 from sgtk import SimplifyingGraphTangentKernel
 from sgnk import SimplifyingGraphNeuralKernel
 from sntk import StructureBasedNTK
@@ -18,10 +18,10 @@ import time
 device = "cuda:1" if torch.cuda.is_available() else "cpu"
 print(f"Using {device} device")
 
-parser = argparse.ArgumentParser(description='SGNK computation')
+parser = argparse.ArgumentParser(description='')
 parser.add_argument('--dataset', type=str, default="Photo", help='name of dataset [Cora, Citeseer, Pubmed, Photo, Computers] (default: Cora)')
 parser.add_argument('--cond_ratio', type=float, default=0.5, help='condensed ratio of the training set (default: 0.5, the condened set is 0.5*training set)')
-parser.add_argument('--ridge', type=float, default=1e-3, help='ridge parameter of KRR (default: 1e-4)')
+parser.add_argument('--ridge', type=float, default=1e-3, help='parameter of GPR (default: 1e-4)')
 # parser.add_argument('--K', type=int, default=3, help='number of aggr in kernel method (default: 1)')
 parser.add_argument('--k', type=int, default=0, help='number of aggr in preprocess the data (default: 1)')
 parser.add_argument('--L', type=int, default=2, help='the number of layers after each aggr (default: 1)')
@@ -32,7 +32,7 @@ parser.add_argument('--set_seed', type=bool, default=True, help='setup the rando
 parser.add_argument('--save', type=int, default=0, help='save the results (default: False)')
 parser.add_argument('--seed', type=int, default=5, help='setup the random seed (default: 5)')
 parser.add_argument('--iter', type=int, default=5, help='iteration times of the experiments (default: 5)')
-parser.add_argument('--kernel', type=str, default='SGNK', help='kernel method in KRR [SGTK, SGNK] (default: SGNK, the condened set is 0.5*training set)')
+parser.add_argument('--kernel', type=str, default='SGNK', help='kernel method[SGNK] (default: SGNK, the condened set is 0.5*training set)')
 args = parser.parse_args()
 
 # K = args.k
@@ -88,7 +88,7 @@ elif args.kernel == "dot_product":
 elif args.kernel == "NTK":
     kernel      =  NTK.nodes_gram
 
-KRR         = KernelRidgeRegression(kernel,ridge,args.k).to(device)
+GPR         = GaussianProcessRegression(kernel,ridge,args.k).to(device)
 MSEloss     = nn.MSELoss().to(device)
 
 adj         = adj.to(device)
@@ -120,7 +120,7 @@ print(f"Seed        :{args.seed}")
 # torch.autograd.set_detect_anomaly(True) 
 def train(G_t, G_s, y_t, y_s, A_t, A_s, Alpha, loss_fn, epoch, learnA):
 
-    pred, acc  = KRR.forward( G_t, G_s, y_t, y_s, A_t, A_s, Alpha, epoch,train=True, learnA=learnA)
+    pred, acc  = GPR.forward( G_t, G_s, y_t, y_s, A_t, A_s, Alpha, epoch,train=True, learnA=learnA)
     pred      = pred.to(torch.float32)
     y_t       = y_t.to(torch.float32)
     loss = loss_fn(pred, y_t).to(torch.float32)
@@ -148,7 +148,7 @@ def test(G_t, G_s, y_t, y_s, A_t, A_s, Alpha, loss_fn, learnA):
     
     test_loss = 0
     with torch.no_grad():
-        pred,acc    = KRR.forward( G_t, G_s, y_t, y_s, A_t, A_s, Alpha, train=False, learnA=learnA)
+        pred,acc    = GPR.forward( G_t, G_s, y_t, y_s, A_t, A_s, Alpha, train=False, learnA=learnA)
         test_loss  += loss_fn(pred, y_t).item()
 
     # print(f"Test Acc: {(100*acc):>0.2f}%, Avg loss: {test_loss:>6f}",end = '\n')
@@ -239,6 +239,6 @@ if args.save:
     torch.save(x_s, 'save/'+args.dataset+'_x_s_'+args.kernel+'_'+str(args.cond_ratio)+'_learnA_'+str(args.learn_A)+'.pt')
     torch.save(y_s, 'save/'+args.dataset+'_y_s_'+args.kernel+'_'+str(args.cond_ratio)+'_learnA_'+str(args.learn_A)+'.pt')
     torch.save(adj, 'save/'+args.dataset+'_A_s_'+args.kernel+'_'+str(args.cond_ratio)+'_learnA_'+str(args.learn_A)+'.pt')
-    pred,_ = KRR.forward( x_s, x_s, y_s, y_s, Alpha, adj, adj,train=False)
+    pred,_ = GPR.forward( x_s, x_s, y_s, y_s, Alpha, adj, adj,train=False)
     torch.save(pred,'save/'+args.dataset+'_pred_'+args.kernel+'_'+str(args.cond_ratio)+'_learnA_'+str(args.learn_A)+'.pt')
     print("--------------- Save Done! ----------------")

@@ -7,7 +7,7 @@ import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 from torch import nn
 from torch.nn import functional as F
-from krr import KernelRidgeRegression
+from gpr import GaussianProcessRegression
 from sntk import StructureBasedNeuralTangentKernel
 from sgnk import SimplifyingGraphNeuralKernel
 from ntk import NeuralTangentKernel
@@ -21,7 +21,7 @@ from OgbLoader import OgbNodeDataLoader
 
 
 def train(G_t, G_s, y_t, y_s, A_t, A_s, Alpha, loss_fn, accumulate_steps,i, epoch, learnA, norm):
-    pred, correct = KRR.forward( G_t, G_s, y_t, y_s, A_t, A_s, Alpha, epoch, train = 1, learnA=learnA, norm = norm)
+    pred, correct = GPR.forward( G_t, G_s, y_t, y_s, A_t, A_s, Alpha, epoch, train = 1, learnA=learnA, norm = norm)
 
     if sum(sum(A_s<0)):
         raise ValueError(f"Training loss is {A_s}")
@@ -67,7 +67,7 @@ def test(G_t, G_s, y_t, y_s, A_t, A_s, Alpha, loss_fn, learnA):
     size               = len(y_t)
     test_loss, correct = 0, 0
     with torch.no_grad():
-        pred,_      = KRR.forward( G_t, G_s, y_t, y_s, A_t, A_s,Alpha, train = 0, learnA=learnA)
+        pred,_      = GPR.forward( G_t, G_s, y_t, y_s, A_t, A_s,Alpha, train = 0, learnA=learnA)
         test_loss  += loss_fn(pred, y_t).item()
         correct    += (pred.argmax(1) == y_t.argmax(1)).type(torch.float).sum().item()
     return test_loss, correct
@@ -77,40 +77,32 @@ def test(G_t, G_s, y_t, y_s, A_t, A_s, Alpha, loss_fn, learnA):
 device = "cuda:1" if torch.cuda.is_available() else "cpu"
 print(f"Using {device} device")
 
-parser = argparse.ArgumentParser(description='SGNK computation')
+parser = argparse.ArgumentParser(description='')
 parser.add_argument('--dataset', type=str, default="ogbn-arxiv", help='name of dataset (default: ogbn-arxiv)')
 parser.add_argument('--cond_size', type=int, default=90, help='condensed ratio of the training set (default: 0.5, the condened set is 0.5*training set)')
-parser.add_argument('--ridge', type=float, default=1e-3, help='ridge parameter of KRR (default: 1e-3)')
+parser.add_argument('--ridge', type=float, default=1e-3, help='parameter of GPR (default: 1e-3)')
 parser.add_argument('--epochs', type=int, default=120, help='number of epochs to train (default: 100)')
 parser.add_argument('--lr_X', type=float, default=5e-3, help='learning rate (default: 0.005)')
 parser.add_argument('--lr_A', type=float, default=5e-3, help='learning rate (default: 0.005)')
-parser.add_argument('--k', type=int, default=0, help='the convolutiona times of the dataset (default: 2)')
-parser.add_argument('--K', type=int, default=0, help='number of aggr in SGTK (default: 2)')
+# parser.add_argument('--k', type=int, default=0, help='the convolutiona times of the dataset (default: 2)')
+parser.add_argument('--K', type=int, default=0, help='number of aggr in SGNK (default: 2)')
 parser.add_argument('--L', type=int, default=2, help='the number of layers after each aggr (default: 2)')
 parser.add_argument('--learn_A', type=int, default=0, help='whether to learn the adjacency matrix')
 parser.add_argument('--norm', type=int, default=0, help='whether to normalize the features')
 parser.add_argument('--set_seed', type=bool, default=True, help='whether to set seed')
 parser.add_argument('--seed', type=int, default=5, help='setup the random seed (default: 5)')
 parser.add_argument('--iter', type=int, default=2, help='iteration times (default: 3)')
-parser.add_argument('--kernel', type=str, default='SGNK', help='kernel method in KRR [SGTK, SGNK] (default: SGNK)')
+parser.add_argument('--kernel', type=str, default='SGNK', help='kernel method [SGNK] (default: SGNK)')
 parser.add_argument('--split_method', type=str, default='random', help='split method of the test set [kmeans,none] (default: kmeans)')
 parser.add_argument('--train_batch_size', type=int, default=5000, help='split method of the test set [kmeans,none] (default: kmeans)')
 parser.add_argument('--save', type=int, default=0, help='whether to save the results')
 args = parser.parse_args()
 
-args.K = args.k
+
 
 name = args.dataset
-# loader = OgbDataLoader(dataset_name=name, train_batch_size=3000, test_batch_size = 10000, k = args.k, num_neighbor=[10], device = device)
-# TRAIN_K, test_k, n_train, n_test, n_class, dim, n  = loader.properties()
-# loader.split_test_batch()
 
-
-# test_loader  = OgbDataLoader(dataset_name=name, split='test', batch_size=20000, split_method=args.split_method)
-# TRAIN_K,n_train,n_class, dim, n  = train_loader.properties()
-# test_k,n_test,_,_,_              = test_loader.properties()
-
-OGBloader = OgbNodeDataLoader(dataset_name=args.dataset, train_batch_size=args.train_batch_size, test_batch_size = 10000, aggr = args.k, num_hops = 1, device=device)
+OGBloader = OgbNodeDataLoader(dataset_name=args.dataset, train_batch_size=args.train_batch_size, test_batch_size = 10000, aggr = args.K, num_hops = 1, device=device)
 TRAIN_K, test_k, n_train, n_test, n_class, dim, n = OGBloader.properties()
 
 # test_loader.split_batch()
@@ -146,7 +138,7 @@ elif args.kernel == "dot_product":
 elif args.kernel == "NTK":
     kernel      =  NTK.nodes_gram
 
-KRR        = KernelRidgeRegression(kernel, ridge, K = args.K).to(device)
+GPR        = GaussianProcessRegression(kernel, ridge, K = args.K).to(device)
 
 if args.learn_A:
     args.lr_A = args.lr_X
@@ -297,7 +289,7 @@ print("--------------- Train Done! ----------------")
 
 
 
-# pred,_ = KRR.forward( x_s, x_s, y_s, y_s, A_s, A_s,train=False)
+# pred,_ = GPR.forward( x_s, x_s, y_s, y_s, A_s, A_s,train=False)
 
 if args.save:
     adj = A_s.detach()
@@ -308,6 +300,6 @@ if args.save:
     torch.save(x_s, 'save/'+args.dataset+'_x_s_'+str(args.cond_size)+'_learnA_'+str(args.learn_A)+'.pt')
     torch.save(y_s, 'save/'+args.dataset+'_y_s_'+str(args.cond_size)+'_learnA_'+str(args.learn_A)+'.pt')
     torch.save(adj, 'save/'+args.dataset+'_A_s_'+str(args.cond_size)+'_learnA_'+str(args.learn_A)+'.pt')
-    pred,_ = KRR.forward( x_s, x_s, y_s, y_s, adj, adj,train=False)
+    pred,_ = GPR.forward( x_s, x_s, y_s, y_s, adj, adj,train=False)
     torch.save(pred,'save/'+args.dataset+'_pred_'+str(args.cond_size)+'_learnA_'+str(args.learn_A)+'.pt')
     print("--------------- Save Done! ----------------")
