@@ -1,4 +1,4 @@
-# Efficient Graph Condensation via Gaussian Process (GCGP) [Paper](./docs/Efficient_Graph_Condensation_via_Gaussian_Processes.pdf.pdf)
+# Efficient Graph Condensation via Gaussian Process (GCGP) [Paper](./docs/Efficient_Graph_Condensation_via_Gaussian_Processes.pdf)
 
 
 
