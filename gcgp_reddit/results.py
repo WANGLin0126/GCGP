@@ -6,7 +6,7 @@ import re
 line_numbers = [624]  
 header = ["Dataset", "Cond_Size", "Ridge", "k", "Learn_A", "Norm", "Epoch", "Acc", "Std."]
 
-# 创建并写入表头到 CSV 文件
+
 with open('results.csv', 'w', newline='', encoding='utf-8') as cvs_file:
     writer = csv.writer(cvs_file)
     writer.writerow(header)

@@ -1,7 +1,3 @@
-
-
-
-
 for dataset in  Reddit; do 
     for cond_size in 77 153 307; do
         for ridge in 1e-3 1e-2 1e-1 1e0 1e1 ; do 

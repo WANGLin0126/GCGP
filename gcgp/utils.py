@@ -258,7 +258,7 @@ def load_data(dataset, degree_as_tag):
         for g in g_list:
             g.node_tags = list(dict(g.g.degree(range(len(g.g)))).values())
 
-    #Extracting unique tag labels   
+    #Extracting unique tag labels
     tagset = set([])
     for g in g_list:
         tagset = tagset.union(set(g.node_tags))

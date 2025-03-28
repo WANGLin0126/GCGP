@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 读取配置文件并逐行执行
+
 while IFS= read -r line
 do
   dataset=$(echo "$line" | awk '{print $1}')

@@ -178,13 +178,3 @@ class OgbDataLoader(nn.Module):
         idx       = self.batch_labels_list[i]
         batch_i   = self.getitem(idx)
         return batch_i
-
-    # def kmeans_centers(self):
-    #     """
-    #     genrate kmeans centers
-    #     """
-    #     data = self.split_feat.cpu()
-    #     kmeans = KMeans(n_clusters = self.M)
-    #     kmeans.fit(data.numpy())
-    #     centers = kmeans.cluster_centers_
-    #     return centers

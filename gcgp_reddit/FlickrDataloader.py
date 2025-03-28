@@ -77,14 +77,13 @@ class FlickrDataLoader(nn.Module):
         tensor = torch.arange(self.n_split)
         shuffled_tensor = tensor[torch.randperm(tensor.size(0))]
 
-        # 根据 training batch size 分成 self.train_batch 组
+
         groups = torch.chunk(shuffled_tensor, self.k)
 
         for i, group in enumerate(groups):
             # num_hops = 2  # k-hop
-            # 使用 k_hop_subgraph 函数查找 k-hop 邻居， 输出的是子图的节点索引 和 边索引
+
             subset, edge_index_k_hop,_,_ = k_hop_subgraph(node_idx=group, num_hops=self.num_hops, edge_index=split_edge_index, relabel_nodes=True)
-            # 生成 training batch 数据
             yield Data(x = self.split_feat[subset], edge_index = edge_index_k_hop, y = self.split_label[subset])
 
 
