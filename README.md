@@ -188,3 +188,5 @@ If our paper and codes helps your research, please cite it in your publications:
   year={2025}
 }
 ```
+
+License: [MIT](./LICENSE) © 2025 WANG Lin

@@ -5,7 +5,7 @@ for dataset in  ogbn-arxiv; do
                 for learn_A in 0 1; do
                     for norm in 0 1; do
                         echo ${dataset}_size_${cond_size}_ridge_${ridge}_k_${k}_learn_A_${learn_A}_norm_${norm}
-                        python main.py --dataset $dataset --cond_size $cond_size --ridge $ridge --k $k --kernel SGNK --epochs 200 --learn_A $learn_A --norm $norm > outputs/${dataset}_size_${cond_size}_ridge_${ridge}_k_${k}_learn_A_${learn_A}_norm_${norm}.txt
+                        python main.py --dataset $dataset --cond_size $cond_size --ridge $ridge --K $k --kernel SGNK --epochs 200 --learn_A $learn_A --norm $norm > outputs/${dataset}_size_${cond_size}_ridge_${ridge}_k_${k}_learn_A_${learn_A}_norm_${norm}.txt
                     done
                 done
             done

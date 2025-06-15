@@ -11,6 +11,7 @@ from gpr import GaussianProcessRegression
 from sntk import StructureBasedNeuralTangentKernel
 from sgnk import SimplifyingGraphNeuralKernel
 from ntk import NeuralTangentKernel
+from lightgntk import LightGraphNeuralTangentKernel
 from utils import sub_G, sub_A_list, update_E, sub_E
 import argparse
 import numpy as np
@@ -72,9 +73,7 @@ def test(G_t, G_s, y_t, y_s, A_t, A_s, Alpha, loss_fn, learnA):
         correct    += (pred.argmax(1) == y_t.argmax(1)).type(torch.float).sum().item()
     return test_loss, correct
 
-
-
-device = "cuda:1" if torch.cuda.is_available() else "cpu"
+device = "cuda:0" if torch.cuda.is_available() else "cpu"
 print(f"Using {device} device")
 
 parser = argparse.ArgumentParser(description='')
@@ -85,14 +84,14 @@ parser.add_argument('--epochs', type=int, default=120, help='number of epochs to
 parser.add_argument('--lr_X', type=float, default=5e-3, help='learning rate (default: 0.005)')
 parser.add_argument('--lr_A', type=float, default=5e-3, help='learning rate (default: 0.005)')
 # parser.add_argument('--k', type=int, default=0, help='the convolutiona times of the dataset (default: 2)')
-parser.add_argument('--K', type=int, default=0, help='number of aggr in SGNK (default: 2)')
-parser.add_argument('--L', type=int, default=2, help='the number of layers after each aggr (default: 2)')
+parser.add_argument('--K', type=int, default=2, help='number of aggr in SGNK (default: 2)')
+parser.add_argument('--L', type=int, default=1, help='the number of layers after each aggr (default: 2)')
 parser.add_argument('--learn_A', type=int, default=0, help='whether to learn the adjacency matrix')
 parser.add_argument('--norm', type=int, default=0, help='whether to normalize the features')
 parser.add_argument('--set_seed', type=bool, default=True, help='whether to set seed')
 parser.add_argument('--seed', type=int, default=5, help='setup the random seed (default: 5)')
 parser.add_argument('--iter', type=int, default=2, help='iteration times (default: 3)')
-parser.add_argument('--kernel', type=str, default='SGNK', help='kernel method [SGNK] (default: SGNK)')
+parser.add_argument('--kernel', type=str, default='LightGNTK', help='kernel method [SGNK] (default: SGNK)')
 parser.add_argument('--split_method', type=str, default='random', help='split method of the test set [kmeans,none] (default: kmeans)')
 parser.add_argument('--train_batch_size', type=int, default=5000, help='split method of the test set [kmeans,none] (default: kmeans)')
 parser.add_argument('--save', type=int, default=0, help='whether to save the results')
@@ -107,7 +106,6 @@ TRAIN_K, test_k, n_train, n_test, n_class, dim, n = OGBloader.properties()
 
 # test_loader.split_batch()
 
-
 def setup_seed(seed):
      torch.manual_seed(seed)
      torch.cuda.manual_seed_all(seed)
@@ -121,6 +119,7 @@ SGTK       = StructureBasedNeuralTangentKernel( L=args.L).to(device)
 SGNK       = SimplifyingGraphNeuralKernel(L=args.L).to(device)
 NTK        = NeuralTangentKernel(L=args.L).to(device)
 SNTK       = StructureBasedNeuralTangentKernel(K=args.K, L=args.L).to(device)
+LightGNTK  = LightGraphNeuralTangentKernel(K=args.K).to(device)
 ridge      = torch.tensor(args.ridge).to(device)
 
 
@@ -137,6 +136,8 @@ elif args.kernel == "dot_product":
     kernel      =  dot_product
 elif args.kernel == "NTK":
     kernel      =  NTK.nodes_gram
+elif args.kernel == "LightGNTK":
+    kernel      =  LightGNTK.nodes_gram
 
 GPR        = GaussianProcessRegression(kernel, ridge, K = args.K).to(device)
 

@@ -2,3 +2,138 @@
 /datasets/
 /datasets/
 .DS_Store
+/TKDE_review/
+/TKDE_review
+TKDE_review/
+
+
+# ============================
+# 通用设置
+# ============================
+
+# 忽略操作系统生成的文件
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# 忽略日志文件和临时文件
+*.log
+*.tmp
+*.swp
+*.bak
+
+# ============================
+# Git 设置
+# ============================
+
+# 忽略 Git 忽略文件本身的备份
+.gitignore~
+.gitmodules~
+
+# 本地 Git 配置
+.gitconfig
+.gitattributes
+
+# ============================
+# 编辑器和IDE
+# ============================
+
+# VS Code
+.vscode/
+
+# JetBrains IDEs (IntelliJ, PyCharm, etc)
+.idea/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Emacs
+*~
+\#*\#
+
+# Vim
+*.swp
+*.swo
+
+# ============================
+# 编程语言相关
+# ============================
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg
+*.egg-info/
+dist/
+build/
+.env
+.venv/
+venv/
+pip-wheel-metadata/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log
+package-lock.json
+yarn.lock
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+target/
+out/
+
+# C/C++
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.out
+
+# Rust
+/target/
+Cargo.lock
+
+# Go
+/bin/
+/vendor/
+/*.exe
+*.test
+
+# ============================
+# Others
+# ============================
+
+# 环境变量文件（根据需要保留或忽略）
+.env
+
+# 本地数据库或缓存
+*.sqlite3
+*.db
+*.pid
+
+# 压缩包
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# 图片缓存或生成资源
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.webp
+.cache/

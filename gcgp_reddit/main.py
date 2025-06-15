@@ -1,5 +1,3 @@
-
-
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 import torch
@@ -10,6 +8,7 @@ from sgtk import SimplifyingGraphTangentKernel
 from sgnk import SimplifyingGraphNeuralKernel
 from ntk import NeuralTangentKernel
 from sntk import StructureBasedNTK
+from lightgntk import LightGraphNeuralTangentKernel
 from utils import update_E
 import argparse
 import numpy as np
@@ -17,7 +16,7 @@ import random
 import time
 from utils import edge_ind_to_sparse_adj
 from FlickrDataloader import FlickrDataLoader
-device = "cuda:1" if torch.cuda.is_available() else "cpu"
+device = "cuda:0" if torch.cuda.is_available() else "cpu"
 print(f"Using {device} device")
 
 
@@ -25,20 +24,20 @@ parser = argparse.ArgumentParser(description='')
 parser.add_argument('--dataset', type=str, default="Reddit", help='name of dataset [Reddit]')
 parser.add_argument('--cond_size', type=int, default=77, help='condensation size)[77, 153, 307]')
 parser.add_argument('--ridge', type=float, default=1e-3, help='ridge parameter of GPR (default: 1e-3)')
-parser.add_argument('--epochs', type=int, default=200, help='number of epochs to train (default: 100)')
+parser.add_argument('--epochs', type=int, default=270, help='number of epochs to train (default: 100)')
 parser.add_argument('--lr_X', type=float, default=5e-3, help='learning rate (default: 0.005)')
 parser.add_argument('--lr_A', type=float, default=5e-3, help='learning rate (default: 0.005)')
-parser.add_argument('--K', type=int, default=0, help='number of aggr in SGNK (default: 2)')
-parser.add_argument('--k', type=int, default=0, help='number of aggr in SGNK (default: 2)')
-parser.add_argument('--L', type=int, default=2, help='the number of layers after each aggr (default: 2)')
+parser.add_argument('--K', type=int, default=2, help='number of aggr in SGNK (default: 2)')
+parser.add_argument('--k', type=int, default=2, help='number of aggr in SGNK (default: 2)')
+parser.add_argument('--L', type=int, default=1, help='the number of layers after each aggr (default: 2)')
 parser.add_argument('--learn_A', type=int, default=0, help='whether to learn the adjacency matrix')
 parser.add_argument('--norm', type=int, default=0, help='whether to normalize the features')
 parser.add_argument('--set_seed', type=bool, default=True, help='setup the random seed (default: False)')
 parser.add_argument('--seed', type=int, default=5, help='setup the random seed (default: 5)')
 parser.add_argument('--batch_size', type=int, default=8000, help='batch size (default: 4000)')
 parser.add_argument('--accumulate_steps', type=int, default=8, help='accumulate steps (default: 10)')
-parser.add_argument('--save', type=bool, default=False, help='save the results (default: False)')
-parser.add_argument('--iterations', type=int, default=2, help='number of iterations of the whole experiments (default: 10)')
+parser.add_argument('--save', type=bool, default=True, help='save the results (default: False)')
+parser.add_argument('--iterations', type=int, default=1, help='number of iterations of the whole experiments (default: 10)')
 parser.add_argument('--kernel', type=str, default='SGNK', help='kernel method [SGNK] (default: SGNK)')
 parser.add_argument('--num_hops', type=int, default=0, help='number of the hops when sampling the training batches (default: 0)')
 args = parser.parse_args()
@@ -124,7 +123,7 @@ SGNK       = SimplifyingGraphNeuralKernel(L=args.L).to(device)
 SGTK       = SimplifyingGraphTangentKernel(K=args.K, L=args.L).to(device)
 SNTK       = StructureBasedNTK(K=args.K, L=args.L).to(device)
 NTK         = NeuralTangentKernel( L = 2 ).to(device)
-
+LightGNTK = LightGraphNeuralTangentKernel(K=args.K).to(device)
 
 ridge      = torch.tensor(args.ridge).to(device)
 
@@ -138,6 +137,8 @@ elif args.kernel == "dot_product":
     kernel      =  dot_product
 elif args.kernel == "NTK":
     kernel      =  NTK.nodes_gram
+elif args.kernel == "LightGNTK":
+    kernel      =  LightGNTK.nodes_gram
 
 GPR        = GaussianProcessRegression(kernel,ridge,args.K).to(device)
 
@@ -316,8 +317,8 @@ Time_Acc = torch.cat((epochs.unsqueeze(1),Acc_mean.unsqueeze(1), Acc_std.unsquee
 
 np.set_printoptions(suppress=True, linewidth=300, threshold=np.inf)
 print(np.array(Time_Acc.cpu()))
-print(f'Best Result: Epoch   Acc  Std.') 
-print(f'                {max_mean_index+1} {max_mean.item():>0.2f}  {Acc_std[max_mean_index].item():>0.2f}')
+print(f'Best Result: Epoch   Acc  Std.  Time') 
+print(f'                {max_mean_index+1} {max_mean.item():>0.2f}  {Acc_std[max_mean_index].item():>0.2f} {Time_mean[max_mean_index].item():>0.2f} s')
 print("--------------- Train Done! ----------------")
 # load file Time_Acc.pt
 # Time_Acc = torch.load('Time_Acc.pt')

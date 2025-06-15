@@ -1,0 +1,560 @@
+Using cuda:0 device
+Dataset       :Reddit
+Conden size   :77
+Ridge         :0.01
+Epochs        :270
+Learn A       :1
+Norm          :1
+Aggr (K)      :2
+L             :1
+LR X          :0.005
+LR A          :0.005
+Batches       :20
+Kernel        :SGNK
+The  1-th iteration
+---------------------------------------------
+Epoch 1 Test Acc: 2.9585%, Test loss: 0.023806
+Epoch 2 Test Acc: 3.3732%, Test loss: 0.023801
+Epoch 3 Test Acc: 3.4774%, Test loss: 0.023793
+Epoch 4 Test Acc: 1.6803%, Test loss: 0.023788
+Epoch 5 Test Acc: 3.1973%, Test loss: 0.023766
+Epoch 6 Test Acc: 2.8508%, Test loss: 0.023753
+Epoch 7 Test Acc: 3.2476%, Test loss: 0.023747
+Epoch 8 Test Acc: 4.7879%, Test loss: 0.023730
+Epoch 9 Test Acc: 7.5813%, Test loss: 0.023729
+Epoch 10 Test Acc: 14.4804%, Test loss: 0.023710
+Epoch 11 Test Acc: 29.4903%, Test loss: 0.023703
+Epoch 12 Test Acc: 29.3916%, Test loss: 0.023664
+Epoch 13 Test Acc: 28.2067%, Test loss: 0.023628
+Epoch 14 Test Acc: 30.9983%, Test loss: 0.023585
+Epoch 15 Test Acc: 32.6912%, Test loss: 0.023544
+Epoch 16 Test Acc: 29.2408%, Test loss: 0.023497
+Epoch 17 Test Acc: 33.6966%, Test loss: 0.023469
+Epoch 18 Test Acc: 33.8851%, Test loss: 0.023401
+Epoch 19 Test Acc: 44.2184%, Test loss: 0.023366
+Epoch 20 Test Acc: 43.6781%, Test loss: 0.023366
+Epoch 21 Test Acc: 43.9204%, Test loss: 0.023385
+Epoch 22 Test Acc: 40.1020%, Test loss: 0.023344
+Epoch 23 Test Acc: 42.0265%, Test loss: 0.023261
+Epoch 24 Test Acc: 44.2292%, Test loss: 0.023231
+Epoch 25 Test Acc: 42.3101%, Test loss: 0.023173
+Epoch 26 Test Acc: 41.7769%, Test loss: 0.023160
+Epoch 27 Test Acc: 44.3010%, Test loss: 0.023110
+Epoch 28 Test Acc: 46.2668%, Test loss: 0.023062
+Epoch 29 Test Acc: 54.8893%, Test loss: 0.022984
+Epoch 30 Test Acc: 56.5122%, Test loss: 0.022903
+Epoch 31 Test Acc: 58.1513%, Test loss: 0.022896
+Epoch 32 Test Acc: 58.6234%, Test loss: 0.022860
+Epoch 33 Test Acc: 59.2535%, Test loss: 0.022863
+Epoch 34 Test Acc: 57.4044%, Test loss: 0.022840
+Epoch 35 Test Acc: 58.3469%, Test loss: 0.022652
+Epoch 36 Test Acc: 57.7096%, Test loss: 0.022692
+Epoch 37 Test Acc: 49.3869%, Test loss: 0.022765
+Epoch 38 Test Acc: 52.5142%, Test loss: 0.022692
+Epoch 39 Test Acc: 58.1190%, Test loss: 0.022539
+Epoch 40 Test Acc: 58.0453%, Test loss: 0.022543
+Epoch 41 Test Acc: 61.5335%, Test loss: 0.022486
+Epoch 42 Test Acc: 62.0631%, Test loss: 0.022331
+Epoch 43 Test Acc: 58.0005%, Test loss: 0.022320
+Epoch 44 Test Acc: 61.7453%, Test loss: 0.022220
+Epoch 45 Test Acc: 61.3935%, Test loss: 0.022239
+Epoch 46 Test Acc: 57.6827%, Test loss: 0.022280
+Epoch 47 Test Acc: 59.5677%, Test loss: 0.022324
+Epoch 48 Test Acc: 60.7813%, Test loss: 0.022339
+Epoch 49 Test Acc: 58.3721%, Test loss: 0.022252
+Epoch 50 Test Acc: 64.6177%, Test loss: 0.022065
+Epoch 51 Test Acc: 61.3737%, Test loss: 0.022324
+Epoch 52 Test Acc: 60.4528%, Test loss: 0.022294
+Epoch 53 Test Acc: 66.7810%, Test loss: 0.022193
+Epoch 54 Test Acc: 63.9696%, Test loss: 0.022164
+Epoch 55 Test Acc: 66.9659%, Test loss: 0.022070
+Epoch 56 Test Acc: 65.1886%, Test loss: 0.022055
+Epoch 57 Test Acc: 67.2980%, Test loss: 0.022007
+Epoch 58 Test Acc: 66.4919%, Test loss: 0.021919
+Epoch 59 Test Acc: 65.0665%, Test loss: 0.021989
+Epoch 60 Test Acc: 64.1330%, Test loss: 0.022290
+Epoch 61 Test Acc: 62.0972%, Test loss: 0.022340
+Epoch 62 Test Acc: 57.1675%, Test loss: 0.022279
+Epoch 63 Test Acc: 58.3631%, Test loss: 0.022304
+Epoch 64 Test Acc: 59.3182%, Test loss: 0.022166
+Epoch 65 Test Acc: 61.0829%, Test loss: 0.022180
+Epoch 66 Test Acc: 62.3324%, Test loss: 0.022178
+Epoch 67 Test Acc: 65.6697%, Test loss: 0.022077
+Epoch 68 Test Acc: 66.0216%, Test loss: 0.021921
+Epoch 69 Test Acc: 67.6481%, Test loss: 0.022147
+Epoch 70 Test Acc: 65.5602%, Test loss: 0.022096
+Epoch 71 Test Acc: 64.5333%, Test loss: 0.022157
+Epoch 72 Test Acc: 61.1655%, Test loss: 0.022297
+Epoch 73 Test Acc: 57.2519%, Test loss: 0.022387
+Epoch 74 Test Acc: 57.7797%, Test loss: 0.022370
+Epoch 75 Test Acc: 63.8709%, Test loss: 0.022269
+Epoch 76 Test Acc: 62.8350%, Test loss: 0.022350
+Epoch 77 Test Acc: 60.0452%, Test loss: 0.022457
+Epoch 78 Test Acc: 66.0162%, Test loss: 0.022375
+Epoch 79 Test Acc: 62.8745%, Test loss: 0.022230
+Epoch 80 Test Acc: 49.2218%, Test loss: 0.022362
+Epoch 81 Test Acc: 56.3686%, Test loss: 0.022181
+Epoch 82 Test Acc: 53.7009%, Test loss: 0.022058
+Epoch 83 Test Acc: 62.8386%, Test loss: 0.022230
+Epoch 84 Test Acc: 58.5031%, Test loss: 0.022174
+Epoch 85 Test Acc: 52.2862%, Test loss: 0.022023
+Epoch 86 Test Acc: 59.2643%, Test loss: 0.022144
+Epoch 87 Test Acc: 63.6178%, Test loss: 0.022062
+Epoch 88 Test Acc: 55.6972%, Test loss: 0.022041
+Epoch 89 Test Acc: 62.1098%, Test loss: 0.022320
+Epoch 90 Test Acc: 64.3574%, Test loss: 0.022464
+Epoch 91 Test Acc: 64.3843%, Test loss: 0.022431
+Epoch 92 Test Acc: 61.6394%, Test loss: 0.022391
+Epoch 93 Test Acc: 56.5804%, Test loss: 0.022710
+Epoch 94 Test Acc: 56.7761%, Test loss: 0.022923
+Epoch 95 Test Acc: 56.4314%, Test loss: 0.023004
+Epoch 96 Test Acc: 61.3504%, Test loss: 0.022916
+Epoch 97 Test Acc: 71.4181%, Test loss: 0.022648
+Epoch 98 Test Acc: 73.7034%, Test loss: 0.022647
+Epoch 99 Test Acc: 77.6421%, Test loss: 0.022526
+Epoch 100 Test Acc: 76.3980%, Test loss: 0.022513
+Epoch 101 Test Acc: 75.9277%, Test loss: 0.022282
+Epoch 102 Test Acc: 75.5543%, Test loss: 0.022409
+Epoch 103 Test Acc: 78.4644%, Test loss: 0.022340
+Epoch 104 Test Acc: 79.8664%, Test loss: 0.022345
+Epoch 105 Test Acc: 79.1555%, Test loss: 0.022488
+Epoch 106 Test Acc: 80.4248%, Test loss: 0.022513
+Epoch 107 Test Acc: 80.3170%, Test loss: 0.022369
+Epoch 108 Test Acc: 80.9579%, Test loss: 0.022406
+Epoch 109 Test Acc: 82.8393%, Test loss: 0.022435
+Epoch 110 Test Acc: 83.3025%, Test loss: 0.022422
+Epoch 111 Test Acc: 84.5951%, Test loss: 0.022383
+Epoch 112 Test Acc: 85.8894%, Test loss: 0.022447
+Epoch 113 Test Acc: 86.2844%, Test loss: 0.022478
+Epoch 114 Test Acc: 86.0636%, Test loss: 0.022440
+Epoch 115 Test Acc: 86.5268%, Test loss: 0.022362
+Epoch 116 Test Acc: 86.9720%, Test loss: 0.022269
+Epoch 117 Test Acc: 87.1192%, Test loss: 0.022267
+Epoch 118 Test Acc: 87.9360%, Test loss: 0.022362
+Epoch 119 Test Acc: 87.7511%, Test loss: 0.022310
+Epoch 120 Test Acc: 87.8391%, Test loss: 0.022222
+Epoch 121 Test Acc: 87.8642%, Test loss: 0.022126
+Epoch 122 Test Acc: 88.2843%, Test loss: 0.021997
+Epoch 123 Test Acc: 88.6631%, Test loss: 0.021914
+Epoch 124 Test Acc: 87.8750%, Test loss: 0.022003
+Epoch 125 Test Acc: 88.4548%, Test loss: 0.022134
+Epoch 126 Test Acc: 88.0599%, Test loss: 0.022215
+Epoch 127 Test Acc: 88.0581%, Test loss: 0.022239
+Epoch 128 Test Acc: 88.1712%, Test loss: 0.022344
+Epoch 129 Test Acc: 85.5466%, Test loss: 0.022279
+Epoch 130 Test Acc: 85.5466%, Test loss: 0.022271
+Epoch 131 Test Acc: 85.7728%, Test loss: 0.022281
+Epoch 132 Test Acc: 87.1623%, Test loss: 0.022262
+Epoch 133 Test Acc: 88.2861%, Test loss: 0.022285
+Epoch 134 Test Acc: 88.9216%, Test loss: 0.022146
+Epoch 135 Test Acc: 88.5374%, Test loss: 0.022151
+Epoch 136 Test Acc: 88.6254%, Test loss: 0.022173
+Epoch 137 Test Acc: 88.1784%, Test loss: 0.022102
+Epoch 138 Test Acc: 87.7780%, Test loss: 0.022110
+Epoch 139 Test Acc: 87.1138%, Test loss: 0.022234
+Epoch 140 Test Acc: 86.5591%, Test loss: 0.022227
+Epoch 141 Test Acc: 86.3095%, Test loss: 0.022254
+Epoch 142 Test Acc: 86.4998%, Test loss: 0.022244
+Epoch 143 Test Acc: 86.5806%, Test loss: 0.022134
+Epoch 144 Test Acc: 86.3311%, Test loss: 0.022134
+Epoch 145 Test Acc: 86.7530%, Test loss: 0.022148
+Epoch 146 Test Acc: 86.2844%, Test loss: 0.022161
+Epoch 147 Test Acc: 86.4119%, Test loss: 0.022197
+Epoch 148 Test Acc: 86.4926%, Test loss: 0.022197
+Epoch 149 Test Acc: 86.4208%, Test loss: 0.022191
+Epoch 150 Test Acc: 86.5680%, Test loss: 0.022230
+Epoch 151 Test Acc: 87.8822%, Test loss: 0.022286
+Epoch 152 Test Acc: 88.7277%, Test loss: 0.022308
+Epoch 153 Test Acc: 88.9108%, Test loss: 0.022349
+Epoch 154 Test Acc: 89.9826%, Test loss: 0.022326
+Epoch 155 Test Acc: 89.9162%, Test loss: 0.022310
+Epoch 156 Test Acc: 89.0114%, Test loss: 0.022238
+Epoch 157 Test Acc: 88.1191%, Test loss: 0.022075
+Epoch 158 Test Acc: 87.6380%, Test loss: 0.021896
+Epoch 159 Test Acc: 87.9360%, Test loss: 0.021756
+Epoch 160 Test Acc: 86.8643%, Test loss: 0.021719
+Epoch 161 Test Acc: 86.7171%, Test loss: 0.021715
+Epoch 162 Test Acc: 87.0546%, Test loss: 0.021718
+Epoch 163 Test Acc: 87.6470%, Test loss: 0.021745
+Epoch 164 Test Acc: 88.3148%, Test loss: 0.021731
+Epoch 165 Test Acc: 88.3364%, Test loss: 0.021748
+Epoch 166 Test Acc: 88.1874%, Test loss: 0.021768
+Epoch 167 Test Acc: 88.5356%, Test loss: 0.021789
+Epoch 168 Test Acc: 88.6559%, Test loss: 0.021816
+Epoch 169 Test Acc: 88.4872%, Test loss: 0.021814
+Epoch 170 Test Acc: 88.2915%, Test loss: 0.021845
+Epoch 171 Test Acc: 88.7995%, Test loss: 0.021877
+Epoch 172 Test Acc: 88.8929%, Test loss: 0.021905
+Epoch 173 Test Acc: 89.3363%, Test loss: 0.021924
+Epoch 174 Test Acc: 89.8174%, Test loss: 0.021939
+Epoch 175 Test Acc: 90.1801%, Test loss: 0.022004
+Epoch 176 Test Acc: 90.4260%, Test loss: 0.022020
+Epoch 177 Test Acc: 90.5786%, Test loss: 0.022091
+Epoch 178 Test Acc: 90.6253%, Test loss: 0.022112
+Epoch 179 Test Acc: 90.7545%, Test loss: 0.022123
+Epoch 180 Test Acc: 91.0831%, Test loss: 0.022140
+Epoch 181 Test Acc: 90.9987%, Test loss: 0.022117
+Epoch 182 Test Acc: 91.0059%, Test loss: 0.022117
+Epoch 183 Test Acc: 91.2464%, Test loss: 0.022085
+Epoch 184 Test Acc: 91.3703%, Test loss: 0.022073
+Epoch 185 Test Acc: 91.3488%, Test loss: 0.022086
+Epoch 186 Test Acc: 91.4385%, Test loss: 0.022123
+Epoch 187 Test Acc: 91.5193%, Test loss: 0.022143
+Epoch 188 Test Acc: 91.5157%, Test loss: 0.022161
+Epoch 189 Test Acc: 91.5319%, Test loss: 0.022180
+Epoch 190 Test Acc: 91.5678%, Test loss: 0.022188
+Epoch 191 Test Acc: 91.6073%, Test loss: 0.022150
+Epoch 192 Test Acc: 91.5965%, Test loss: 0.022100
+Epoch 193 Test Acc: 91.5337%, Test loss: 0.022130
+Epoch 194 Test Acc: 91.5175%, Test loss: 0.022152
+Epoch 195 Test Acc: 91.6468%, Test loss: 0.022097
+Epoch 196 Test Acc: 91.6737%, Test loss: 0.022020
+Epoch 197 Test Acc: 91.6432%, Test loss: 0.021970
+Epoch 198 Test Acc: 91.6073%, Test loss: 0.021940
+Epoch 199 Test Acc: 91.5696%, Test loss: 0.021929
+Epoch 200 Test Acc: 91.5965%, Test loss: 0.021884
+Epoch 201 Test Acc: 91.5337%, Test loss: 0.021832
+Epoch 202 Test Acc: 90.4242%, Test loss: 0.021587
+Epoch 203 Test Acc: 89.8336%, Test loss: 0.021550
+Epoch 204 Test Acc: 89.0024%, Test loss: 0.021467
+Epoch 205 Test Acc: 88.5751%, Test loss: 0.021424
+Epoch 206 Test Acc: 88.5877%, Test loss: 0.021401
+Epoch 207 Test Acc: 88.9180%, Test loss: 0.021386
+Epoch 208 Test Acc: 89.6559%, Test loss: 0.021366
+Epoch 209 Test Acc: 90.0957%, Test loss: 0.021364
+Epoch 210 Test Acc: 90.3811%, Test loss: 0.021371
+Epoch 211 Test Acc: 90.5014%, Test loss: 0.021384
+Epoch 212 Test Acc: 90.6307%, Test loss: 0.021400
+Epoch 213 Test Acc: 90.7797%, Test loss: 0.021417
+Epoch 214 Test Acc: 90.9071%, Test loss: 0.021430
+Epoch 215 Test Acc: 91.2141%, Test loss: 0.021422
+Epoch 216 Test Acc: 91.7401%, Test loss: 0.021489
+Epoch 217 Test Acc: 91.7796%, Test loss: 0.021495
+Epoch 218 Test Acc: 91.9932%, Test loss: 0.021555
+Epoch 219 Test Acc: 92.0597%, Test loss: 0.021550
+Epoch 220 Test Acc: 92.0633%, Test loss: 0.021546
+Epoch 221 Test Acc: 92.1063%, Test loss: 0.021545
+Epoch 222 Test Acc: 92.1028%, Test loss: 0.021546
+Epoch 223 Test Acc: 92.0812%, Test loss: 0.021552
+Epoch 224 Test Acc: 92.0992%, Test loss: 0.021562
+Epoch 225 Test Acc: 92.1261%, Test loss: 0.021568
+Epoch 226 Test Acc: 92.1817%, Test loss: 0.021580
+Epoch 227 Test Acc: 92.1817%, Test loss: 0.021594
+Epoch 228 Test Acc: 92.1835%, Test loss: 0.021603
+Epoch 229 Test Acc: 92.2051%, Test loss: 0.021612
+Epoch 230 Test Acc: 92.2230%, Test loss: 0.021610
+Epoch 231 Test Acc: 92.2141%, Test loss: 0.021605
+Epoch 232 Test Acc: 92.2033%, Test loss: 0.021596
+Epoch 233 Test Acc: 92.1692%, Test loss: 0.021590
+Epoch 234 Test Acc: 92.1494%, Test loss: 0.021590
+Epoch 235 Test Acc: 92.1674%, Test loss: 0.021593
+Epoch 236 Test Acc: 92.4564%, Test loss: 0.021715
+Epoch 237 Test Acc: 92.4905%, Test loss: 0.021674
+Epoch 238 Test Acc: 92.5085%, Test loss: 0.021652
+Epoch 239 Test Acc: 92.5157%, Test loss: 0.021640
+Epoch 240 Test Acc: 92.5246%, Test loss: 0.021635
+Epoch 241 Test Acc: 92.5013%, Test loss: 0.021636
+Epoch 242 Test Acc: 92.5246%, Test loss: 0.021649
+Epoch 243 Test Acc: 92.5318%, Test loss: 0.021667
+Epoch 244 Test Acc: 92.5300%, Test loss: 0.021687
+Epoch 245 Test Acc: 92.4905%, Test loss: 0.021685
+Epoch 246 Test Acc: 92.4510%, Test loss: 0.021681
+Epoch 247 Test Acc: 92.4439%, Test loss: 0.021672
+Epoch 248 Test Acc: 92.4726%, Test loss: 0.021663
+Epoch 249 Test Acc: 92.5157%, Test loss: 0.021652
+Epoch 250 Test Acc: 92.5354%, Test loss: 0.021644
+Epoch 251 Test Acc: 92.5623%, Test loss: 0.021639
+Epoch 252 Test Acc: 92.6072%, Test loss: 0.021643
+Epoch 253 Test Acc: 92.5982%, Test loss: 0.021651
+Epoch 254 Test Acc: 92.6018%, Test loss: 0.021655
+Epoch 255 Test Acc: 92.6306%, Test loss: 0.021661
+Epoch 256 Test Acc: 92.6790%, Test loss: 0.021663
+Epoch 257 Test Acc: 92.6880%, Test loss: 0.021661
+Epoch 258 Test Acc: 92.7078%, Test loss: 0.021658
+Epoch 259 Test Acc: 92.7060%, Test loss: 0.021655
+Epoch 260 Test Acc: 92.7149%, Test loss: 0.021652
+Epoch 261 Test Acc: 92.7203%, Test loss: 0.021648
+Epoch 262 Test Acc: 92.6898%, Test loss: 0.021642
+Epoch 263 Test Acc: 92.6736%, Test loss: 0.021630
+Epoch 264 Test Acc: 92.6647%, Test loss: 0.021621
+Epoch 265 Test Acc: 92.6844%, Test loss: 0.021606
+Epoch 266 Test Acc: 92.7078%, Test loss: 0.021593
+Epoch 267 Test Acc: 92.7419%, Test loss: 0.021583
+Epoch 268 Test Acc: 92.7580%, Test loss: 0.021578
+Epoch 269 Test Acc: 92.7616%, Test loss: 0.021575
+Epoch 270 Test Acc: 92.7885%, Test loss: 0.021576
+---------------------------------------------
+---------------------------------------------
+[[  1.          2.958548          nan   2.8896582]
+ [  2.          3.3732474         nan   4.401225 ]
+ [  3.          3.477371          nan   5.985772 ]
+ [  4.          1.6803404         nan   7.392938 ]
+ [  5.          3.1973143         nan   8.849399 ]
+ [  6.          2.850834          nan  10.242528 ]
+ [  7.          3.247581          nan  11.707557 ]
+ [  8.          4.787893          nan  13.3046465]
+ [  9.          7.5812793         nan  14.732371 ]
+ [ 10.         14.48037           nan  16.284225 ]
+ [ 11.         29.490334          nan  17.681475 ]
+ [ 12.         29.391594          nan  19.425228 ]
+ [ 13.         28.20674           nan  20.980804 ]
+ [ 14.         30.998331          nan  22.457747 ]
+ [ 15.         32.69124           nan  24.13224  ]
+ [ 16.         29.240795          nan  25.73787  ]
+ [ 17.         33.696568          nan  27.353539 ]
+ [ 18.         33.88507           nan  28.794334 ]
+ [ 19.         44.218445          nan  30.309246 ]
+ [ 20.         43.678078          nan  31.935217 ]
+ [ 21.         43.920437          nan  33.49893  ]
+ [ 22.         40.10197           nan  35.109745 ]
+ [ 23.         42.026463          nan  36.555115 ]
+ [ 24.         44.229218          nan  38.10596  ]
+ [ 25.         42.31011           nan  39.644226 ]
+ [ 26.         41.776924          nan  41.239357 ]
+ [ 27.         44.301025          nan  42.929558 ]
+ [ 28.         46.266808          nan  44.63391  ]
+ [ 29.         54.889324          nan  46.190197 ]
+ [ 30.         56.51222           nan  47.637398 ]
+ [ 31.         58.151268          nan  49.13048  ]
+ [ 32.         58.623413          nan  50.475403 ]
+ [ 33.         59.25354           nan  52.06789  ]
+ [ 34.         57.40445           nan  53.762108 ]
+ [ 35.         58.346947          nan  55.234333 ]
+ [ 36.         57.70964           nan  56.903057 ]
+ [ 37.         49.38693           nan  58.339836 ]
+ [ 38.         52.51423           nan  59.84967  ]
+ [ 39.         58.118954          nan  61.231285 ]
+ [ 40.         58.04535           nan  62.48889  ]
+ [ 41.         61.53349           nan  63.9224   ]
+ [ 42.         62.063084          nan  65.30289  ]
+ [ 43.         58.000465          nan  66.68464  ]
+ [ 44.         61.745327          nan  67.98717  ]
+ [ 45.         61.393463          nan  69.254555 ]
+ [ 46.         57.68271           nan  70.67585  ]
+ [ 47.         59.567707          nan  71.90224  ]
+ [ 48.         60.78129           nan  73.05338  ]
+ [ 49.         58.37208           nan  74.37812  ]
+ [ 50.         64.61771           nan  75.70067  ]
+ [ 51.         61.373714          nan  77.09579  ]
+ [ 52.         60.45276           nan  78.42228  ]
+ [ 53.         66.78096           nan  79.632545 ]
+ [ 54.         63.969624          nan  80.84191  ]
+ [ 55.         66.96587           nan  82.01295  ]
+ [ 56.         65.18859           nan  83.24531  ]
+ [ 57.         67.29799           nan  84.76554  ]
+ [ 58.         66.49193           nan  86.50174  ]
+ [ 59.         65.06651           nan  88.02271  ]
+ [ 60.         64.13299           nan  89.616776 ]
+ [ 61.         62.097195          nan  91.461174 ]
+ [ 62.         57.167477          nan  92.974785 ]
+ [ 63.         58.363106          nan  94.526634 ]
+ [ 64.         59.31817           nan  96.268524 ]
+ [ 65.         61.082886          nan  98.11068  ]
+ [ 66.         62.33237           nan  99.84308  ]
+ [ 67.         65.669716          nan 101.94282  ]
+ [ 68.         66.021576          nan 104.346756 ]
+ [ 69.         67.64806           nan 107.04874  ]
+ [ 70.         65.5602            nan 109.75392  ]
+ [ 71.         64.533325          nan 112.326416 ]
+ [ 72.         61.165466          nan 115.02955  ]
+ [ 73.         57.251854          nan 118.04845  ]
+ [ 74.         57.77965           nan 120.64418  ]
+ [ 75.         63.870888          nan 123.44397  ]
+ [ 76.         62.835037          nan 125.990005 ]
+ [ 77.         60.04524           nan 127.86719  ]
+ [ 78.         66.01619           nan 130.04875  ]
+ [ 79.         62.87453           nan 131.9481   ]
+ [ 80.         49.221764          nan 134.33638  ]
+ [ 81.         56.3686            nan 136.9013   ]
+ [ 82.         53.70088           nan 139.23596  ]
+ [ 83.         62.838627          nan 141.36581  ]
+ [ 84.         58.50313           nan 143.5148   ]
+ [ 85.         52.286232          nan 145.8383   ]
+ [ 86.         59.264313          nan 148.01358  ]
+ [ 87.         63.61776           nan 150.31343  ]
+ [ 88.         55.697178          nan 152.44705  ]
+ [ 89.         62.10976           nan 154.52559  ]
+ [ 90.         64.3574            nan 156.9662   ]
+ [ 91.         64.38432           nan 159.39238  ]
+ [ 92.         61.63941           nan 161.51591  ]
+ [ 93.         56.580437          nan 163.50613  ]
+ [ 94.         56.776115          nan 165.74669  ]
+ [ 95.         56.43143           nan 168.0214   ]
+ [ 96.         61.350376          nan 170.00978  ]
+ [ 97.         71.41805           nan 171.9627   ]
+ [ 98.         73.70339           nan 174.10233  ]
+ [ 99.         77.642136          nan 176.23581  ]
+ [100.         76.39804           nan 178.26823  ]
+ [101.         75.92769           nan 180.57053  ]
+ [102.         75.554276          nan 182.79686  ]
+ [103.         78.464355          nan 184.96724  ]
+ [104.         79.86643           nan 187.04338  ]
+ [105.         79.15552           nan 189.53299  ]
+ [106.         80.42475           nan 191.59555  ]
+ [107.         80.31704           nan 193.52695  ]
+ [108.         80.95794           nan 195.53354  ]
+ [109.         82.83935           nan 197.33466  ]
+ [110.         83.30251           nan 199.2299   ]
+ [111.         84.595085          nan 201.27733  ]
+ [112.         85.88945           nan 203.27206  ]
+ [113.         86.2844            nan 204.83588  ]
+ [114.         86.06359           nan 206.85342  ]
+ [115.         86.52676           nan 208.72191  ]
+ [116.         86.97198           nan 210.37737  ]
+ [117.         87.11919           nan 211.83572  ]
+ [118.         87.93602           nan 213.68533  ]
+ [119.         87.75111           nan 215.72618  ]
+ [120.         87.83907           nan 217.71054  ]
+ [121.         87.86421           nan 220.33548  ]
+ [122.         88.284294          nan 222.33723  ]
+ [123.         88.663086          nan 224.43646  ]
+ [124.         87.87498           nan 226.46332  ]
+ [125.         88.45484           nan 228.60742  ]
+ [126.         88.05989           nan 230.7321   ]
+ [127.         88.05809           nan 232.8533   ]
+ [128.         88.171196          nan 235.56659  ]
+ [129.         85.54656           nan 238.34554  ]
+ [130.         85.54656           nan 241.04144  ]
+ [131.         85.77276           nan 243.27908  ]
+ [132.         87.16227           nan 245.65007  ]
+ [133.         88.28609           nan 247.90729  ]
+ [134.         88.9216            nan 250.22556  ]
+ [135.         88.53742           nan 252.78912  ]
+ [136.         88.62539           nan 255.71254  ]
+ [137.         88.178375          nan 258.4722   ]
+ [138.         87.77804           nan 260.27335  ]
+ [139.         87.1138            nan 262.2604   ]
+ [140.         86.559074          nan 264.4453   ]
+ [141.         86.30953           nan 266.5261   ]
+ [142.         86.49983           nan 268.5265   ]
+ [143.         86.58061           nan 271.01614  ]
+ [144.         86.33108           nan 273.69446  ]
+ [145.         86.75296           nan 275.61118  ]
+ [146.         86.2844            nan 277.71613  ]
+ [147.         86.411865          nan 279.92007  ]
+ [148.         86.492645          nan 281.9072   ]
+ [149.         86.42084           nan 284.03058  ]
+ [150.         86.56805           nan 285.91806  ]
+ [151.         87.882164          nan 287.98666  ]
+ [152.         88.727715          nan 290.04272  ]
+ [153.         88.91083           nan 292.36426  ]
+ [154.         89.98259           nan 294.60104  ]
+ [155.         89.91616           nan 296.70987  ]
+ [156.         89.01136           nan 298.7599   ]
+ [157.         88.11913           nan 301.02313  ]
+ [158.         87.63801           nan 303.31198  ]
+ [159.         87.93602           nan 305.61862  ]
+ [160.         86.864265          nan 307.59515  ]
+ [161.         86.71706           nan 309.53888  ]
+ [162.         87.05456           nan 311.62817  ]
+ [163.         87.64699           nan 313.72452  ]
+ [164.         88.31481           nan 316.05157  ]
+ [165.         88.33636           nan 318.09354  ]
+ [166.         88.18735           nan 320.22195  ]
+ [167.         88.53563           nan 322.4226   ]
+ [168.         88.65591           nan 324.55557  ]
+ [169.         88.48715           nan 326.10367  ]
+ [170.         88.29147           nan 327.7663   ]
+ [171.         88.79952           nan 329.58304  ]
+ [172.         88.892876          nan 331.41714  ]
+ [173.         89.3363            nan 333.12958  ]
+ [174.         89.81742           nan 335.02716  ]
+ [175.         90.18006           nan 336.68323  ]
+ [176.         90.42601           nan 338.30185  ]
+ [177.         90.578606          nan 339.8726   ]
+ [178.         90.62528           nan 341.6929   ]
+ [179.         90.75454           nan 343.1068   ]
+ [180.         91.08307           nan 344.51953  ]
+ [181.         90.99869           nan 346.07996  ]
+ [182.         91.00587           nan 347.9273   ]
+ [183.         91.24643           nan 349.9255   ]
+ [184.         91.3703            nan 352.09143  ]
+ [185.         91.34876           nan 354.4112   ]
+ [186.         91.43852           nan 356.79468  ]
+ [187.         91.51931           nan 358.81598  ]
+ [188.         91.51572           nan 361.30377  ]
+ [189.         91.531876          nan 363.67517  ]
+ [190.         91.56778           nan 365.41748  ]
+ [191.         91.60728           nan 367.9316   ]
+ [192.         91.596504          nan 370.64478  ]
+ [193.         91.53367           nan 373.31113  ]
+ [194.         91.51751           nan 375.9062   ]
+ [195.         91.64677           nan 378.36057  ]
+ [196.         91.6737            nan 381.2738   ]
+ [197.         91.64318           nan 383.50455  ]
+ [198.         91.60728           nan 385.98706  ]
+ [199.         91.56957           nan 388.7935   ]
+ [200.         91.596504          nan 390.91888  ]
+ [201.         91.53367           nan 393.24857  ]
+ [202.         90.42422           nan 395.09833  ]
+ [203.         89.83358           nan 397.0395   ]
+ [204.         89.00239           nan 399.046    ]
+ [205.         88.57512           nan 401.0794   ]
+ [206.         88.587685          nan 403.12585  ]
+ [207.         88.918015          nan 405.3585   ]
+ [208.         89.65585           nan 407.31415  ]
+ [209.         90.09569           nan 409.64737  ]
+ [210.         90.38113           nan 411.9002   ]
+ [211.         90.50141           nan 413.99017  ]
+ [212.         90.63067           nan 415.8494   ]
+ [213.         90.77967           nan 417.93372  ]
+ [214.         90.907135          nan 419.8645   ]
+ [215.         91.21412           nan 421.595    ]
+ [216.         91.74012           nan 423.6603   ]
+ [217.         91.77962           nan 425.74582  ]
+ [218.         91.99325           nan 427.70438  ]
+ [219.         92.05968           nan 429.87836  ]
+ [220.         92.06326           nan 431.8053   ]
+ [221.         92.106346          nan 433.895    ]
+ [222.         92.10276           nan 435.91827  ]
+ [223.         92.081215          nan 437.96558  ]
+ [224.         92.09917           nan 439.9766   ]
+ [225.         92.1261            nan 441.71045  ]
+ [226.         92.18175           nan 443.71356  ]
+ [227.         92.18175           nan 445.86755  ]
+ [228.         92.18355           nan 447.85114  ]
+ [229.         92.205086          nan 449.95068  ]
+ [230.         92.22304           nan 451.9429   ]
+ [231.         92.214066          nan 453.78134  ]
+ [232.         92.20329           nan 455.47125  ]
+ [233.         92.16918           nan 457.23053  ]
+ [234.         92.14944           nan 458.8772   ]
+ [235.         92.16739           nan 460.33832  ]
+ [236.         92.45642           nan 461.6656   ]
+ [237.         92.49053           nan 463.15656  ]
+ [238.         92.508484          nan 464.94864  ]
+ [239.         92.51566           nan 466.50452  ]
+ [240.         92.52464           nan 468.11072  ]
+ [241.         92.501305          nan 469.65994  ]
+ [242.         92.52464           nan 471.08337  ]
+ [243.         92.53182           nan 472.69086  ]
+ [244.         92.53002           nan 474.28677  ]
+ [245.         92.49053           nan 475.73065  ]
+ [246.         92.451035          nan 477.1219   ]
+ [247.         92.443855          nan 478.58548  ]
+ [248.         92.47258           nan 479.89902  ]
+ [249.         92.51566           nan 481.26633  ]
+ [250.         92.53541           nan 482.94955  ]
+ [251.         92.56234           nan 484.71884  ]
+ [252.         92.60722           nan 486.662    ]
+ [253.         92.59824           nan 488.60333  ]
+ [254.         92.60184           nan 490.35574  ]
+ [255.         92.63056           nan 491.97858  ]
+ [256.         92.67903           nan 493.62762  ]
+ [257.         92.688             nan 495.45557  ]
+ [258.         92.707756          nan 497.10767  ]
+ [259.         92.705956          nan 498.84796  ]
+ [260.         92.714935          nan 501.20572  ]
+ [261.         92.72032           nan 503.7477   ]
+ [262.         92.689804          nan 506.64737  ]
+ [263.         92.673645          nan 509.19635  ]
+ [264.         92.664665          nan 511.56744  ]
+ [265.         92.68442           nan 514.2024   ]
+ [266.         92.707756          nan 516.4211   ]
+ [267.         92.74186           nan 518.66     ]
+ [268.         92.75802           nan 521.22205  ]
+ [269.         92.76161           nan 523.8244   ]
+ [270.         92.788536          nan 525.3378   ]]
+Best Result: Epoch   Acc  Std.  Time
+                270 92.79  nan 525.34 s
+--------------- Train Done! ----------------

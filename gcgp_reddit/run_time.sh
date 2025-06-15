@@ -13,6 +13,6 @@ do
 
   echo " $dataset $cond_size  $ridge $k $learn_A  $norm"
   # python main.py --dataset $dataset --cond_size $cond_size --ridge $ridge --k $k --kernel SGTK --epochs $epoch --learn_A $learn_A --norm $norm --iter 1 --save True
-  python main.py --dataset $dataset --cond_size $cond_size --ridge $ridge --k $k --kernel SGNK --epochs 150 --learn_A $learn_A --norm $norm > outputs_time/${dataset}_size_${cond_size}_ridge_${ridge}_k_${k}_learn_A_${learn_A}_norm_${norm}.txt
+  python main.py --dataset $dataset --cond_size $cond_size --ridge $ridge --k $k --kernel SGNK --epochs 270 --learn_A $learn_A --norm $norm > save/${dataset}_size_${cond_size}_ridge_${ridge}_k_${k}_learn_A_${learn_A}_norm_${norm}.txt
 done < config.txt
 
